@@ -1,0 +1,13 @@
+{
+  "name": "elven-tools-website",
+  "version": "0.0.1",
+  "description": "elven-tools-website",
+  "main": "index.js",
+  "scripts": {
+    "build": "harold-scripts build",
+    "start": "harold-scripts start"
+  },
+  "devDependencies": {
+    "harold-scripts": "^0.8.2"
+  }
+}
