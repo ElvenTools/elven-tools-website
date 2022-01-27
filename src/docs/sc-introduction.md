@@ -45,6 +45,5 @@ You can also take a more standard path and use [erdpy](https://docs.elrond.com/s
 - Smart Contract in version 1 doesn't have many mechanisms which will strongly limit unwanted behaviors. It only implements random minting, but in version 2, there will be more mechanisms for fair launches.
 
 <div class="next-page-link">
-  Next: <a href="/docs/sc-functions.html">SC functions review</a>
+  Next: <a href="/docs/sc-endpoints.html">SC functions review</a>
 </div>
-
