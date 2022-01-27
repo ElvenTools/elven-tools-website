@@ -1,11 +1,11 @@
 {{> head
 title="NFTs on the Elrond Blockchain"
-description=""
+description="Open Source toolset for the launches of NFT collections on the Elrond blockchain."
 ogTitle="Elven Tools - NFTs on the Elrond Blockchain"
-ogDescription=""
+ogDescription="Open Source toolset for the launches of NFT collections on the Elrond blockchain."
 ogUrl="https://www.elven.tools"
 twitterTitle="Elven Tools - NFTs on the Elrond Blockchain"
-twitterDescription=""
+twitterDescription="Open Source toolset for the launches of NFT collections on the Elrond blockchain."
 twitterUrl="https://www.elven.tools"
 }}
 
@@ -22,7 +22,7 @@ twitterUrl="https://www.elven.tools"
   </div>
   <div class="homepage-lead-columns">
     <div class="homepage-lead-column">
-      <div class="homepage-lead-column-icon-wrap"><img class="homepage-lead-column-icon"
+      <div class="homepage-lead-column-icon-wrap"><img height="117px" width="117px" class="homepage-lead-column-icon"
           src="{{relativePath 'assets/images/sc.svg'}}" alt="Elven Tools Smart Contract" /></div>
       <div class="homepage-lead-column-title">
         <h2>Smart Contract</h2>
@@ -31,12 +31,12 @@ twitterUrl="https://www.elven.tools"
         candy machine style of minting. It will let you run the proper NFT launch. If you need you will be able to
         modify it. It is open-source code. There will also be a raffle version. Stay tuned!</div>
       <div class="homepage-lead-column-btns">
-        <a href="/docs/sc-introduction.html" class="homepage-lead-column-btn">More</a>
+        <a href="/docs/sc-introduction.html" class="homepage-lead-column-btn" title="Smart Contract Introduction">More</a>
         <a href="https://github.com/juliancwirko/elven-nft-minter-sc" class="homepage-lead-column-btn">GitHub</a>
       </div>
     </div>
     <div class="homepage-lead-column">
-      <div class="homepage-lead-column-icon-wrap"><img class="homepage-lead-column-icon"
+      <div class="homepage-lead-column-icon-wrap"><img height="117px" width="117px" class="homepage-lead-column-icon"
           src="{{relativePath 'assets/images/cli.svg'}}" alt="Elven Tools CLI" /></div>
       <div class="homepage-lead-column-title">
         <h2>CLI tool</h2>
@@ -45,12 +45,12 @@ twitterUrl="https://www.elven.tools"
         interactions with the Smart Contract. It allows you to set up the project and also mint the tokens. Let's go!
         You can start almost without any coding skills. You will only need the Node environment set up.</div>
       <div class="homepage-lead-column-btns">
-        <a href="/docs/cli-tool.html" class="homepage-lead-column-btn">More</a>
+        <a href="/docs/cli-introduction.html" class="homepage-lead-column-btn" title="CLI Introduction">More</a>
         <a href="https://github.com/juliancwirko/elven-tools-cli" class="homepage-lead-column-btn">GitHub</a>
       </div>
     </div>
     <div class="homepage-lead-column">
-      <div class="homepage-lead-column-icon-wrap"><img class="homepage-lead-column-icon"
+      <div class="homepage-lead-column-icon-wrap"><img height="117px" width="117px" class="homepage-lead-column-icon"
           src="{{relativePath 'assets/images/www.svg'}}" alt="Elven Tools Landing Page" /></div>
       <div class="homepage-lead-column-title">
         <h2>Landing Page</h2>
@@ -65,12 +65,24 @@ twitterUrl="https://www.elven.tools"
   </div>
   <div class="homepage-code-try">
     <h3 class="homepage-code-try-header">Try it now!</h3>
-    <p class="homepage-code-try-desc">By default, it will deploy the Smart Contract from its repository, and all will happen on the
+    <p class="homepage-code-try-desc">By default, it will deploy the Smart Contract from its repository, and all will
+      happen on the
       devnet! So you can try it out safely.<br>
-      What you need to start is a devnet account with some funds on it.</p>
-    <img class="homepage-code-example" src="{{relativePath 'assets/images/carbon.svg'}}" alt="Elven Tools code demo" />
+      What you need to start is a devnet account with some funds on it.<br>
+      Then enter the terminal commands in order displayed below:</p>
+
+    <div class="homepage-code-example">
+      1. npm install elven-tools@latest -g<br> 
+      2. elven-tools derive-pem<br> 
+      3. elven-tools deploy nft-minter<br> 
+      4. elven-tools nft-minter issue-collection-token<br> 
+      5. elven-tools nft-minter set-roles<br> 
+      6. elven-tools nft-minter start-minting<br> 
+      7. elven-tools nft-minter mint
+    </div>
+
     <div class="homepage-docs-button-section">
-      <a href="/docs/jump-start.html">Learn more</a>
+      <a href="/docs/jump-start.html" title="Elven Tools Jump Start!">Learn more</a>
     </div>
   </div>
 </div>

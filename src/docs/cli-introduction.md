@@ -5,10 +5,10 @@ publicationDate: '2022-01-25'
 tags:
   - cli tool
 ogTitle: "Elven Tools CLI tool - introduction"
-ogDescription: ""
+ogDescription: "The CLI tools is a standard Node CLI program which you can install using the npm package manager."
 ogUrl: "https://www.elven.tools/docs/cli-introduction.html"
 twitterTitle: "Elven Tools CLI tool - introduction"
-twitterDescription: ""
+twitterDescription: "The CLI tools is a standard Node CLI program which you can install using the npm package manager."
 twitterUrl: "https://www.elven.tools/docs/cli-introduction.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/cli-introduction.md"
 ---

@@ -22,10 +22,21 @@
 
   <meta name="generator" content="haroldjs.com" />
 
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/images/icon-192x192.png">
+  <meta name="theme-color" content="#FF5733" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://css.gg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://unpkg.com">
+
   <link rel="stylesheet"
       href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/stackoverflow-light.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins:100,400,300,600,900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,400,300,600,900&display=swap"
+    media="print" onload="this.media='all'" />
+  
   <link rel="stylesheet" href="{{relativePath 'styles/main.css'}}">
 </head>
 

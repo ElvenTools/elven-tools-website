@@ -1,14 +1,14 @@
 ---
 layout: "docs"
-title: "Jump start!"
+title: "Jump start"
 publicationDate: "2022-01-25"
 tags:
   - intro
 ogTitle: "Elven Tools CLI tool - jump start!"
-ogDescription: ""
+ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
 ogUrl: "https://www.elven.tools/docs/jump-start.html"
 twitterTitle: "Elven Tools CLI tool - jump start!"
-twitterDescription: ""
+twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
@@ -27,7 +27,7 @@ Let's focus on the devnet and the Smart Contract code from a remote source.
 
 What you need to do to start is to run the `elven-tools derive-pem`. You should have the elven-tools cli installed globally so accessible from everywhere in your env. The best would be to create a separate directory to work with it.
 
-```plain
+```bash
 elven-tools derive-pem
 ✔ Enter mnemonic (seed phrase)
  … source crop brown mountain grace imitate cattle rice profit truck small soul castle prize tube spoil such topic code actor venue friend truck alien
@@ -44,11 +44,11 @@ After you generate the PEM file, you can run all other commands. Let's walk thro
 
 The first command will be `elven-tools deploy nft-minter`. It takes the Smart Contract code from its repository and tries to deploy it on behalf of the user whose walletKey.pem file is generated in this directory. It will ask a couple of questions. Let's explain them here.
 
-```plain
+```bash
 elven-tools deploy nft-minter
 ✔ Decide if the contract can be upgraded in the future.
  › Yes
-✔ Decide if the contract's storage can be read by other contracts. Not recommended in this case.
+✔ Decide if the contracts storage can be read by other contracts. Not recommended in this case.
  › No
 ✔ Decide if the contract can receive funds. Recommended because of the royalties.
  › Yes
@@ -81,7 +81,7 @@ The following prompt is where you would need to provide your CIDs. It can be a d
 
 The following mandatory command which you would use is issuing the collection token. You can do this by running `elven-tools nft-minter issue-collection-token`. The token will be issued, and all will be saved in the `output.json` file in the same directory. Here you will be asked about the name of the collection and the ticker. It looks like that:
 
-```plain
+```bash
 elven-tools nft-minter issue-collection-token
 ✔ Enter the name for the collection token (ex. MyName123). 
 Avoid spaces and special characters
@@ -97,7 +97,7 @@ Also saved in the output.json file.
 
 The last mandatory command is `elven-tools nft-minter set-roles`. It will assign the obligatory role, which allows for new NFT tokens creation. Here there won't be any prompts, at least for now. Only a transaction will take the token data from the output.json file and assign the roles.
 
-```plain
+```bash
 elven-tools nft-minter set-roles
 Transaction: https://devnet-explorer.elrond.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
 ```
@@ -120,7 +120,7 @@ Take into account possible limitations set on the Smart Contract (ex 3 for three
 Transaction: https://devnet-explorer.elrond.com/transactions/15194f779bebc31babdc7711f685a4bf0560c9a0484f6e644a40a1a0ee2f94ef
 ```
 
-Now let's see how to define a drop in which we will mint only 2500 of the whole 10k collection. `elven-tools nft-minter set-drop`. You will be asked to provide how many tokens per drop it should mint. After that, it will pause the minting process. You can also pause the minting at any time you want by `elven-tools nft-minter pause-minting`. You can also unset the drop by `elven-mint nft-minter unset-drop`. You'll find all the commands [here](/docs/cli-tool.html), and some of them will be described later in this article.
+Now let's see how to define a drop in which we will mint only 2500 of the whole 10k collection. `elven-tools nft-minter set-drop`. You will be asked to provide how many tokens per drop it should mint. After that, it will pause the minting process. You can also pause the minting at any time you want by `elven-tools nft-minter pause-minting`. You can also unset the drop by `elven-mint nft-minter unset-drop`. You'll find all the commands [here](/docs/cli-introduction.html), and some of them will be described later in this article.
 
 ```bash
 elven-tools nft-minter set-drop
@@ -175,7 +175,7 @@ The file should be named `.elventoolsrc,` or take any compatible name from the [
 
 In the example above, we define the chain as the 'devnet' (set by default), and we also define the version for the Smart Contract, which is its main' (selected by default) branch in its repository. It can also be a tag name. Then we also define the new name for the 'mint' function. You can also change names for other functions and set up different gas limits for them.
 
-**You will find all possible options [here](/docs/cli-tool.html).**
+**You will find all possible options [here](/docs/cli-introduction.html#custom-configuration-options).**
 
 ### Good to know
 
@@ -207,8 +207,8 @@ This part of the docs had one purpose: to guide you through the process step by 
 <!-- TODO: video here -->
 
 From here you can read more detailed docs on:
-- [CLI configuration options](/docs/cli-tool.html#custom-configuration-options)
-- [CLI possible commands](/docs/cli-tool.html#all-commands)
+- [CLI configuration options](/docs/cli-introduction.html#custom-configuration-options)
+- [CLI possible commands](/docs/cli-introduction.html#all-commands)
 - [Smart Contract endpoints](/docs/sc-endpoints.html)
 
 If you still don't know how to use it, please feel free to contact me on [Twitter](https://twitter.com/JulianCwirko) or [Telegram](https://t.me/juliancwirko). You can also write an e-mail to me: julian.cwirko@gmail.com

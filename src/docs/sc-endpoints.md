@@ -5,10 +5,10 @@ publicationDate: '2022-01-24'
 tags:
   - smart contract
 ogTitle: "Smart Contract version 1 - endpoints review"
-ogDescription: ""
+ogDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
 ogUrl: "https://www.elven.tools/docs/sc-endpoints.html"
 twitterTitle: "Smart Contract version 1 - endpoints review"
-twitterDescription: ""
+twitterDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
 twitterUrl: "https://www.elven.tools/docs/sc-endpoints.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/sc-endpoints.md"
 ---

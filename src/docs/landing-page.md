@@ -5,10 +5,10 @@ publicationDate: '2022-01-25'
 tags:
   - landing page
 ogTitle: "Landing page template - introduction"
-ogDescription: ""
+ogDescription: "Fully functional and optimized template to be used with the Next framework."
 ogUrl: "https://www.elven.tools/docs/landing-page.html"
 twitterTitle: "Landing page template - introduction"
-twitterDescription: ""
+twitterDescription: "Fully functional and optimized template to be used with the Next framework."
 twitterUrl: "https://www.elven.tools/docs/landing-page.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/landing-page.md"
 ---
