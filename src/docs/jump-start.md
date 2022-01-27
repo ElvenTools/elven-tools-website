@@ -204,7 +204,9 @@ Elven Tools will also provide the landing page for the NFT launch, which will be
 
 This part of the docs had one purpose: to guide you through the process step by step. There is also a video which shows it. So I recommend you to check it out:
 
-<!-- TODO: video here -->
+<div class="embeded-media-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/szkNE_qOy6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 From here you can read more detailed docs on:
 - [CLI configuration options](/docs/cli-introduction.html#custom-configuration-options)
