@@ -1,6 +1,6 @@
 ---
 layout: 'docs'
-title: 'Introduction'
+title: 'SC Introduction'
 publicationDate: '2022-01-25'
 tags:
   - smart contract
@@ -10,6 +10,7 @@ ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
 twitterTitle: "Smart Contract version 1 - introduction"
 twitterDescription: ""
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
+githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/sc-introduction.md"
 ---
 
 NFT minter Smart Contract v1
@@ -34,7 +35,7 @@ The smart contract works like a candy machine. In short, the user can pay in EGL
 
 ### Ways of using it
 
-The best way of using it will be with [Elven Tools CLI tool](/docs/cli-tool). It has a lot of valuable functions integrated with the smart contract, so deploying or interacting is simple. You can deploy the smart contract directly from its repository. Almost no coding skills are required in this case.
+The best way of using it will be with [Elven Tools CLI tool](/docs/cli-tool.html). It has a lot of valuable functions integrated with the smart contract, so deploying or interacting is simple. You can deploy the smart contract directly from its repository. Almost no coding skills are required in this case.
 
 You can also take a more standard path and use [erdpy](https://docs.elrond.com/sdk-and-tools/erdpy/erdpy/) for that. Erdpy is an official CLI SDK for Elrond blockchain based on Python. For more information, check the [blog post](https://www.julian.io/articles/elrond-smart-contracts.html).
 

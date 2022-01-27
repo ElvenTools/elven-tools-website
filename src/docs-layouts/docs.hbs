@@ -1,8 +1,9 @@
-{{> head description=excerpt fullWidth=true}}
+{{> head description=excerpt fullWidth=true githubUrl=githubUrl}}
 
 <div class="container-full-width docs-layout">
   {{> docs-sidebar-left}}
   <section class="docs-content" data-js-doc-content>
+    <div class="docs-content-edit-button"><a href="{{githubUrl}}">Suggest a change</a></div>
     <h1>{{title}}</h1>
     {{{content}}}
   </section>

@@ -123,6 +123,19 @@
   }
 }
 
+.docs-content-edit-button {
+  text-align: right;
+  font-size: 13px;
+  
+  a {
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid $color-main-contrast;
+    text-decoration: none;
+  }
+}
+
 .docs-home {
   margin-right: 0;
 }
