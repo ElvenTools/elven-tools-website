@@ -58,6 +58,8 @@ code {
   background-color: $color-main-contrast2;
   padding: 2px 10px;
   border-radius: 6px;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
 pre {
@@ -73,8 +75,6 @@ pre {
 
   code {
     width: 100%;
-    word-break: break-word;
-    white-space: pre-wrap;
   }
 }
 
