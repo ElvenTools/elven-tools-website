@@ -50,6 +50,10 @@ img[src$='shadowed'] {
   margin-bottom: 20px;
 }
 
+.docs-box-centered {
+  text-align: center;
+}
+
 .docs-info-box {
   @extend .docs-box;
   border-color: rgb(54, 131, 255);
