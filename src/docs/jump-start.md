@@ -13,6 +13,8 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
+<div class="docs-warning-box">Please be aware that there are not enough tests, no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it on the devnet.</div>
+
 The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
 Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/juliancwirko/nft-art-maker).
