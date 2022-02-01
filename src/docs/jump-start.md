@@ -15,6 +15,18 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 
 <div class="docs-warning-box">Please be aware that there are not enough tests and no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it and test it on the devnet. Check it back a million times before you'll use it on the mainnet. Please report all the issues and ideas.</div>
 
+### TL;DR
+
+1. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
+2. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
+3. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
+4. `elven-tools nft-minter set-roles` -> roles for the issued token
+5. `elven-tools nft-minter shuffle` -> this one should be called at least one. It can be called at any time by anyone
+6. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
+7. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
+
+### Longer step-by-step guides
+
 The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
 Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/juliancwirko/nft-art-maker).
