@@ -17,12 +17,22 @@ Below you'll find all endpoints with a short description. You can always see the
 
 Please check all attributes for each endpoint in the linked code line in the repository. It is all open-source.
 
-### Only owner endpoints
+### Setup endpoints
 
-Only the owner of the Smart Contract can call them. In such a Smart Contract, there are quite a lot of them.
+These are the required operations you would need to perform once always when configuring a new collection and Smart Contract. Check the CLI tool to simplify the work required.
 
 - [init](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L22) - standard init endpoint, it will be triggered on deployment and upgrade
 - [issueToken](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L72) - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection. You can read more about it [here](https://docs.elrond.com/developers/nft-tokens/#issuance-of-non-fungible-tokens)
+- [setLocalRoles](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L104) - Set roles set only one role for now. The required one for creating the NFTs.
+- [shuffle](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L367) - this one is not owner only because everyone can call it, but it is required to call it at least once to be able to start minting
+- [startMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L129) - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
+
+### Only owner endpoints
+
+Only the owner of the Smart Contract can call them. In such a Smart Contract, there are quite a lot of them. Some of them are mandatory for the initial Smart Contract setup. See above. To keep everything in order, they are also copied here.
+
+ [init](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L22) - standard init endpoint, it will be triggered on deployment and upgrade
+- [issueTok-en](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L72) - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection. You can read more about it [here](https://docs.elrond.com/developers/nft-tokens/#issuance-of-non-fungible-tokens)
 - [setLocalRoles](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L104) - Set roles set only one role for now. The required one for creating the NFTs. 
 - [pauseMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L120) - You can pause the minting process in any moment you need. 
 - [startMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L129) - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function

@@ -13,7 +13,7 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
-<div class="docs-warning-box">Please be aware that there are not enough tests, no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it on the devnet.</div>
+<div class="docs-warning-box">Please be aware that there are not enough tests and no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it and test it on the devnet. Check it back a million times before you'll use it on the mainnet. Please report all the issues and ideas.</div>
 
 The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
@@ -45,6 +45,8 @@ Derive PEM is a command which will take your seed phrase and create the key file
 After you generate the PEM file, you can run all other commands. Let's walk through the whole process here.
 
 The first command will be `elven-tools deploy nft-minter`. It takes the Smart Contract code from its repository and tries to deploy it on behalf of the user whose walletKey.pem file is generated in this directory. It will ask a couple of questions. Let's explain them here.
+
+When deploying using the CLI tool, it will also trigger the `populateIndexes` transactions, depending on the amount of the tokens provided. You can also call it by hand if something goes wrong. Always check the transactions after deployment on the Elrond explorer.
 
 ```bash
 elven-tools deploy nft-minter
@@ -103,6 +105,8 @@ The last mandatory command is `elven-tools nft-minter set-roles`. It will assign
 elven-tools nft-minter set-roles
 Transaction: https://devnet-explorer.elrond.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
 ```
+
+You would also need to call the `elven-tools nft-minter shuffle` at least once. This one is accessible for everyone. Everyone can call it to change the following index, which will be minted without knowing precisely what it will be.
 
 The following steps can be different on what you want to achieve. You can start minting directly or set up so-called 'drops' where you will define how many tokens will be minted in one drop. You can also always start or pause the minting process. What is necessary is that the contract will always mint randomly in all cases. Let's see how it looks when we want just to start the minting: `elven-tools nft-minter start-minting` and `elven-tools nft-minter mint` You will be asked to provide how many tokens you would wish to mint. Remember that the Smart Contract will have limits per one address. See how to check them later in this article.
 

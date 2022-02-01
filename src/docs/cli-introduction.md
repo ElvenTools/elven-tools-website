@@ -49,9 +49,10 @@ First steps:
   - This command takes a couple of arguments asking for them with prompts.
 3 When the Smart Contract (check it in the explorer) is deployed, you need to create your collection token. You can do this by `elven-tools nft-minter issue-collection-token`. You will be asked for the name and the ticker. Keep the name without spaces and the ticker short and capitalized.
 4. Next step would be to add a 'create' role. You can do this by `elven-tools nft-minter set-roles`
-5. Then you can start the minting `elven-tools nft-minter start-minting` or setup a drop `elven-tools nft-minter set-drop` where the minting will be split into 'waves'. The first version of the Smart Contract mints randomly on demand and sends the NFT to the buyer. More advanced logic will land in version 2.
-6. You can also mint the tokens using the same or different `walletKey.pem` for that run `elven-tools nft-minter mint`.
-7. You can list all the commands using `elven-tools nft-minter --help`; below, you'll find all of them with short descriptions.
+5. Then you would need to call at least once the `elven-tools nft-minter shuffle` to choose the first index to mint.
+6. Then you can start the minting `elven-tools nft-minter start-minting` or setup a drop `elven-tools nft-minter set-drop` where the minting will be split into 'waves'. The first version of the Smart Contract mints randomly on demand and sends the NFT to the buyer. More advanced logic will land in version 2.
+7. You can also mint the tokens using the same or different `walletKey.pem` for that run `elven-tools nft-minter mint`.
+8. You can list all the commands using `elven-tools nft-minter --help`; below, you'll find all of them with short descriptions.
 
 ### All Commands
 
@@ -77,8 +78,10 @@ First steps:
 - `elven-tools nft-minter get-nft-price` - the Smart Contract query, returns the current price
 - `elven-tools nft-minter get-nft-token-id` - the Smart Contract query, returns the collection token id
 - `elven-tools nft-minter get-nft-token-name` - the Smart Contract query, returns the collection token name
-- `elven-tools nft-minter get-tokens-limit-per-address` - the Smart Contract query returns the tokens limit per address
-- `elven-tools nft-minter get-tokens-minted-per-address` - the Smart Contract query returns the number of tokens minted per one address
+- `elven-tools nft-minter get-tokens-limit-per-address-total` - the Smart Contract query returns the tokens limit per address
+- `elven-tools nft-minter get-minted-per-address-total` - the Smart Contract query returns the number of tokens minted per one address
+- `get-minted-per-address-per-drop` - when the drop is configured, it will return the number of tokens minted per address per drop
+- `get-tokens-limit-per-address-per-drop` - when the drop is configured, it will return the total limit of tokens per address per drop
 
 ### Custom configuration options
 
@@ -96,13 +99,13 @@ Below is an example of a `.elventoolsrc` config file with default values. It is 
     "assignRolesGasLimit": 80000000,
     "issueTokenFnName": "issueToken",
     "setLocalRolesFnName": "setLocalRoles",
-    "mintBaseGasLimit": 10000000,
+    "mintBaseGasLimit": 11000000,
     "tokenSelingPrice": "",
     "mintFnName": "mint",
-    "giveawayBaseGasLimit": 10000000,
+    "giveawayBaseGasLimit": 11000000,
     "giveawayFnName": "giveaway",
     "setDropFnName": "setDrop",
-    "setUnsetDropGasLimit": 6000000,
+    "setUnsetDropGasLimit": 12000000,
     "unsetDropFnName": "unsetDrop",
     "pauseUnpauseGasLimit": 5000000,
     "pauseMintingFnName": "pauseMinting",
@@ -110,21 +113,26 @@ Below is an example of a `.elventoolsrc` config file with default values. It is 
     "setNewPriceGasLimit": 5000000,
     "setNewPriceFnName": "setNewPrice",
     "shuffleFnName": "shuffle",
-    "shuffleGasLimit": 5000000,
+    "shuffleGasLimit": 6000000,
     "getTotalTokensLeftFnName": "getTotalTokensLeft",
     "getProvenanceHashFnName": "getProvenanceHash",
     "getDropTokensLeftFnName": "getDropTokensLeft",
     "getNftPriceFnName": "getNftPrice",
     "getNftTokenIdFnName": "getNftTokenId",
     "getNftTokenNameFnName": "getNftTokenName",
-    "getTokensLimitPerAddressFnName": "getTokensLimitPerAddress",
-    "getTokensMintedPerAddressFnName": "getTokensMintedPerAddress",
+    "getMintedPerAddressTotalFnName": "getMintedPerAddressTotal",
+    "getTokensLimitPerAddressTotalFnName": "getTokensLimitPerAddressTotal",
+    "getMintedPerAddressPerDropFnName": "getMintedPerAddressPerDrop",
+    "getTokensLimitPerAddressPerDropFnName": "getTokensLimitPerAddressPerDrop",
     "changeBaseCidsFnName": "changeBaseCids",
     "changeBaseCidsGasLimit": 5000000,
     "setNewTokensLimitPerAddressFnName": "setNewTokensLimitPerAddress",
     "setNewTokensLimitPerAddressGasLimit": 5000000,
     "claimScFundsFnName": "claimScFunds",
-    "claimScFundsGasLimit": 6000000
+    "claimScFundsGasLimit": 6000000,
+    "populateIndexesBaseGasLimit": 5000000,
+    "populateIndexesMaxBatchSize": 5000,
+    "populateIndexesFnName": "populateIndexes"
   }
 }
 ```
