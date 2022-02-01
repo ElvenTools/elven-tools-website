@@ -46,7 +46,7 @@ After you generate the PEM file, you can run all other commands. Let's walk thro
 
 The first command will be `elven-tools deploy nft-minter`. It takes the Smart Contract code from its repository and tries to deploy it on behalf of the user whose walletKey.pem file is generated in this directory. It will ask a couple of questions. Let's explain them here.
 
-When deploying using the CLI tool, it will also trigger the `populateIndexes` transactions, depending on the amount of the tokens provided. You can also call it by hand if something goes wrong. Always check the transactions after deployment on the Elrond explorer.
+When deploying using the CLI tool, it will also trigger the `populateIndexes` transactions, depending on the amount of the tokens provided. You can also call it by hand if something goes wrong. Always check the transactions after deployment on the Elrond explorer. This operation is mandatory, so if you don't use the CLI you would need to do it by yourself.
 
 ```bash
 elven-tools deploy nft-minter

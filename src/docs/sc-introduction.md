@@ -33,6 +33,10 @@ You are reading about the Smart Contract designed for the Elrond blockchain. Its
 
 The smart contract works like a candy machine. In short, the user can pay in EGLD and, in return, will get randomly minted tokens from the previously configured collection. The amount of tokens per address is configured on the smart contract.
 
+### Required initial configuration
+
+
+
 ### Ways of using it
 
 The best way of using it will be with [Elven Tools CLI tool](/docs/cli-introduction.html). It has a lot of valuable functions integrated with the smart contract, so deploying or interacting is simple. You can deploy the smart contract directly from its repository. Almost no coding skills are required in this case.
