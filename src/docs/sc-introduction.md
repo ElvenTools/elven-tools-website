@@ -35,7 +35,16 @@ The smart contract works like a candy machine. In short, the user can pay in EGL
 
 ### Required initial configuration
 
+All are mandatory operations and should be done only once. Make the transactions in this order.
 
+1. The Smart Contract requires initial configuration to start the minting process. First, you would need to deploy it with all the arguments defined for the `init` endpoint. Check the description and link to the code in the [endpoints section](/docs/sc-endpoints.html). It is simpler if you are using the [Elven Tools CLI](/docs/cli-introduction.html).
+2. If you are not using the CLI, you need to make a couple of transactions using the `populateIndexes` endpoint. The CLI does it automatically when deploying the Smart Contract.
+3. You would need to issue the collection token using the `issueCollection` endpoint. With CLI, it is simpler to do that. Again, check it in the endpoints section.
+4. Next is the `setLocalRoles` endpoint - it is required to set up proper roles for the collection token.
+5. You would also need to run the `shuffle` endpoint at least once. This endpoint is public, and anyone can call it. Check more about it in the endpoints section.
+6. Finally, you need to start the minting by calling the `startMinting` endpoint. By default, in the beginning, the minting is paused.
+
+**Remember that everything is more straightforward with the Elven Tools CLI** Check the [jump start section](/docs/jump-start.html).
 
 ### Ways of using it
 
