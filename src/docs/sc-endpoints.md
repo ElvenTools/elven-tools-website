@@ -4,6 +4,7 @@ title: 'Endpoints'
 publicationDate: '2022-01-24'
 tags:
   - smart contract
+excerpt: "Below you'll find all endpoints with a short description. You can always see the complete code."
 ogTitle: "Smart Contract version 1 - endpoints review"
 ogDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
 ogUrl: "https://www.elven.tools/docs/sc-endpoints.html"

@@ -4,6 +4,7 @@ title: 'SC Introduction'
 publicationDate: '2022-01-25'
 tags:
   - smart contract
+excerpt: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 ogTitle: "Smart Contract version 1 - introduction"
 ogDescription: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 ogUrl: "https://www.elven.tools/docs/sc-introduction.html"

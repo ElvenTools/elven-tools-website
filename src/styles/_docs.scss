@@ -108,6 +108,8 @@
 
   a {
     color: $color-main-contrast;
+    word-break: break-word;
+    white-space: pre-wrap;
   }
 
   img {

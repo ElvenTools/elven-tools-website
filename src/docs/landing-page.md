@@ -4,6 +4,7 @@ title: 'Landing page'
 publicationDate: '2022-01-25'
 tags:
   - landing page
+excerpt: "Fully functional and optimized template to be used with the Next framework."
 ogTitle: "Landing page template - introduction"
 ogDescription: "Fully functional and optimized template to be used with the Next framework."
 ogUrl: "https://www.elven.tools/docs/landing-page.html"

@@ -4,6 +4,7 @@ title: "Jump start"
 publicationDate: "2022-01-25"
 tags:
   - intro
+excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
 ogTitle: "Elven Tools CLI tool - jump start!"
 ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
 ogUrl: "https://www.elven.tools/docs/jump-start.html"

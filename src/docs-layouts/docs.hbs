@@ -3,7 +3,9 @@
 <div class="container-full-width docs-layout">
   {{> docs-sidebar-left}}
   <section class="docs-content" data-js-doc-content>
-    <div class="docs-content-edit-button"><a href="{{githubUrl}}">Suggest a change</a></div>
+    <div class="docs-content-edit-button">
+      {{#if githubUrl}}<a href="{{githubUrl}}">Suggest a change</a>{{/if}}
+    </div>
     <h1>{{title}}</h1>
     {{{content}}}
   </section>
