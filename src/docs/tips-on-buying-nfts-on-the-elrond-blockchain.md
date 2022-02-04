@@ -4,16 +4,16 @@ title: 'Tips on buying NFTs on the Elrond blockchain'
 publicationDate: '2022-01-25'
 tags:
   - articles
-excerpt: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
+excerpt: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
 ogTitle: "Tips on buying NFTs on the Elrond blockchain"
-ogDescription: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
+ogDescription: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
 ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
 twitterTitle: "Tips on buying NFTs on the Elrond blockchain"
-twitterDescription: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
+twitterDescription: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
 ---
 
-There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison to other chains. I don't want to focus on the supply and demand aspect because you should always do your own research before buying anything. I want to focus on the technological and communication-like elements here. 
+There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison to other chains. I don't want to focus on the supply and demand aspect because you should always do your own research before buying anything. I want to focus on the technological and communication-like elements here. 
 
 ### What we will tackle in the article:
 
