@@ -1,14 +1,14 @@
 ---
 layout: 'docs'
-title: 'Tips on Buying NFTs on the Elrond blockchain'
+title: 'Tips on buying NFTs on the Elrond blockchain'
 publicationDate: '2022-01-25'
 tags:
   - articles
 excerpt: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
-ogTitle: "Tips on Buying NFTs on the Elrond blockchain"
+ogTitle: "Tips on buying NFTs on the Elrond blockchain"
 ogDescription: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
 ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
-twitterTitle: "Tips on Buying NFTs on the Elrond blockchain"
+twitterTitle: "Tips on buying NFTs on the Elrond blockchain"
 twitterDescription: "There is a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
 ---
