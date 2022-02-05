@@ -113,6 +113,20 @@ pre {
   user-select: none;
 }
 
+.main-menu-versions {
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
+}
+
 .main-logo {
   font-size: 36px;
   font-weight: 900;
