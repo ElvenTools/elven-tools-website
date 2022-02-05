@@ -60,7 +60,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - [getNftTokenName](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L675) - This query will return the collection token name
 - [getNftPrice](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L679) - This query will return the price for a single NFT
 - [getTokensLimitPerAddressTotal](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L687) - This query will return the limit of tokens for a single address as total for the whole collection
-- [getMintedPerAddressTotal](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L547) - This query will return tokens already minted per single address as total for the whole collection
+- [getMintedPerAddressTotal](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L691) - This query will return tokens already minted per single address as total for the whole collection
 - [getTokensLimitPerAddressPerDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L695) - This query will return the limit of tokens for a single address per drop
 - [getMintedPerAddressPerDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L661) - This query will return tokens already minted per single address per drop
 
