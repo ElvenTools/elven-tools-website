@@ -44,7 +44,7 @@ Be aware that, by default, all will happen on the devnet. See below how to chang
 First steps:
 
 1. `elven-tools derive-pem` - you would need to generate the PEM file for all further operations, do not share it with anyone. It works similar to `erdpy wallet derive`. It will take the keyphrase and generate the `walletKey.pem` file in the same directory.
-2. `elven-tools deploy nft-minter` - by default, the tools will take the abi and wasm source code and deploy directly from the main branch of the smart contract. There are two options to work with it, though. You can configure a different branch or tag, or you can download the files and work on them locally.
+2. `elven-tools deploy nft-minter` - by default, the tools will take the abi and wasm source code and deploy directly from the defined tag branch of the smart contract. There are two options to work with it, though. You can configure a different branch or tag, or you can download the files and work on them locally.
   - For changing the branch, for example to `development` create the `.elventoolsrc` file in the same directory where the `walletKey.pem` file is located, put there `{ "nftMinter": { "version": "development" } }`. It can be also a tag name of the release in this [GitHub repository](https://github.com/juliancwirko/elven-nft-minter-sc).
   - If you would like to work locally. For example, you cloned the Smart Contract and worked on your version. You can create a directory structure next to the `walletKey.pem`. It should look like: `sc/nft-minter`. Here you will need to put the .wasm and .abi.json files which you can get from the [output]() directory of the Smart Contract.
   - This command takes a couple of arguments asking for them with prompts.
@@ -58,7 +58,7 @@ First steps:
 ### All Commands
 
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
-- `elven-tools deploy nft-minter` - deploys the smart contract (by default from the main branch using the devnet, can be configured)
+- `elven-tools deploy nft-minter` - deploys the smart contract (by default from the defined tag branch using the devnet, can be configured)
 - `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the Elrond chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection.
 - `elven-tools nft-minter set-roles` [only owner] - for now, the command sets the critical role for the collection handle. It is a 'create nft' role.
 - `elven-tools nft-minter start-minting` [only owner] - by default, after deploying the smart contract, the minting is disabled. You would need to start it
@@ -86,21 +86,21 @@ First steps:
 
 ### Custom configuration options
 
-Below is an example of a `.elventoolsrc` config file with default values. It is not required if you will work on the devnet with the main branch of the Smart Contract. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered—the same directory as the one where the `walletKey.pem` file is located.
+Below is an example of a `.elventoolsrc` config file with default values. You don't have to change the `config.ts` file. It is for library usage. `.elventoolsrc` is the only config file that should be used. It is not required if you will work on the devnet with the defined tag branch of the Smart Contract. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered—the same directory as the one where the `walletKey.pem` file is located.
 
 ```json
 {
   "chain": "devnet",
   "customProxyGateway": "https://devnet-gateway.elrond.com",
   "nftMinter": {
-    "version": "main",
+    "version": "{tag version here or branch name, for example: v1.2.0}",
     "deployGasLimit": 120000000,
     "issueCollectionTokenGasLimit": 80000000,
     "issueValue": "0.05",
     "assignRolesGasLimit": 80000000,
     "issueTokenFnName": "issueToken",
     "setLocalRolesFnName": "setLocalRoles",
-    "mintBaseGasLimit": 11000000,
+    "mintBaseGasLimit": 14000000,
     "tokenSelingPrice": "",
     "mintFnName": "mint",
     "giveawayBaseGasLimit": 11000000,
@@ -139,6 +139,8 @@ Below is an example of a `.elventoolsrc` config file with default values. It is 
 ```
 
 **Whole config with default values:** [config.ts](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts)
+
+Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
 ### Limitations and caveats
 

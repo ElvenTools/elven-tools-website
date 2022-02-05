@@ -70,31 +70,53 @@ elven-tools deploy nft-minter
 ✔ Decide if the contract can receive funds. Recommended because of the royalties.
  › Yes
 ✔ Provide the base IPFS CID:
- … your_images_cid_here
+ … main_asset_ipfs_cid_here
 ✔ Provide the base metadata files IPFS CID:
- … your_metadata_cid_here
+ … main_metadata_ipfs_cid_here
+✔ Do you want to attach the metadata JSON file in the Assets/Uris? 
+ (It will be attached and encoded in the attributes anyway, but some marketplaces require that). 
+ › Yes
 ✔ Provide the file extension:
  › .png
 ✔ Provide amount of tokens in collection:
  … 10000
 ✔ Provide the seling price (ex. 0.5 for 0.5 EGLD):
- … 0.5
-✔ Tokens limit per one address (ex 3 for three):
- … 20
+ … 0.01
+✔ Total tokens limit per one address per whole collection
+Keep it low. Max 55 because of single transaction gas limits:
+ … 6
 ✔ Provide the royalties value (ex. 20 for 20%) [optional]:
  … 5
 ✔ Provide tags (ex. tag1,tag2,tag3) [optional]:
- … tag1,tag2
+ … test1,test2
 ✔ Provide the provenance hash (sha256 hash of all images) [optional]:
- … here_provenance_hash_should_land
+ … optional_provenance_hash_here
 Deployment transaction executed: success
-Transaction: https://devnet-explorer.elrond.com/transactions/8523c30d71add931802de94a7419bd06e27d56d09753166f9329dc555d7c9200
-Smart Contract address: erd1qqqqqqqqqqqqqpgqehkqpewq76rxedwmdg78yaxcg24ey7vly8rs9hgn9u
+Deployment tx: https://devnet-explorer.elrond.com/transactions/6c78b4f9adbf4e04e84e5ffe8bfed577ee2ad080c039fb3c3db1199c5d1d413c
+Populating indexes transaction executed!
+Populate indexes tx (1): https://devnet-explorer.elrond.com/transactions/284addb23c3d6ec4809fcca1394a5827574aaf68397e0baf703c718c6319bd7a
+Populating indexes transaction executed!
+Populate indexes tx (2): https://devnet-explorer.elrond.com/transactions/254793bd5a005548f234d4efda54313fd8079e834ac9fe679f124d0a1bcf6a9b
+Smart Contract address: erd1qqqqqqqqqqqqqpgqetmlnt8t8u9nll6l87we9wsp60m602pselesmc86cg
 ```
 
 You will be asked one by one. The prompts are helpful. You don't have to worry about proper arguments preparation. The first three questions are about metadata for code. You need to decide if your smart contract should be payable or upgradable. There are hints for that. You can also read about it [here](https://docs.elrond.com/developers/developer-reference/code-metadata/).
 
-The following prompt is where you would need to provide your CIDs. It can be a different CID for metadata and images, but it can also be the same CID. It depends on how you store your files in the IPFS. Then you can also configure the file extension. There are a couple to choose from. After that, you will provide the total amount of tokens in your collection. Here is an example it is 10000. Next is the selling price. You can use the standard format here. For example, 0.5 is 0.5 EGLD. Then you would need to define how many tokens one address can mint. It is usually used to prevent a big player from buying the almost whole collection. Of course, it doesn't avoid minting on the different addresses, but it is always helpful. Then you can provide the royalties value. Use standard percent here, so 5 is a 5%. Then you can give the tags for the collection, and at the end, you can also provide the [provenance hash](https://medium.com/coinmonks/the-elegance-of-the-nft-provenance-hash-solution-823b39f99473). It will also be queryable later.
+The following prompt is where you would need to provide your CIDs. It can be a different CID for metadata and images, but it can also be the same CID. It depends on how you store your files in the IPFS. 
+
+You will also be able to choose if you want your metadata file to be attached in the Assets/Uris next to the Uri for the asset file (like .png). The metadata Uri is encoded in the attributes, but some marketplaces also require it in the Uris array. 
+
+Then you can also configure the file extension. There are a couple to choose from. 
+
+After that, you will provide the total amount of tokens in your collection. 
+
+Next is the selling price. You can use the standard format here. For example, 0.5 is 0.5 EGLD.
+
+Then you would need to define how many tokens one address can mint. It is usually used to prevent a big player from buying the almost whole collection. Of course, it doesn't avoid minting on the different addresses, but it is always helpful. It is also required because of max single transaction gas limits on the blockchain. For now, the maximum amount of tokens per address per one transaction is 55. 
+
+Then you can provide the royalties value. Use standard percent here, so 5 is a 5%. 
+
+Then you can give the tags for the collection, and at the end, you can also provide the [provenance hash](https://medium.com/coinmonks/the-elegance-of-the-nft-provenance-hash-solution-823b39f99473). It will also be queryable later.
 
 The following mandatory command which you would use is issuing the collection token. You can do this by running `elven-tools nft-minter issue-collection-token`. The token will be issued, and all will be saved in the `output.json` file in the same directory. Here you will be asked about the name of the collection and the ticker. It looks like that:
 
@@ -120,6 +142,11 @@ Transaction: https://devnet-explorer.elrond.com/transactions/b156ebc9f91a75c56ee
 ```
 
 You would also need to call the `elven-tools nft-minter shuffle` at least once. This one is accessible for everyone. Everyone can call it to change the following index, which will be minted without knowing precisely what it will be.
+
+```bash
+elven-tools nft-minter shuffle
+Transaction: https://devnet-explorer.elrond.com/transactions/c9248963f37e95ce81e58b06a6a8edc2872f48919302ca8d2914dcf3107aac19
+```
 
 The following steps can be different on what you want to achieve. You can start minting directly or set up so-called 'drops' where you will define how many tokens will be minted in one drop. You can also always start or pause the minting process. What is necessary is that the contract will always mint randomly in all cases. Let's see how it looks when we want just to start the minting: `elven-tools nft-minter start-minting` and `elven-tools nft-minter mint` You will be asked to provide how many tokens you would wish to mint. Remember that the Smart Contract will have limits per one address. See how to check them later in this article.
 
@@ -178,23 +205,25 @@ If you need some help working with the Smart Contract in the Elrond ecosystem, p
 
 ### How to use the configuration file?
 
-The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source, plus maybe after modifications functions names and gas limit for them. All default values are defined [here](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of such a configuration file.
+The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source. Plus, maybe after some modifications, you would like to change the functions names and gas limit. All default values are defined [here](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of how to overwrite them from outside of the lib itself.
 
-The file should be named `.elventoolsrc,` or take any compatible name from the [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) project. The main id should be elventools.
+The configuration file should be named `.elventoolsrc,` or take any compatible name from the [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) project. The main handle should be `elventools`.
 
 ```json
 {
-    "chain": "devnet",
+    "chain": "testnet",
     "nftMinterSc": {
-        "version": "main",
+        "version": "v1.2.0",
         "mintFnName": "mintMe"
     }
 }
 ```
 
-In the example above, we define the chain as the 'devnet' (set by default), and we also define the version for the Smart Contract, which is its main' (selected by default) branch in its repository. It can also be a tag name. Then we also define the new name for the 'mint' function. You can also change names for other functions and set up different gas limits for them.
+In the example above, we define the chain as the 'testnet' (devnet is set by default), and we also define the version for the Smart Contract, `v1.2.0` (the last tag name should always be selected as default). It can also be a branch name. Then we also define the new name for the 'mint' function. You can also change names for other functions and set up different gas limits.
 
 **You will find all possible options [here](/docs/cli-introduction.html#custom-configuration-options).**
+
+Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
 ### Good to know
 
