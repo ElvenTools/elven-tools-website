@@ -142,6 +142,30 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 
 Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
+### CLI for a buyer
+
+You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
+
+1. Install the CLI: `npm install elven-tools -g`
+2. Derive the PEM file of your wallet: `elven-tools derive-pem` You would need to pass your seed phrase here. No worries, you work on your computer. If it is safe, nothing leaves it because of the CLI too. Never share seed phrases and PEM files with anyone.
+3. Create a configuration file in the same directory as the generated walletKey.pem file. The configuration file should be named `.elventoolsrc`. Inside add:
+
+```
+{
+  "nftMinterSc": {
+    "deployNftMinterSC": "<nft_minter_smart_contract_address_here>",
+    "tokenSelingPrice": "<price_of_the_nft_here>"
+  }
+}
+```
+
+You would need only these two settings to be able to buy. Of course, the contract owner should prepare everything and start the minting process.
+
+The `tokenSelingPrice` here is a format with 18 zeros. So 1 EGLD is 1000000000000000000.
+The `deployNftMinterSC` here is an address of the contract. The owner should share it.
+
+4. The last would be to call the mint command: `elven-tools nft-minter mint`. You will be asked about the number of tokens to mint. There will be limits. You would know them. You can [query the contract to check them](/docs/sc-endpoints.html#smart-contract-queries).
+
 ### Limitations and caveats
 
 - there are main limitations related to the Smart Contract. Remember that it is most likely that this CLI tool won't be used only in a way that everyone would want to, be aware that you can always change the names of the endpoints in the Smart Contract. Then you can also use the config file and change them here in the CLI
