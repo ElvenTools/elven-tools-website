@@ -58,6 +58,16 @@ You can also take a more standard path and use [erdpy](https://docs.elrond.com/s
 - Remember that it is most likely that because of the open-source nature of this Smart Contract, it won't be used only in a way that everyone would want to, be aware that you can always change the names of the endpoints in the Smart Contract. You can even deploy a couple of them. In the last minutes before the mint decide to use one of them. This will limit the bots. Remember always to inform which one is the official one.
 - Smart Contract in version 1 doesn't have many mechanisms which will strongly limit unwanted behaviors. It only implements random minting, but in version 2, there will be more mechanisms for fair launches.
 
+### Issues and ideas
+
+Please post issues and ideas [here](https://github.com/juliancwirko/elven-nft-minter-sc/issues).
+
+### Contact
+
+- [Telegram](https://t.me/juliancwirko)
+- [Twitter](https://twitter.com/JulianCwirko)
+- julian.cwirko@gmail.com
+
 <div class="next-page-link">
   Next: <a href="/docs/sc-endpoints.html">SC endpoints review</a>
 </div>
