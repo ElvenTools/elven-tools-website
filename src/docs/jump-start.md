@@ -18,7 +18,7 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 
 ### TL;DR
 
-1. `npm install -g elven-tools`
+1. `npm install -g elven-tools` -> install the npm library (you would need to have Node configured on the system)
 2. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
 3. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
 4. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
