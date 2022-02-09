@@ -18,13 +18,14 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 
 ### TL;DR
 
-1. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
-2. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
-3. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
-4. `elven-tools nft-minter set-roles` -> roles for the issued token
-5. `elven-tools nft-minter shuffle` -> this one should be called at least one. It can be called at any time by anyone
-6. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
-7. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
+1. `npm install -g elven-tools`
+2. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
+3. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
+4. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
+5. `elven-tools nft-minter set-roles` -> roles for the issued token
+6. `elven-tools nft-minter shuffle` -> this one should be called at least one. It can be called at any time by anyone
+7. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
+8. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
 
 ### Longer step-by-step guides
 
