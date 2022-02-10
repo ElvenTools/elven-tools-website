@@ -83,8 +83,7 @@ elven-tools deploy nft-minter
  … 10000
 ✔ Provide the seling price (ex. 0.5 for 0.5 EGLD):
  … 0.01
-✔ Total tokens limit per one address per whole collection
-Keep it low. Max 55 because of single transaction gas limits:
+✔ Total tokens limit per one address per whole collection:
  … 6
 ✔ Provide the royalties value (ex. 20 for 20%) [optional]:
  … 5
@@ -113,7 +112,7 @@ After that, you will provide the total amount of tokens in your collection.
 
 Next is the selling price. You can use the standard format here. For example, 0.5 is 0.5 EGLD.
 
-Then you would need to define how many tokens one address can mint. It is usually used to prevent a big player from buying the almost whole collection. Of course, it doesn't avoid minting on the different addresses, but it is always helpful. It is also required because of max single transaction gas limits on the blockchain. For now, the maximum amount of tokens per address per one transaction is 55. 
+Then you would need to define how many tokens one address can mint. It is usually used to prevent a big player from buying the almost whole collection. Of course, it doesn't avoid minting on the different addresses, but it is always helpful.
 
 Then you can provide the royalties value. Use standard percent here, so 5 is a 5%. 
 
