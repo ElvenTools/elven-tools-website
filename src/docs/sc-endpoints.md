@@ -45,7 +45,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - [changeBaseCids](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L199) - You can change the CIDs for images and metadata, but only when there is no NFTs minted yet. Otherwise, it doesn't make sense because the collection will be unsynchronized.
 - [setNewTokensLimitPerAddress](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L217) - You can change the limit of tokens per single address in any given time.
 - [giveaway](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L225) - You can organize the giveaway by providing the address and amount of tokens to send. It will mint and send tokens without the payment.
-- [claimScFunds](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L257) - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. 
+- [claimScFunds](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L257) - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from minting are directly sent to the contract owner after each mint.
 
 ### Endpoints for all
 
