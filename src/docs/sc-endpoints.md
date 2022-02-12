@@ -1,6 +1,6 @@
 ---
 layout: 'docs'
-title: 'Endpoints'
+title: 'SC Endpoints'
 publicationDate: '2022-01-24'
 tags:
   - smart contract

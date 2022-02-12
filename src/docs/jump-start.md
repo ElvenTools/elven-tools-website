@@ -166,7 +166,7 @@ Take into account possible limitations set on the Smart Contract (ex 3 for three
 Transaction: https://devnet-explorer.elrond.com/transactions/15194f779bebc31babdc7711f685a4bf0560c9a0484f6e644a40a1a0ee2f94ef
 ```
 
-Now let's see how to define a drop in which we will mint only 2500 of the whole 10k collection. `elven-tools nft-minter set-drop`. You will be asked to provide how many tokens per drop it should mint. After that, it will pause the minting process. You can also pause the minting at any time you want by `elven-tools nft-minter pause-minting`. You can also unset the drop by `elven-mint nft-minter unset-drop`. You'll find all the commands [here](/docs/cli-introduction.html), and some of them will be described later in this article.
+Now let's see how to define a drop in which we will mint only 2500 of the whole 10k collection. `elven-tools nft-minter set-drop`. You will be asked to provide how many tokens per drop it should mint. After that, it will pause the minting process. You can also pause the minting at any time you want by `elven-tools nft-minter pause-minting`. You can also unset the drop by `elven-mint nft-minter unset-drop`. You'll find all the commands [here](/docs/cli-commands.html), and some of them will be described later in this article.
 
 ```bash
 elven-tools nft-minter set-drop
@@ -260,7 +260,7 @@ This part of the docs had one purpose: to guide you through the process step by 
 
 From here you can read more detailed docs on:
 - [CLI configuration options](/docs/cli-introduction.html#custom-configuration-options)
-- [CLI possible commands](/docs/cli-introduction.html#all-commands)
+- [CLI possible commands](/docs/cli-commands.html)
 - [Smart Contract endpoints](/docs/sc-endpoints.html)
 
 If you still don't know how to use it, please feel free to contact me on [Twitter](https://twitter.com/JulianCwirko) or [Telegram](https://t.me/juliancwirko). You can also write an e-mail to me: julian.cwirko@gmail.com
