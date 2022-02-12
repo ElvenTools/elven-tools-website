@@ -240,8 +240,10 @@ get-drop-tokens-left
 get-nft-price
 get-nft-token-id
 get-nft-token-name
-get-tokens-limit-per-address
-get-tokens-minted-per-address
+get-tokens-limit-per-address-total
+get-tokens-minted-per-address-total
+get-tokens-limit-per-address-per-drop
+get-minted-per-address-per-drop
 ```
 
 With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.elrond.com/sdk-and-tools/rest-api/virtual-machine/).
