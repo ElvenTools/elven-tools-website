@@ -225,6 +225,15 @@ In the example above, we define the chain as the 'testnet' (devnet is set by def
 
 Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
+### Mainnet deployments
+
+**Important!** The same way as in the example above, you can configure deployment to `mainnet`. I don't recommend it yet, but if you know what you are doing, then remember about a couple of things:
+- make sure that you derive the walletKey.pem file from the seed from the mainnet wallet. Make sure that the computer you are using is safe, and no one will take the PEM file from you. Or/and seed phrase,
+- change the `chain` in the config file to the `mainnet`,
+- be careful with Smart Contract versions. By default, the latest version of the CLI will use the newest version of the Smart Contract. Remember that if you have .wasm and .abi files in the `sc/nft-minter` directory, then they will be used instead of the ones from the repository,
+- test the whole process 'million' times on the devnet, test with small amounts and big amounts, with multiple wallets as buyers, test queries and transactions, buy to the limits, to test them too,
+- **I can't provide individual support**, but I will always try to help
+
 ### Good to know
 
 The Elven Tools CLI can list all the available commands for every subcommand. You can do: `elven-tools --help` or `elven-tools nft-minter --help`. You can always check the installed version by `elven-tools --version`.
