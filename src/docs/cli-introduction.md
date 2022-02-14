@@ -106,7 +106,15 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "claimScFundsGasLimit": 6000000,
     "populateIndexesBaseGasLimit": 5000000,
     "populateIndexesMaxBatchSize": 5000,
-    "populateIndexesFnName": "populateIndexes"
+    "populateIndexesFnName": "populateIndexes",
+    "populateAllowlistFnName": "populateAllowlist",
+    "populateAllowlistBaseGasLimit": 6000000,
+    "getAllowlistFnName": "getAllowlistSize",
+    "isAllowlistEnabledFnName": "isAllowlistEnabled",
+    "getAllowlistAddressCheckFn": "getAllowlistAddressCheck",
+    "enableAllowlistFnName": "enableAllowlist",
+    "disableAllowlistFnName": "disableAllowlist",
+    "enableDisableAllowlistGasLimit": 6000000,
   }
 }
 ```

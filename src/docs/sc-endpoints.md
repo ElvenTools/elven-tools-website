@@ -18,52 +18,61 @@ Below you'll find all endpoints with a short description. You can always see the
 
 Please check all attributes for each endpoint in the linked code line in the repository. It is all open-source.
 
+You'll find all the endpoints here: [lib.rs](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs).
+
 ### Setup endpoints
 
 These are the required operations you would need to perform once always when configuring a new collection and Smart Contract. Check the CLI tool to simplify the work required.
 
-- [init](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L22) - standard init endpoint, it will be triggered on deployment and upgrade
-- [populateIndexes](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L271) - A very important endpoint. It populates the VecMapper with indexes to mint. You would need to split the number of total tokens provided when deploying the contract into batches of 5000 max. The split is required because of the max gas limits. When using the Elven Tools CLI, the usage of this endpoint will be hidden when deploying. It will be done automatically. You won't mint if the indexes are not correctly populated. This operation is done only once with the number of transactions depending on the total amount of tokens. This additional configuration step gives us a performant way of randomly minting because the base is a VecMapper, and we use `swap_remove` there. I found it the simplest and most performant way of doing that.
-- [issueToken](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L72) - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection. You can read more about it [here](https://docs.elrond.com/developers/nft-tokens/#issuance-of-non-fungible-tokens)
-- [setLocalRoles](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L104) - Set roles set only one role for now. The required one for creating the NFTs.
-- [shuffle](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L480) - this one is not owner only because everyone can call it, but it is required to call it at least once to be able to start minting
-- [startMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L129) - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
+- `init` - standard init endpoint, it will be triggered on deployment and upgrade
+- `populateIndexes` - A very important endpoint. It populates the VecMapper with indexes to mint. You would need to split the number of total tokens provided when deploying the contract into batches of 5000 max. The split is required because of the max gas limits. When using the Elven Tools CLI, the usage of this endpoint will be hidden when deploying. It will be done automatically. You won't mint if the indexes are not correctly populated. This operation is done only once with the number of transactions depending on the total amount of tokens. This additional configuration step gives us a performant way of randomly minting because the base is a VecMapper, and we use `swap_remove` there. I found it the simplest and most performant way of doing that.
+- `issueToken` - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection.
+- `setLocalRoles` - Set roles set only one role for now. The required one for creating the NFTs.
+- `shuffle` - this one is not owner only because everyone can call it, but it is required to call it at least once to be able to start minting
+- `startMinting` - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
 
 ### Only owner endpoints
 
 Only the owner of the Smart Contract can call them. In such a Smart Contract, there are quite a lot of them. Some of them are mandatory for the initial Smart Contract setup. See above. To keep everything in order, they are also copied here.
 
- - [init](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L22) - standard init endpoint, it will be triggered on deployment and upgrade
- - [populateIndexes](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L271) - A very important endpoint. It populates the VecMapper with indexes to mint. You would need to split the number of total tokens provided when deploying the contract into batches of 5000 max. The split is required because of the max gas limits. When using the Elven Tools CLI, the usage of this endpoint will be hidden when deploying. It will be done automatically. You won't mint if the indexes are not correctly populated. This operation is done only once with the number of transactions depending on the total amount of tokens. This additional configuration step gives us a performant way of randomly minting because the base is a VecMapper, and we use `swap_remove` there. I found it the simplest and most performant way of doing that.
-- [issueToken](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L72) - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection. You can read more about it [here](https://docs.elrond.com/developers/nft-tokens/#issuance-of-non-fungible-tokens)
-- [setLocalRoles](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L104) - Set roles set only one role for now. The required one for creating the NFTs. 
-- [pauseMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L120) - You can pause the minting process in any moment you need. 
-- [startMinting](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L129) - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
-- [setDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L139) - You can set the 'drop' by defining how many tokens per drop will be minted 
-- [unsetDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L179) - You can unset the drop in any time. Minting will continue without limits.
-- [setNewPrice](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L190) - You can change the price for each NFT at any time. The best is to do this when configuring the next drop.
-- [changeBaseCids](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L199) - You can change the CIDs for images and metadata, but only when there is no NFTs minted yet. Otherwise, it doesn't make sense because the collection will be unsynchronized.
-- [setNewTokensLimitPerAddress](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L217) - You can change the limit of tokens per single address in any given time.
-- [giveaway](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L225) - You can organize the giveaway by providing the address and amount of tokens to send. It will mint and send tokens without the payment.
-- [claimScFunds](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L257) - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from minting are directly sent to the contract owner after each mint.
+ - `init` - standard init endpoint, it will be triggered on deployment and upgrade
+ - `populateIndexes` - A very important endpoint. It populates the VecMapper with indexes to mint. You would need to split the number of total tokens provided when deploying the contract into batches of 5000 max. The split is required because of the max gas limits. When using the Elven Tools CLI, the usage of this endpoint will be hidden when deploying. It will be done automatically. You won't mint if the indexes are not correctly populated. This operation is done only once with the number of transactions depending on the total amount of tokens. This additional configuration step gives us a performant way of randomly minting because the base is a VecMapper, and we use `swap_remove` there. I found it the simplest and most performant way of doing that.
+- `issueToken` - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection.
+- `setLocalRoles` - Set roles set only one role for now. The required one for creating the NFTs. 
+- `pauseMinting` - You can pause the minting process in any moment you need. 
+- `startMinting` - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
+- `setDrop` - You can set the 'drop' by defining how many tokens per drop will be minted 
+- `unsetDrop` - You can unset the drop in any time. Minting will continue without limits.
+- `setNewPrice` - You can change the price for each NFT at any time. The best is to do this when configuring the next drop.
+- `changeBaseCids` - You can change the CIDs for images and metadata, but only when there is no NFTs minted yet. Otherwise, it doesn't make sense because the collection will be unsynchronized.
+- `setNewTokensLimitPerAddress` - You can change the limit of tokens per single address in any given time.
+- `giveaway` - You can organize the giveaway by providing the address and amount of tokens to send. It will mint and send tokens without the payment.
+- `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from minting are directly sent to the contract owner after each mint.
+- `populateAllowlist` - You can set up the allowlist by populating the storage with addresses. Keep 250 addresses as max per one transaction. Otherwise, it could reach the max gas limit.
+- `enableAllowlist` - You can enable to allowlist. Only then will it work. Remember about that.
+- `disableAllowlist` - Tou can disable the allowlist and keep standard minting functionality
+
 
 ### Endpoints for all
 
-- [mint](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L307) - The main mint/buy function. The smart contract works like a candy machine. You pay, and it randomly mints the NFT for you. Then it sends it into your wallet. The NFTs on the Elrond network are ESDT standardized tokens.
-- [shuffle](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L480) - To be more transparent, the Smart Contract has a public endpoint that allows everyone to trigger the shuffling mechanism which is also triggered after every mint. This additional functionality ensures that the process is random, and anyone can set the following index.
+- `mint` - The main mint/buy function. The smart contract works like a candy machine. You pay, and it randomly mints the NFT for you. Then it sends it into your wallet. The NFTs on the Elrond network are ESDT standardized tokens.
+- `shuffle` - To be more transparent, the Smart Contract has a public endpoint that allows everyone to trigger the shuffling mechanism which is also triggered after every mint. This additional functionality ensures that the process is random, and anyone can set the following index.
 
 ### Smart Contract queries
 
-- [getDropTokensLeft](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L658) - This query will return the tokens left for the active drop.
-- [getTotalTokensLeft](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L667) - This query will return total amount of tokens left to mint 
-- [getNftTokenId](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L692) - This query will return the collection token ticker
-- [getNftTokenName](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L696) - This query will return the collection token name
-- [getNftPrice](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L700) - This query will return the price for a single NFT
-- [getTokensLimitPerAddressTotal](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L708) - This query will return the limit of tokens for a single address as total for the whole collection
-- [getMintedPerAddressTotal](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L712) - This query will return tokens already minted per single address as total for the whole collection
-- [getTokensLimitPerAddressPerDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L716) - This query will return the limit of tokens for a single address per drop
-- [getMintedPerAddressPerDrop](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L676) - This query will return tokens already minted per single address per drop
-- [getProvenanceHash](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs#L704) - This query will show the provenance hash if provided.
+- `getDropTokensLeft` - This query will return the tokens left for the active drop.
+- `getTotalTokensLeft` - This query will return total amount of tokens left to mint 
+- `getNftTokenId` - This query will return the collection token ticker
+- `getNftTokenName` - This query will return the collection token name
+- `getNftPrice` - This query will return the price for a single NFT
+- `getTokensLimitPerAddressTotal` - This query will return the limit of tokens for a single address as total for the whole collection
+- `getMintedPerAddressTotal` - This query will return tokens already minted per single address as total for the whole collection
+- `getTokensLimitPerAddressPerDrop` - This query will return the limit of tokens for a single address per drop
+- `getMintedPerAddressPerDrop` - This query will return tokens already minted per single address per drop
+- `getProvenanceHash` - This query will show the provenance hash if provided.
+- `getAllowlistAddressCheck` - This query will check if the provided address is on the allowlist.
+- `getAllowlistSize` - This is mainly to check if the allowlist has the correct size after populating it with addresses.
+- `isAllowlistEnabled` - This is an important check to ensure that the allowlist is enabled. Only then will it work.
 
 ### How to interact with endpoints
 

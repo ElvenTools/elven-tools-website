@@ -38,5 +38,11 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools nft-minter get-nft-token-name` - the Smart Contract query, returns the collection token name
 - `elven-tools nft-minter get-tokens-limit-per-address-total` - the Smart Contract query returns the tokens limit per address
 - `elven-tools nft-minter get-minted-per-address-total` - the Smart Contract query returns the number of tokens minted per one address
-- `get-minted-per-address-per-drop` - when the drop is configured, it will return the number of tokens minted per address per drop
-- `get-tokens-limit-per-address-per-drop` - when the drop is configured, it will return the total limit of tokens per address per drop
+- `elven-tools nft-minter get-minted-per-address-per-drop` - when the drop is configured, it will return the number of tokens minted per address per drop
+- `elven-tools nft-minter get-tokens-limit-per-address-per-drop` - when the drop is configured, it will return the total limit of tokens per address per drop
+- `elven-tools nft-minter populate-allowlist` - the command for preparing the allowlist, you will be able to read it for `sc/nft-minter/allowlist.json` file or you can provide addresses by hand. There is a limit of 250 addresses per transaction
+- `elven-tools nft-minter enable-allowlist` - enable the allowlist, it won't be onsidered unles enabled even when it is filled with addresses,
+- `elven-tools nft-minter disable-allowlist` - the option to disable the allowlist,
+- `elven-tools nft-minter get-allowlist-size` - check the size of the allowlist,
+- `elven-tools nft-minter is-allowlist-enabled` - check if allowlist is currently enabled,
+- `elven-tools nft-minter get-allowlist-address-check` - check if provided address is included in the allowlist,
