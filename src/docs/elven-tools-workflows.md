@@ -4,12 +4,12 @@ title: 'Elven Tools workflows'
 publicationDate: '2022-01-25'
 tags:
   - articles
-excerpt: ""
+excerpt: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs."
 ogTitle: "Elven Tools workflows"
-ogDescription: ""
+ogDescription: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs."
 ogUrl: "https://www.elven.tools/docs/elven-tools-workflows.html"
 twitterTitle: "Elven Tools workflows"
-twitterDescription: ""
+twitterDescription: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs."
 twitterUrl: "https://www.elven.tools/docs/elven-tools-workflows.html"
 ---
 
