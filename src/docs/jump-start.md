@@ -14,7 +14,7 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
-<div class="docs-warning-box">Please be aware that there are not enough tests and no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it and test it on the devnet. Check it back a million times before you'll use it on the mainnet. Please report all the issues and ideas.</div>
+<div class="docs-warning-box">Please be aware that there are not enough tests and no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it and test it on <span class="strong-text">both</span> the <span class="strong-text">devnet</span> and <span class="strong-text">testnet</span>. Check it back a million times before you'll use it on the mainnet. Please report all the <a href="https://github.com/juliancwirko/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
 
 <div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="#custom-api-endpoints">here</a>.</div>
 

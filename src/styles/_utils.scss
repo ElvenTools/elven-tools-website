@@ -48,6 +48,14 @@ img[src$='shadowed'] {
   font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  .underlined-text {
+    text-decoration: underline;
+  }
+
+  .strong-text {
+    font-weight: 600;
+  }
 }
 
 .docs-box-centered {
