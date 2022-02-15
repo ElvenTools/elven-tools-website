@@ -4,12 +4,12 @@ title: 'Elven Tools workflows'
 publicationDate: '2022-01-25'
 tags:
   - articles
-excerpt: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs. All in a randomized way."
+excerpt: "How exactly should one work with the Elven Tools? Let's see the options on how you could randomly mint and distribute your NFTs"
 ogTitle: "Elven Tools workflows"
-ogDescription: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs. All in a randomized way."
+ogDescription: "How exactly should one work with the Elven Tools? Let's see the options on how you could randomly mint and distribute your NFTs"
 ogUrl: "https://www.elven.tools/docs/elven-tools-workflows.html"
 twitterTitle: "Elven Tools workflows"
-twitterDescription: "How exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs. All in a randomized way."
+twitterDescription: "How exactly should one work with the Elven Tools? Let's see the options on how you could randomly mint and distribute your NFTs"
 twitterUrl: "https://www.elven.tools/docs/elven-tools-workflows.html"
 ---
 
