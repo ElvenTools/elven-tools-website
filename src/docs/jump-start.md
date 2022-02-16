@@ -244,7 +244,7 @@ It is good to build the Smart Contract locally and deploy it from the file syste
 ├── walletKey.pem
 ```
 
-As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building the Smart Contract locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter` and also run the `elven-tools` in the same directory.
+As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building the Smart Contract locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter`.
 
 If you need some help working with the Smart Contract in the Elrond ecosystem, please check docs and my article [here](https://www.julian.io/articles/elrond-smart-contracts.html).
 
