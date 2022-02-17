@@ -29,6 +29,12 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 7. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
 8. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
 
+There is also a video which shows it. So I recommend you to check it out:
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/resGP6a7_34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### Longer step-by-step guides
 
 The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
@@ -323,11 +329,7 @@ Elven Tools will also provide the landing page for the NFT launch, which will be
 
 ### Where to go from here?
 
-This part of the docs had one purpose: to guide you through the process step by step. There is also a video which shows it. So I recommend you to check it out:
-
-<div class="embeded-media-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/szkNE_qOy6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+This part of the docs had one purpose: to guide you through the process step by step. 
 
 From here you can read more detailed docs on:
 - [CLI configuration options](/docs/cli-introduction.html#custom-configuration-options)
