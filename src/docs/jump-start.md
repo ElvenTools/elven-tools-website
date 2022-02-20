@@ -58,7 +58,7 @@ elven-tools derive-pem
 File saved as walletKey.pem
 ```
 
-Derive PEM is a command which will take your seed phrase and create the key file for signing every transaction. Without it, you want to be able to use the elven-tools cli. The good thing is that you will need to do this only once. And then run every command in the same directory where the `walletKey.pem` file will land after running this command.
+Derive PEM is a command which will take your seed phrase and create the key file for signing every transaction. Without it, you won't be able to use the elven-tools cli. The good thing is that you will need to do this only once. And then run every command in the same directory where the `walletKey.pem` file will land after running this command.
 
 <div class="docs-error-box">
   Don't share your PEM file with anyone. It is the main key to your wallet—the same as the seed phrases. The elven-tools don't send any data to the Internet. It works with it only in your local file system.
