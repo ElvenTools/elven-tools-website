@@ -322,6 +322,7 @@ get-tokens-minted-per-address-total
 get-tokens-limit-per-address-per-drop
 get-minted-per-address-per-drop
 ```
+...and more, check `elven-tools nft-minter --help` for the whole list.
 
 With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.elrond.com/sdk-and-tools/rest-api/virtual-machine/).
 

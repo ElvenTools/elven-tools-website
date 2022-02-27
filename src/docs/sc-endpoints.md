@@ -58,7 +58,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `mint` - The main mint/buy function. The smart contract works like a candy machine. You pay, and it randomly mints the NFT for you. Then it sends it into your wallet. The NFTs on the Elrond network are ESDT standardized tokens.
 - `shuffle` - To be more transparent, the Smart Contract has a public endpoint that allows everyone to trigger the shuffling mechanism which is also triggered after every mint. This additional functionality ensures that the process is random, and anyone can set the following index.
 
-### Smart Contract queries
+### Smart Contract queries (also for all, by design)
 
 - `getDropTokensLeft` - This query will return the tokens left for the active drop.
 - `getTotalTokensLeft` - This query will return total amount of tokens left to mint 
@@ -73,6 +73,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `getAllowlistAddressCheck` - This query will check if the provided address is on the allowlist.
 - `getAllowlistSize` - This is mainly to check if the allowlist has the correct size after populating it with addresses.
 - `isAllowlistEnabled` - This is an important check to ensure that the allowlist is enabled. Only then will it work.
+- `isDropActive` - This is for checking if there is currently a drop active.
 
 ### How to interact with endpoints
 

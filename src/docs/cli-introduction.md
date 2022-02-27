@@ -116,6 +116,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "enableAllowlistFnName": "enableAllowlist",
     "disableAllowlistFnName": "disableAllowlist",
     "enableDisableAllowlistGasLimit": 6000000,
+    "isDropActiveFunctionName": "isDropActive"
   }
 }
 ```

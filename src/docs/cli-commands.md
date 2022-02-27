@@ -46,3 +46,4 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools nft-minter get-allowlist-size` - check the size of the allowlist,
 - `elven-tools nft-minter is-allowlist-enabled` - check if allowlist is currently enabled,
 - `elven-tools nft-minter get-allowlist-address-check` - check if provided address is included in the allowlist,
+- `elven-tools nft-minter is-drop-active` - checks if there is an active drop at the moment
