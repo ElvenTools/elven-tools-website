@@ -168,6 +168,8 @@
     font-size: 13px;
     text-decoration: none;
     color: $color-main-dark;
+    line-height: 1.1;
+    display: inline-block;
 
     &:hover {
       color: $color-main-contrast;
@@ -182,6 +184,7 @@
 .docs-sidebar-right-item {
   padding: 0 25px;
   position: relative;
+  margin: 3px 0;
 
   &.js-docs-active-header {
     a {

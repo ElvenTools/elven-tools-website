@@ -39,21 +39,9 @@ For now it is designed to deploy the contract: [elven-nft-minter-sc](https://git
 
 **Steps for deploying and interacting with the Smart Contract:**
 
-Be aware that, by default, all will happen on the devnet. See below how to change it. Also check out the [Jump start section](/docs/jump-start.html).
+Check the detailed steps here: [Jump start section](/docs/jump-start.html).
 
-First steps:
-
-1. `elven-tools derive-pem` - you would need to generate the PEM file for all further operations, do not share it with anyone. It works similar to `erdpy wallet derive`. It will take the keyphrase and generate the `walletKey.pem` file in the same directory.
-2. `elven-tools deploy nft-minter` - by default, the tools will take the abi and wasm source code and deploy directly from the defined tag branch of the smart contract. There are two options to work with it, though. You can configure a different branch or tag, or you can download the files and work on them locally.
-  - For changing the branch, for example to `development` create the `.elventoolsrc` file in the same directory where the `walletKey.pem` file is located, put there `{ "nftMinter": { "version": "development" } }`. It can be also a tag name of the release in this [GitHub repository](https://github.com/juliancwirko/elven-nft-minter-sc).
-  - If you would like to work locally. For example, you cloned the Smart Contract and worked on your version. You can create a directory structure next to the `walletKey.pem`. It should look like: `sc/nft-minter`. Here you will need to put the .wasm and .abi.json files which you can get from the [output]() directory of the Smart Contract.
-  - This command takes a couple of arguments asking for them with prompts.
-3 When the Smart Contract (check it in the explorer) is deployed, you need to create your collection token. You can do this by `elven-tools nft-minter issue-collection-token`. You will be asked for the name and the ticker. Keep the name without spaces and the ticker short and capitalized.
-4. Next step would be to add a 'create' role. You can do this by `elven-tools nft-minter set-roles`
-5. Then you would need to call at least once the `elven-tools nft-minter shuffle` to choose the first index to mint.
-6. Then you can start the minting `elven-tools nft-minter start-minting` or setup a drop `elven-tools nft-minter set-drop` where the minting will be split into 'waves'. The first version of the Smart Contract mints randomly on demand and sends the NFT to the buyer. More advanced logic will land in version 2.
-7. You can also mint the tokens using the same or different `walletKey.pem` for that run `elven-tools nft-minter mint`.
-8. You can list all the commands using `elven-tools nft-minter --help`; below, you'll find all of them with short descriptions.
+Be aware that, by default, all will happen on the devnet. See [here](/docs/recipes.html#how-to-use-the-configuration-file) how to change it.
 
 Check all commands [here](/docs/cli-commands.html)
 
@@ -124,30 +112,6 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 **Whole config with default values:** [config.ts](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts)
 
 Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
-
-### CLI for a buyer
-
-You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
-
-1. Install the CLI: `npm install elven-tools -g`
-2. Derive the PEM file of your wallet: `elven-tools derive-pem` You would need to pass your seed phrase here. No worries, you work on your computer. If it is safe, nothing leaves it because of the CLI too. Never share seed phrases and PEM files with anyone.
-3. Create a configuration file in the same directory as the generated walletKey.pem file. The configuration file should be named `.elventoolsrc`. Inside add:
-
-```
-{
-  "nftMinterSc": {
-    "deployNftMinterSC": "<nft_minter_smart_contract_address_here>",
-    "tokenSelingPrice": "<price_of_the_nft_here>"
-  }
-}
-```
-
-You would need only these two settings to be able to buy. Of course, the contract owner should prepare everything and start the minting process.
-
-The `tokenSelingPrice` here is a format with 18 zeros. So 1 EGLD is 1000000000000000000.
-The `deployNftMinterSC` here is an address of the contract. The owner should share it.
-
-4. The last would be to call the mint command: `elven-tools nft-minter mint`. You will be asked about the number of tokens to mint. There will be limits. You would know them. You can [query the contract to check them](/docs/sc-endpoints.html#smart-contract-queries).
 
 ### Limitations and caveats
 

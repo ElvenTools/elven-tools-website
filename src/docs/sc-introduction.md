@@ -16,7 +16,7 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 
 NFT minter Smart Contract v1
 
-<div class="docs-error-box ">Be aware that the Smart Contract doesn't have any audits, and because it is pretty new, there wasn't a lot of testing either. You will use it at your own risk!</div>
+<div class="docs-info-box ">Be aware that the Smart Contract doesn't have any audits. It has complete functionality for the first version, but it is still under active development. As for the mainnet, use it at your own risk! Test it first on the devnet/testnet.</div>
 
 You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens from a previously configured collection. It does it in a randomized way. 
 

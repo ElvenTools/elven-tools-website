@@ -14,9 +14,9 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
-<div class="docs-warning-box">Please be aware that there are not enough tests and no audits! As for the mainnet, use the tools at your own risk! The code is open source. You can always validate it and test it on <span class="strong-text">both</span> the <span class="strong-text">devnet</span> and <span class="strong-text">testnet</span>. Check it back a million times before you'll use it on the mainnet. Please report all the <a href="https://github.com/juliancwirko/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
+<div class="docs-info-box">It has complete functionality for the first version, but it is still under active development. As for the mainnet, use it at your own risk! Test it first on the devnet/testnet. Please report all the <a href="https://github.com/juliancwirko/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
 
-<div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="#custom-api-endpoints">here</a>.</div>
+<div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="/docs/recipes.html#custom-api-endpoints">here</a>.</div>
 
 ### TL;DR
 
@@ -174,133 +174,7 @@ Take into account possible limitations set on the Smart Contract (ex 3 for three
 Transaction: https://devnet-explorer.elrond.com/transactions/15194f779bebc31babdc7711f685a4bf0560c9a0484f6e644a40a1a0ee2f94ef
 ```
 
-Now let's see how to define a drop in which we will mint only 2500 of the whole 10k collection. `elven-tools nft-minter set-drop`. You will be asked to provide how many tokens per drop it should mint. After that, it will pause the minting process. You can also pause the minting at any time you want by `elven-tools nft-minter pause-minting`. You can also unset the drop by `elven-tools nft-minter unset-drop`. You'll find all the commands [here](/docs/cli-commands.html), and some of them will be described later in this article.
-
-```bash
-elven-tools nft-minter set-drop
-✔ Provide the amount of the tokens for the drop:
- … 2500
-Transaction: https://devnet-explorer.elrond.com/transactions/915a9b115d01dbc0026e91ab889284018bd51cee8a030804dbb5da600c1bdd25
-
-elven-tools nft-minter mint
-✔ Provide how many tokens should be minted.
-Take into account possible limitations set on the Smart Contract (ex 3 for three tokens):
- … 2
-✔ Are you sure that you want to proceed?
- › Yes
-Transaction: https://devnet-explorer.elrond.com/transactions/8954262fea15e63705d696fcfeb92874a4c10239703b5a6631fd7f989c494ba8
-```
-
-You can also set up the allowlist. You can do this by placing the JSON file called `allowlist.json` in the `sc/nft-minter` directory. It should have the list of addresses in such a form:
-
-```json
-[
-  "erd1.......",
-  "erd1.......",
-  "erd1.......",
-  "erd1.......",
-]
-```
-
-There should be a maximum of 250 addresses per transaction. You can make a couple of transactions if you need to. But remember to update the file on each.
-
-You want to add only a couple of addresses. You can do this without the file, then the CLI will request it through a prompt where you need to provide them one by one, separated using a comma.
-
-Let's see what it looks like in both cases:
-
-```bash
-elven-tools nft-minter populate-allowlist
- 
-Populating addresses from the file: sc/nft-minter/allowlist.json
- 
-✔ Are you sure that you want to proceed?
- › Yes
-Transaction: https://devnet-explorer.elrond.com/transactions/4a3b63edc1cf00c8025c025926db033964e4625fa5ddcd316b880787f3c8094f
-```
-
-```bash
-elven-tools nft-minter populate-allowlist
- 
-There is no file with the addresses here: sc/nft-minter/allowlist.json
-You will be providing addresses by hand.
- 
-✔ Are you sure that you want to proceed?
- › Yes
-✔ Provide the list of addresses. Max 250 addresses per one transaction.
-You can add more by sending more transactions. Separate them with comma (","):
- … erd1puseeussfftajfj92ezqtfp0ca6u0s2thu7n64cyw6m37ef8dh0sekwt27, erd18yxxeuf2fkwlwgrnc3chjyf4gl3429qpp5fqynhzf2gn6hs3h8dqu7zt7n
-Transaction: https://devnet-explorer.elrond.com/transactions/f8bf7de010629e32008bebb1ba5681a008f23afaf949e0e565ea3bbf41bd80fd
-```
-
 Check out examples of scenarios with all that possibilities: [Elven Tools workflows](/docs/elven-tools-workflows.html).
-
-### How to work with the Smart Contract locally?
-
-In most cases, it is good to provide some modifications for the final version of the Smart Contract, such as changing the functions' names to make life harder for the bot's owners. 
-
-It is good to build the Smart Contract locally and deploy it from the file system in such a case. It is possible by default with the Elven Tools CLI. You need to prepare the directory `sc/nft-minter` in the same place where you already have the `walletKey.pem` file and later the `output.json` file. The tree should look like that:
-
-```bash
-.
-├── output.json
-├── sc
-│   └── nft-minter
-│       ├── elven-nft-minter.abi.json
-│       └── elven-nft-minter.wasm
-├── walletKey.pem
-```
-
-As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building the Smart Contract locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter`.
-
-If you need some help working with the Smart Contract in the Elrond ecosystem, please check docs and my article [here](https://www.julian.io/articles/elrond-smart-contracts.html).
-
-### How to use the configuration file?
-
-The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source. Plus, maybe after some modifications, you would like to change the functions names and gas limit. All default values are defined [here](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of how to overwrite them from outside of the lib itself.
-
-The configuration file should be named `.elventoolsrc,` or take any compatible name from the [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) project. The main handle should be `elventools`.
-
-```json
-{
-    "chain": "testnet",
-    "nftMinterSc": {
-        "version": "v1.2.0",
-        "mintFnName": "mintMe"
-    }
-}
-```
-
-In the example above, we define the chain as the 'testnet' (devnet is set by default), and we also define the version for the Smart Contract, `v1.2.0` (the last tag name should always be selected as default). It can also be a branch name. Then we also define the new name for the 'mint' function. You can also change names for other functions and set up different gas limits.
-
-**You will find all possible options [here](/docs/cli-introduction.html#custom-configuration-options).**
-
-Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
-
-### Mainnet deployments
-
-**Important!** The same way as in the example above, you can configure deployment to `mainnet`. I don't recommend it yet, but if you know what you are doing, then remember about a couple of things:
-- make sure that you derive the walletKey.pem file from the seed from the mainnet wallet. Make sure that the computer you are using is safe, and no one will take the PEM file from you. Or/and seed phrase,
-- change the `chain` in the config file to the `mainnet`,
-- be careful with Smart Contract versions. By default, the latest version of the CLI will use the newest version of the Smart Contract. Remember that if you have .wasm and .abi files in the `sc/nft-minter` directory, then they will be used instead of the ones from the repository,
-- test the whole process 'million' times on the devnet, test with small amounts and big amounts, with multiple wallets as buyers, test queries and transactions, buy to the limits, to test them too,
-- **I can't provide individual support**, but I will always try to help
-
-### Custom API endpoints
-
-It is always advisable to use the custom API endpoints custom proxies for production-ready apps. Even with this tool, it is better to use the custom one. You can read more about how to set up your architecture [here](https://docs.elrond.com/integrators/observing-squad/).
-
-Suppose you don't have the resources to do that. You can find third-party services which do that as a service.
-
-To switch to your custom API endpoint, you would need to add in your `.elventoolsrc` configuration file:
-
-```
-{
-  "chain": "devnet",
-  "customProxyGateway": "https://devnet-api.elrond.com"
-}
-```
-
-Here is an example with the default API endpoint for the devnet. You can do the same for the testnet and mainnet.
 
 ### Good to know
 
@@ -333,6 +207,7 @@ Elven Tools will also provide the landing page for the NFT launch, which will be
 This part of the docs had one purpose: to guide you through the process step by step. 
 
 From here you can read more detailed docs on:
+- [Recipes](/docs/recipes.html)
 - [CLI configuration options](/docs/cli-introduction.html#custom-configuration-options)
 - [CLI possible commands](/docs/cli-commands.html)
 - [Smart Contract endpoints](/docs/sc-endpoints.html)
