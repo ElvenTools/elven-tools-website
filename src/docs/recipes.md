@@ -145,6 +145,10 @@ elven-tools nft-minter get-allowlist-address-check
 
 Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all SC endpoints [here](/docs/sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rdg6s7KHFt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### How to use drops
 
 The drops are, in simple words, batches of tokens to mint. You don't have to use them, but it is usually required because most projects usually split the collection into 'waves' of distribution.
@@ -180,6 +184,10 @@ They are self-explanatory, but you will find all descriptions under the links be
 
 Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all SC endpoints [here](/docs/sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ZERCb-c-BP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### How to use the giveaway
 
 The `giveaway` functionality is helpful when you want to give some tokens to a particular address. It can be because they are the team members or someone you want to thank. Remember that with Elven Tools, you can choose the specific token. It will still be randomly selected and minted. When using this functionality, there is no payment—only transaction fees.
@@ -189,6 +197,10 @@ You can give some tokens using the CLI's command `elven-tools nft-minter giveawa
 You can use this even when the minting process is paused, which is usable for the giveaway before the official minting is started.
 
 As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WH7kl3s7gdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ### How to claim dev rewards
 
