@@ -58,6 +58,10 @@ In the example above, we define the chain as the 'testnet' (devnet is set by def
 
 Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UlyTVa6oLuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### Mainnet deployments
 
 **Important!** The same way as in the example above, you can configure deployment to `mainnet`. I don't recommend it yet, but if you know what you are doing, then remember about a couple of things:
