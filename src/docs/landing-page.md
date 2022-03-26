@@ -17,7 +17,7 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 Landing page based on the [Next](https://nextjs.org/) framework.
 
 <div class="docs-info-box">
-  The landing page template is still in progress. There isn't any official repository yet.
+  The landing page template is still in progress. ETA: 04 Apr 2022!
 </div>
 
 ### Why Next?
