@@ -151,4 +151,4 @@ Another important thing is to keep in mind that even if you, as the collection c
 
 Hopefully, I was able to explain some basics and show you the path where you could start learning about decentralized storage and IPFS. The Elven Tools is prepared to consume the IPFS and keep the Elrond best practices so feel free to play around and test things.
 
-If you want to contact me, you will find all communication channels here: [www.elven.tools/about.html](www.elven.tools/about.html).
+If you want to contact me, you will find all communication channels here: [www.elven.tools/about.html](https://www.elven.tools/about.html).
