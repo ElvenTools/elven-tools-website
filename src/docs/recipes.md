@@ -220,6 +220,42 @@ There will also be a dedicated endpoint/command which will call the marketplaces
 
 As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
 
+### How to get owners addresses using the collection ticker
+
+From version 1.6.0 there is additional command `elven-tools collection-nft-owners`. It will allow getting owners' addresses, using only the collection ticker. It is useful, for example, when you want to do some promotional giveaway. The functionality will save the addresses in the `nft-collection-owners.json` where the command is triggered. 
+
+For now, the functionality does only that. Maybe in the future, it will be extended.
+
+Important: It will work only with the API endpoint, not the gateway. Elven Tools CLI, by default, uses the API endpoint. So it should work by default, but you need to remember that.
+
+How to use it? You need to use at least version 1.6.0 of the CLI. You can check it by `elven-tools -v`, and you would need to use the command `elven-tools collection-nft-owners`. Then there are three prompts. You would need to provide the collection ticker and answer two questions about whether you want to filter not unique addresses and smart contract addresses.
+
+Because of how the API works, we need to do calls with a max size of 100 items. Here we also have calls that are limited to 5 per second. You can change this limit in the configuration file. Check how [here](/docs/cli-introduction#custom-configuration-options). If you need to change this setting, in the config file, there should be an entry:
+
+```
+{
+  "collectionNftOwners": {
+    "apiCallsPerSecond": 5
+  }
+}
+```
+
+When is the address not unique? It is when one address will have more than one NFT token from the collection. See the example below:
+
+```
+elven-tools collection-nft-owners
+
+✔ Provide the collection ticker
+ … EAPES-8f3c1f
+✔ Do you want to include only unique addresses?
+ › Yes
+✔ Do you want to exclude smart contract addresses?
+ › Yes
+
+There is 10000 tokens in that collection.
+Done, 1082 addresses saved. Only uniq addresses. Without smart contract addresses.
+```
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.

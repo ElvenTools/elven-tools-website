@@ -105,6 +105,9 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "disableAllowlistFnName": "disableAllowlist",
     "enableDisableAllowlistGasLimit": 6000000,
     "isDropActiveFunctionName": "isDropActive"
+  },
+  "collectionNftOwners": {
+    "apiCallsPerSecond": 5
   }
 }
 ```
