@@ -256,6 +256,10 @@ There is 10000 tokens in that collection.
 Done, 1082 addresses saved. Only uniq addresses. Without smart contract addresses.
 ```
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Li1Lf6h-ksU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
