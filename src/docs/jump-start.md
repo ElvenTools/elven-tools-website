@@ -14,8 +14,6 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
-<div class="docs-info-box">It has complete functionality for the first version, but it is still under active development. As for the mainnet, use it at your own risk! Test it first on the devnet/testnet. Please report all the <a href="https://github.com/ElvenTools/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
-
 <div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="/docs/recipes.html#custom-api-endpoints">here</a>.</div>
 
 ### TL;DR
