@@ -26,7 +26,7 @@ npm install elven-tools -g
   - deploy the NFT minter Smart Contract on the Elrond blockchain
   - interact with the NFT minter Smart Contract on the Elrond blockchain
 
-For now it is designed to deploy the contract: [elven-nft-minter-sc](https://github.com/juliancwirko/elven-nft-minter-sc).
+For now it is designed to deploy the contract: [elven-nft-minter-sc](https://github.com/ElvenTools/elven-nft-minter-sc).
 
 ### How does it work? 
 
@@ -112,7 +112,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 }
 ```
 
-**Whole config with default values:** [config.ts](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts)
+**Whole config with default values:** [config.ts](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts)
 
 Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
 
@@ -123,7 +123,7 @@ Remember, you don't have to change the `config.ts` file. It is for library usage
 
 ### Issues and ideas
 
-Please post issues and ideas [here](https://github.com/juliancwirko/elven-tools-cli/issues).
+Please post issues and ideas [here](https://github.com/ElvenTools/elven-tools-cli/issues).
 
 ### Contact
 

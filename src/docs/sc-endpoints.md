@@ -14,11 +14,11 @@ twitterUrl: "https://www.elven.tools/docs/sc-endpoints.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/sc-endpoints.md"
 ---
 
-Below you'll find all endpoints with a short description. You can always see the complete code [here](https://github.com/juliancwirko/elven-nft-minter-sc).
+Below you'll find all endpoints with a short description. You can always see the complete code [here](https://github.com/ElvenTools/elven-nft-minter-sc).
 
 Please check all attributes for each endpoint in the linked code line in the repository. It is all open-source.
 
-You'll find all the endpoints here: [lib.rs](https://github.com/juliancwirko/elven-nft-minter-sc/blob/main/src/lib.rs).
+You'll find all the endpoints here: [lib.rs](https://github.com/ElvenTools/elven-nft-minter-sc/blob/main/src/lib.rs).
 
 ### Setup endpoints
 
@@ -88,7 +88,7 @@ Check the examples for `erdjs`:
 
 There will be also fully functional landing page which will use it.
 
-You can also check the [elven-tools-cli](https://github.com/juliancwirko/elven-tools-cli) source code, where I also used the erdjs SDK.
+You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-tools-cli) source code, where I also used the erdjs SDK.
 
 With the landing page, you will get all of these as components.
 

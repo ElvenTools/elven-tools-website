@@ -38,7 +38,7 @@ If you need some help working with the Smart Contract in the Elrond ecosystem, p
 
 ### How to use the configuration file
 
-The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source. Plus, maybe after some modifications, you would like to change the functions names and gas limit. All default values are defined [here](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of how to overwrite them from outside of the lib itself.
+The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source. Plus, maybe after some modifications, you would like to change the functions names and gas limit. All default values are defined [here](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of how to overwrite them from outside of the lib itself.
 
 The configuration file should be named `.elventoolsrc,` or take any compatible name from the [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) project. The main handle should be `elventools`.
 
@@ -303,7 +303,7 @@ The endpoint is required for the initial setup of the Smart Contract. You don't 
 
 Its task is to populate the VecMapper storage with the indexes. These indexes are used to handle the random minting process. Without them, it would be less performant to provide such functionality for many tokens.
 
-If you don't use the CLI, you need to perform this operation by hand after the Smart Contract is deployed. Remember that there will always be a limit per one transaction. You can check it in the [internal config file](https://github.com/juliancwirko/elven-tools-cli/blob/main/src/config.ts) search for `populateIndexesMaxBatchSize`. So basically, you would need to split the number of your tokens into more than one transaction if there is more of them than the limit.
+If you don't use the CLI, you need to perform this operation by hand after the Smart Contract is deployed. Remember that there will always be a limit per one transaction. You can check it in the [internal config file](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts) search for `populateIndexesMaxBatchSize`. So basically, you would need to split the number of your tokens into more than one transaction if there is more of them than the limit.
 
 There is also a CLI command because sometimes, something may go wrong. So then you will need to run the `elven-tools nft-minter populate-indexes` and provide the number of tokens keeping in mind the limits per transaction.
 

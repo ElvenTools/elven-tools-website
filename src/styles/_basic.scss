@@ -111,6 +111,10 @@ pre {
   display: flex;
   align-items: center;
   user-select: none;
+
+  img {
+    margin-top: -2px;
+  }
 }
 
 .main-menu-versions {

@@ -60,7 +60,7 @@ You can also take a more standard path and use [erdpy](https://docs.elrond.com/s
 
 ### Issues and ideas
 
-Please post issues and ideas [here](https://github.com/juliancwirko/elven-nft-minter-sc/issues).
+Please post issues and ideas [here](https://github.com/ElvenTools/elven-nft-minter-sc/issues).
 
 ### Contact
 

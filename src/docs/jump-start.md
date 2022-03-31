@@ -14,7 +14,7 @@ twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
-<div class="docs-info-box">It has complete functionality for the first version, but it is still under active development. As for the mainnet, use it at your own risk! Test it first on the devnet/testnet. Please report all the <a href="https://github.com/juliancwirko/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
+<div class="docs-info-box">It has complete functionality for the first version, but it is still under active development. As for the mainnet, use it at your own risk! Test it first on the devnet/testnet. Please report all the <a href="https://github.com/ElvenTools/elven-nft-minter-sc/issues" class="common-link">issues and ideas</a>.</div>
 
 <div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="/docs/recipes.html#custom-api-endpoints">here</a>.</div>
 
@@ -45,7 +45,7 @@ In the end, you will have a set of generated images and metadata JSON files corr
 
 First of all, you would need to install it globally. You need to set up the [Node](https://nodejs.org/en/) environment. The npm tool should be included. Then you would need to install the elven-tools CLI. You can do this by: `npm install -g elven-tools`.
 
-By default, the elven-tools cli will come with pre-configured options. The most important is the chain on which it works. It is set to the 'devnet' and the source of the minter Smart Contract. It is set to the 'main' branch of [this](https://github.com/juliancwirko/elven-nft-minter-sc) repo. So in simple words, you don't have to do any configuration to start with the nft minter Smart Contract on the devnet. I'll show you how to configure it for the other setup later.
+By default, the elven-tools cli will come with pre-configured options. The most important is the chain on which it works. It is set to the 'devnet' and the source of the minter Smart Contract. It is set to the 'main' branch of [this](https://github.com/ElvenTools/elven-nft-minter-sc) repo. So in simple words, you don't have to do any configuration to start with the nft minter Smart Contract on the devnet. I'll show you how to configure it for the other setup later.
 
 Let's focus on the devnet and the Smart Contract code from a remote source.
 
