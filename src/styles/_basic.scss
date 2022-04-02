@@ -111,9 +111,18 @@ pre {
   display: flex;
   align-items: center;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     margin-top: -2px;
+  }
+
+  @media screen and (max-width: 460px) {
+    &.social-icon {
+      display: none;
+    }
   }
 }
 
