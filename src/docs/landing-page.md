@@ -49,6 +49,6 @@ There are a couple of reasons, the most important are:
 4. Better docs and clarifying best practices.
 5. More walkthrough videos.
 6. Update for the erdjs 10.* which will bring different approaches to the auth process and handling the transactions.
-6. Spit into the auth + transaction npm package for usage in many different dapps.
+6. Split into the: auth and transaction handling npm package for usage in many different dapps.
 
 ### Stay tuned!
