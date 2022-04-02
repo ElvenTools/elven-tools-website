@@ -53,7 +53,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 {
   "chain": "devnet",
   "customProxyGateway": "https://devnet-gateway.elrond.com",
-  "nftMinter": {
+  "nftMinterSc": {
     "version": "{tag version here or branch name, for example: v1.2.0}",
     "deployGasLimit": 120000000,
     "issueCollectionTokenGasLimit": 80000000,
