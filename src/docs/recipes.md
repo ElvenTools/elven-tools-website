@@ -36,6 +36,10 @@ As you can see, we have the `.abi.json` and `.wasm` files there. You will find t
 
 If you need some help working with the Smart Contract in the Elrond ecosystem, please check docs and my article [here](https://www.julian.io/articles/elrond-smart-contracts.html).
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/TivnKJsyLH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### How to use the configuration file
 
 The configuration file is optional, and you don't need it until you want to change the chain or the Smart Contract source. Plus, maybe after some modifications, you would like to change the functions names and gas limit. All default values are defined [here](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts), and below, you'll find the example of how to overwrite them from outside of the lib itself.
