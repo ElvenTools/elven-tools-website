@@ -50,5 +50,6 @@ There are a couple of reasons, the most important are:
 5. More walkthrough videos.
 6. Update for the erdjs 10.* which will bring different approaches to the auth process and handling the transactions.
 6. Split into the: auth and transaction handling npm package for usage in many different dapps.
+7. Backend cache using Redis - at least some solution for SWR and Nextjs. We will see what will be possible.
 
 ### Stay tuned!
