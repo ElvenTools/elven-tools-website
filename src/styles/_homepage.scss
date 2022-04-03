@@ -134,6 +134,11 @@
 .homepage-lead-column-title {
   text-align: center;
   margin-top: 10px;
+  
+  a {
+    color: $color-main-dark;
+    text-decoration: none;
+  }
 }
 
 .homepage-lead-column-btns {
