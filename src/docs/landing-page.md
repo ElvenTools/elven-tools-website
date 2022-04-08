@@ -17,7 +17,11 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 Landing page based on the [Next](https://nextjs.org/) framework.
 
 <div class="docs-info-box">
-  The landing page template is still in progress. ETA moved to: 08 Apr 2022!
+  The landing page template is still in progress. Release date moved to: 11 Apr 2022! Check the sneak peek!
+</div>
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ATSxD3mD4dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Why Next?
