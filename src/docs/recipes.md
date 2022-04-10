@@ -266,6 +266,24 @@ Done, 1082 addresses saved. Only uniq addresses. Without smart contract addresse
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Li1Lf6h-ksU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+After an update, you can also do filtering by metadata JSON filename:
+
+```
+elven-tools collection-nft-owners
+
+✔ Provide the collection ticker
+ … EGG-6ee076
+✔ Do you want to include only unique addresses?
+ › No
+✔ Do you want to exclude smart contract addresses?
+ › No
+✔ Do you want to filter by metadata JSON file name? Provide names without the extension separated by a comma (example: 123,555,9999) [you can ommit that, just press enter]
+ … 1390,827
+
+There is 1000 tokens in that collection.
+Done, 2 addresses saved.
+```
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
