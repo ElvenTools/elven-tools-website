@@ -226,7 +226,9 @@ As always, you can call the giveaway endpoint without the CLI. Check them in the
 
 ### How to get owners addresses using the collection ticker
 
-From version 1.6.0 there is additional command `elven-tools collection-nft-owners`. It will allow getting owners' addresses, using only the collection ticker. It is useful, for example, when you want to do some promotional giveaway. The functionality will save the addresses in the `nft-collection-owners.json` where the command is triggered. 
+From version 1.6.0 there is additional command `elven-tools collection-nft-owners`. It will allow getting owners' addresses, using only the collection ticker. It is useful, for example, when you want to do some promotional giveaway. The functionality will save the addresses in the `nft-collection-owners.json` where the command is triggered.
+
+Additionally, you can also filter by metadata JSON file name. It is an optional step.
 
 For now, the functionality does only that. Maybe in the future, it will be extended.
 
