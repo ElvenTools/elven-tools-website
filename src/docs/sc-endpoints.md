@@ -86,11 +86,7 @@ Check the examples for `erdjs`:
 - [Smart Contract transaction](https://github.com/ElrondNetwork/elrond-sdk-erdjs#creating-smart-contract-transactions) 
 - [Smart Contract query](https://github.com/ElrondNetwork/elrond-sdk-erdjs#querying-smart-contracts)
 
-There will be also fully functional landing page which will use it.
-
 You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-tools-cli) source code, where I also used the erdjs SDK.
-
-With the landing page, you will get all of these as components.
 
 Check the examples for `erdpy`:
 
