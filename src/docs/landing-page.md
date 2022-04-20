@@ -75,7 +75,7 @@ There are a couple of reasons. The most important are:
 
 ### Why separate configuration for the Smart Contract data?
 
-1. This is basically for static data such as smart contract address, collection ticker, etc. It is mainly to the API resources. Otherwise, all users will call the API endpoint a lot of times.
+1. This is basically for static data such as smart contract address, collection ticker, etc. It is mainly to save the API resources. Otherwise, all users will call the API endpoint a lot of times.
 2. In the future, it will be available as an option. The default behavior would be to query the smart contract with better caching.
 
 ### Below, you will find a sneak peek video:
