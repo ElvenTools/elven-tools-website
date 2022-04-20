@@ -4,12 +4,12 @@ title: 'Landing page'
 publicationDate: '2022-01-25'
 tags:
   - landing page
-excerpt: "Fully functional and optimized template to be used with the Next framework."
+excerpt: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 ogTitle: "Landing page template - introduction"
-ogDescription: "Fully functional and optimized template to be used with the Next framework."
+ogDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 ogUrl: "https://www.elven.tools/docs/landing-page.html"
 twitterTitle: "Landing page template - introduction"
-twitterDescription: "Fully functional and optimized template to be used with the Next framework."
+twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 twitterUrl: "https://www.elven.tools/docs/landing-page.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/landing-page.md"
 ---
@@ -92,4 +92,5 @@ There are a couple of reasons. The most important are:
 - Dapp API proxy - how it works **[Soon...]** - here, you will learn how the API proxy and 'guard' middleware works
 - Quick intro to Chakra UI and NextJS with links **[Soon...]** - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
 - Dapp React prebuilt hooks, components, and utilities **[Soon...]** - here, you will learn about all the custom React hooks and tools which can be used in many different ways
+- How to switch between the mainnet, devnet and testnet **[Soon...]**
 - Other docs will pop up when needed...
