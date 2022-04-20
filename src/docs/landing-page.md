@@ -37,9 +37,9 @@ There are a couple of reasons. The most important are:
 
 ### Why not the dapp-core library?
 
-1. To complicated for this purpose.
+1. It is too complicated for this purpose.
 2. The Dapp should also be helpful as a boilerplate for other projects, so it needs to be simple.
-3. More control over it. And it would be the core of the dapp, so it is critical.
+3. With custom approach there is more control over auth flows. And this is the core of the dapp, so it is critical.
 4. It has too many utilities that, for this case, won't be used.
 
 ### Why the API endpoint is proxied?
