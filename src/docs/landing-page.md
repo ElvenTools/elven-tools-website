@@ -45,8 +45,8 @@ There are a couple of reasons. The most important are:
 ### Why the API endpoint is proxied?
 
 1. Allows hiding the API endpoint under the same domain `www.your-domain.com/api`.
-2. No one will be able to use this endpoint outside the Dapp itself.
-3. When used with not public API, You can hide the API keys which need to be attached to the endpoint.
+2. No one will be able to use this endpoint from outside the Dapp.
+3. When used with no public API, You can hide the API keys which need to be attached to the endpoint.
 4. Usage of the public Elrond API is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
 5. It will still work well with the public Elrond API.
 
@@ -59,14 +59,14 @@ There are a couple of reasons. The most important are:
 
 ### Why not use the Redux for state handling?
 
-1. The Redux is a great tool, but it seems to be overkill in this case.
+1. The Redux is a great tool, but it seems to be an overkill in this case.
 2. The Dapp uses [Valtio](https://valtio.pmnd.rs/) for global state management, a small yet powerful tool.
 
 ### Why Chakra UI?
 
 1. Intuitive configuration.
 2. Excellent approach to the theming.
-3. You can use it almost as with utility classes.
+3. You can use it almost the same as with utility css classes.
 4. Very flexible. You can write CSS in JS in many ways.
 5. A lot of React-specific utilities (Hooks).
 6. Integrates well with Next.
