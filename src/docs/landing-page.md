@@ -39,7 +39,7 @@ There are a couple of reasons. The most important are:
 
 1. It is too complicated for this purpose.
 2. The Dapp should also be helpful as a boilerplate for other projects, so it needs to be simple.
-3. With custom approach there is more control over auth flows. And this is the core of the dapp, so it is critical.
+3. There is more control over auth flows with a custom approach. And this is the core of the dapp, so it is critical.
 4. It has too many utilities that, for this case, won't be used.
 
 ### Why the API endpoint is proxied?
@@ -66,7 +66,7 @@ There are a couple of reasons. The most important are:
 
 1. Intuitive configuration.
 2. Excellent approach to the theming.
-3. You can use it almost the same as with utility css classes.
+3. You can use it almost the same as with utility CSS classes.
 4. Very flexible. You can write CSS in JS in many ways.
 5. A lot of React-specific utilities (Hooks).
 6. Integrates well with Next.
@@ -92,5 +92,5 @@ There are a couple of reasons. The most important are:
 - Dapp API proxy - how it works **[Soon...]** - here, you will learn how the API proxy and 'guard' middleware works
 - Quick intro to Chakra UI and NextJS with links **[Soon...]** - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
 - Dapp React prebuilt hooks, components, and utilities **[Soon...]** - here, you will learn about all the custom React hooks and tools which can be used in many different ways
-- How to switch between the mainnet, devnet and testnet **[Soon...]**
+- How to switch between the mainnet, devnet, and testnet **[Soon...]**
 - Other docs will pop up when needed...
