@@ -1,17 +1,17 @@
 ---
 layout: 'docs'
-title: 'Landing page'
-publicationDate: '2022-01-25'
+title: 'Minter Dapp introduction'
+publicationDate: '2022-04-25'
 tags:
-  - landing page
+  - minter dapp
 excerpt: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 ogTitle: "Landing page template - introduction"
 ogDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
-ogUrl: "https://www.elven.tools/docs/landing-page.html"
+ogUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
 twitterTitle: "Landing page template - introduction"
 twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
-twitterUrl: "https://www.elven.tools/docs/landing-page.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/landing-page.md"
+twitterUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
+githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/minter-dapp-introduction.md"
 ---
 
 Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with the Elven Tools Smart Contract. It is a minter dapp based on the [NextJS](https://nextjs.org/) framework, which gives many possibilities for modifications and extending it.
@@ -85,12 +85,14 @@ There are a couple of reasons. The most important are:
 </div>
 
 ### What's next?
+- [How to start with Elven Tools Dapp - step by step](/docs/how-to-start-with-the-dapp.html)
 
-- Dapp structure **[Soon...]** - here, you will learn about the essential components of the Dapp
-- Dapp deployment **[Soon...]** - here, you will learn how to deploy the Dapp using Netlify or Vercel
-- Dapp configuration walkthrough **[Soon...]** - here, you will learn how to configure the Dapp properly
-- Dapp API proxy - how it works **[Soon...]** - here, you will learn how the API proxy and 'guard' middleware works
-- Quick intro to Chakra UI and NextJS with links **[Soon...]** - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
-- Dapp React prebuilt hooks, components, and utilities **[Soon...]** - here, you will learn about all the custom React hooks and tools which can be used in many different ways
-- How to switch between the mainnet, devnet, and testnet **[Soon...]**
+### More detailed docs
+
+- [Dapp structure](/docs/dapp-structure.html) - here, you will learn about the essential components of the Dapp
+- [Soon...] Dapp configuration walkthrough - here, you will learn how to configure the Dapp properly
+- [Soon...] Dapp deployment - here, you will learn how to deploy the Dapp using Netlify or Vercel
+- [Soon...] Dapp API proxy - how it works - here, you will learn how the API proxy and 'guard' middleware works
+- [Soon...] Quick intro to Chakra UI and NextJS with links - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
+- [Soon...] Dapp React prebuilt hooks, components, and utilities - here, you will learn about all the custom React hooks and tools which can be used in many different ways
 - Other docs will pop up when needed...

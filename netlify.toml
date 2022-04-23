@@ -1,4 +1,7 @@
 [[redirects]]
   from = "/docs"
   to = "/docs/jump-start.html"
-  
+
+[[redirects]]
+  from = "/docs/landing-page.html"
+  to = "/docs/minter-dapp-introduction.html"
