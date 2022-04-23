@@ -4,12 +4,12 @@ title: "Jump start"
 publicationDate: "2022-01-25"
 tags:
   - intro
-excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 ogTitle: "Elven Tools CLI tool - jump start!"
-ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 ogUrl: "https://www.elven.tools/docs/jump-start.html"
 twitterTitle: "Elven Tools CLI tool - jump start!"
-twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/jump-start.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
@@ -35,7 +35,7 @@ There is also a video which shows it. So I recommend you to check it out:
 
 ### Longer step-by-step guides
 
-The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
+The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
 Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/juliancwirko/nft-art-maker).
 
@@ -198,7 +198,7 @@ get-minted-per-address-per-drop
 
 With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.elrond.com/sdk-and-tools/rest-api/virtual-machine/).
 
-Elven Tools will also provide the landing page for the NFT launch, which will be strictly integrated with the Smart Contract. It will have a lot of useful widgets. There are also plans to write more articles on how to run it with the performance in mind. It will come later.
+Elven Tools also provides the Minter Dapp for the NFT launch, which strictly integrates with the Smart Contract. It have a lot of useful widgets.
 
 ### Where to go from here?
 

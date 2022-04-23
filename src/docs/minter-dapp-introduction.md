@@ -5,10 +5,10 @@ publicationDate: '2022-04-25'
 tags:
   - minter dapp
 excerpt: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
-ogTitle: "Landing page template - introduction"
+ogTitle: "Minter Dapp template - introduction"
 ogDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 ogUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
-twitterTitle: "Landing page template - introduction"
+twitterTitle: "Minter Dapp template - introduction"
 twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 twitterUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/minter-dapp-introduction.md"

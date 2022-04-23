@@ -4,12 +4,12 @@ title: "Recipes"
 publicationDate: "2022-01-25"
 tags:
   - intro
-excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 ogTitle: "Elven Tools CLI tool - recipes"
-ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 ogUrl: "https://www.elven.tools/docs/recipes.html"
 twitterTitle: "Elven Tools CLI tool - recipes"
-twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Landing page for NFT launches. Every part of it can be used as a separate tool."
+twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/recipes.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/recipes.md"
 ---
