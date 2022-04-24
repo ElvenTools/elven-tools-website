@@ -63,7 +63,8 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `getDropTokensLeft` - This query will return the tokens left for the active drop.
 - `getTotalTokensLeft` - This query will return total amount of tokens left to mint 
 - `getNftTokenId` - This query will return the collection token ticker
-- `getNftTokenName` - This query will return the collection token name
+- `getNftTokenName` - This query will return the name for NFTs
+- `getCollectionTokenName` - This query will return the collection token name
 - `getNftPrice` - This query will return the price for a single NFT
 - `getTokensLimitPerAddressTotal` - This query will return the limit of tokens for a single address as total for the whole collection
 - `getMintedPerAddressTotal` - This query will return tokens already minted per single address as total for the whole collection

@@ -36,7 +36,8 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools nft-minter get-drop-tokens-left` - the Smart Contract query returns the number of tokens left per drop
 - `elven-tools nft-minter get-nft-price` - the Smart Contract query, returns the current price
 - `elven-tools nft-minter get-nft-token-id` - the Smart Contract query, returns the collection token id
-- `elven-tools nft-minter get-nft-token-name` - the Smart Contract query, returns the collection token name
+- `elven-tools nft-minter get-nft-token-name` - the Smart Contract query, returns optional name for each NFT (if not configured NFTs will take the collection name)
+- `elven-tools nft-minter get-collection-token-name` - the Smart Contract query, returns the collection token name
 - `elven-tools nft-minter get-tokens-limit-per-address-total` - the Smart Contract query returns the tokens limit per address
 - `elven-tools nft-minter get-minted-per-address-total` - the Smart Contract query returns the number of tokens minted per one address
 - `elven-tools nft-minter get-minted-per-address-per-drop` - when the drop is configured, it will return the number of tokens minted per address per drop
