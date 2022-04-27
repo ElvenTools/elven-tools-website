@@ -97,7 +97,7 @@ It is a straightforward scenario and probably not very often used. Let's see wha
 
 This scenario is the same as the one above. What is added here is the 'allowlist'. A list of prepopulated addresses on the Smart Contract will be the only ones that can mint if the 'allowlist' is enabled. Let's see what we need to make it happen.
 
-First, you would need to populate the 'allowlist' with addresses. You can do this using the JSON file with a max of 250 addresses per one transaction or providing them by hand using a CLI prompt.
+First, you would need to populate the 'allowlist' with addresses. You can do this using the JSON file with a max of 320 addresses per one transaction or providing them by hand using a CLI prompt.
 
 If you can, please prepare the `allowlist.json` file and put it in the `sc/nft-minter` relative to where you keep your walletKey.pem file and from where you run the `elven-tools` commands.
 
@@ -109,7 +109,7 @@ elven-tools nft-minter populate-allowlist
 
 The CLI will detect it and ask you if you want to continue. 
 
-If you have more than 250 addresses, please repeat the operation. Remember to replace old addresses with new ones in the allowlist.json file. If you send the same addresses again, nothing will happen, there is no way to have duplicates on the smart contract, but you will lose some EGLD on the transaction fees.
+If you have more than 320 addresses, please repeat the operation. Remember to replace old addresses with new ones in the allowlist.json file. If you send the same addresses again, nothing will happen, there is no way to have duplicates on the smart contract, but you will lose some EGLD on the transaction fees.
 
 To provide addresses by hand, you would need to run the same command but remove or change the name of the `allowlist.json` file. Then the CLI will ask you to provide the addresses by hand. You can use commas to separate them.
 

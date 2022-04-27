@@ -48,7 +48,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `setNewTokensLimitPerAddress` - You can change the limit of tokens per single address in any given time.
 - `giveaway` - You can organize the giveaway by providing the address and amount of tokens to send. It will mint and send tokens without the payment.
 - `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from minting are directly sent to the contract owner after each mint.
-- `populateAllowlist` - You can set up the allowlist by populating the storage with addresses. Keep 250 addresses as max per one transaction. Otherwise, it could reach the max gas limit.
+- `populateAllowlist` - You can set up the allowlist by populating the storage with addresses. Keep 320 addresses as max per one transaction. Otherwise, it could reach the max gas limit.
 - `enableAllowlist` - You can enable to allowlist. Only then will it work. Remember about that.
 - `disableAllowlist` - Tou can disable the allowlist and keep standard minting functionality
 

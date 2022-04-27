@@ -109,7 +109,7 @@ Then you need a file called `allowlist.json` in the `sc/nft-minter` directory. I
 ]
 ```
 
-There should be a maximum of 250 addresses per transaction. You can make a couple of transactions if you need to. But remember to update the file on each.
+There should be a maximum of 320 addresses per transaction. You can make a couple of transactions if you need to. But remember to update the file on each.
 
 You can populate the list without the file, then the CLI will request it through a prompt where you need to provide them one by one, separated using a comma.
 
@@ -135,7 +135,7 @@ You will be providing addresses by hand.
  
 ✔ Are you sure that you want to proceed?
  › Yes
-✔ Provide the list of addresses. Max 250 addresses per one transaction.
+✔ Provide the list of addresses. Max 320 addresses per one transaction.
 You can add more by sending more transactions. Separate them with comma (","):
  … erd1puseeussfftajfj92ezqtfp0ca6u0s2thu7n64cyw6m37ef8dh0sekwt27, erd18yxxeuf2fkwlwgrnc3chjyf4gl3429qpp5fqynhzf2gn6hs3h8dqu7zt7n
 Transaction: https://devnet-explorer.elrond.com/transactions/f8bf7de010629e32008bebb1ba5681a008f23afaf949e0e565ea3bbf41bd80fd
