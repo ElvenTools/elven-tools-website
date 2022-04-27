@@ -14,9 +14,14 @@ twitterUrl: "https://www.elven.tools/docs/cli-commands.html"
 githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/cli-commands.md"
 ---
 
+### General commands
+
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
 - `elven-tools collection-nft-owners` - get collection nft owners using the collection ticker ([see more](/docs/recipes#how-to-get-owners-addresses-using-the-collection-ticker))
 - `elven-tools deploy nft-minter` - deploys the smart contract (by default from the defined tag branch using the devnet, can be configured)
+
+### nft-minter commands
+
 - `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the Elrond chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection.
 - `elven-tools nft-minter set-roles` [only owner] - for now, the command sets the critical role for the collection handle. It is a 'create nft' role.
 - `elven-tools nft-minter start-minting` [only owner] - by default, after deploying the smart contract, the minting is disabled. You would need to start it
