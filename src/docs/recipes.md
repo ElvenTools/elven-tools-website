@@ -98,7 +98,7 @@ The allowlist is usually required for the first batch of tokens to distribute th
 
 There are three endpoints and commands which help with that. First you would need to have the listof addresses.
 
-Then you need a file called `allowlist.json` in the `sc/nft-minter` directory. It should have the list of addresses in such a form:
+Then you need a file called `allowlist.json` in the root directory. It should have the list of addresses in such a form:
 
 ```json
 [
@@ -119,7 +119,7 @@ Example:
 ```bash
 elven-tools nft-minter populate-allowlist
  
-Populating addresses from the file: sc/nft-minter/allowlist.json
+Populating addresses from the allowlist.json file: 
  
 ✔ Are you sure that you want to proceed?
  › Yes
@@ -130,7 +130,7 @@ Example:
 ```bash
 elven-tools nft-minter populate-allowlist
  
-There is no file with the addresses here: sc/nft-minter/allowlist.json
+There is no allowlist.json file with the addresses.
 You will be providing addresses by hand.
  
 ✔ Are you sure that you want to proceed?

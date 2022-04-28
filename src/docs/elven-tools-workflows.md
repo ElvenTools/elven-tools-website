@@ -99,7 +99,7 @@ This scenario is the same as the one above. What is added here is the 'allowlist
 
 First, you would need to populate the 'allowlist' with addresses. You can do this using the JSON file with a max of 320 addresses per one transaction or providing them by hand using a CLI prompt.
 
-If you can, please prepare the `allowlist.json` file and put it in the `sc/nft-minter` relative to where you keep your walletKey.pem file and from where you run the `elven-tools` commands.
+If you can, please prepare the `allowlist.json` file and put it in the root dir, where you keep your walletKey.pem file and from where you run the `elven-tools` commands.
 
 You need to run the command:
 
