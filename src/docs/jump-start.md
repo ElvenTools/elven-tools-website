@@ -33,6 +33,9 @@ There is also a video which shows it. So I recommend you to check it out:
   <iframe width="560" height="315" src="https://www.youtube.com/embed/resGP6a7_34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+Then you can also initialize the Minter Dapp template by using `elven-tools init-dapp`.
+Check how to start with it here: [How to start with the Dapp](/docs/how-to-start-with-the-dapp.html).
+
 ### Longer step-by-step guides
 
 The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.

@@ -27,15 +27,26 @@ There are a couple of steps to run it locally and start working on modifications
 
 The only essential thing here will be the sufficiently configured Node environment. I recommend using the LTS versions of Node and being careful with permissions on your system. The best is to use the Node version manager. I recommend [NVM](https://github.com/nvm-sh/nvm). Also, the best would be to work on Linux/macOS or Windows with a Linux subsystem.
 
-### Clone/Download the repository code
+### Clone/Download/Initialize the repository code
 
-You can clone the repository using the git command:
+There are three ways of getting the Dapp's code:
+
+1. By using Elven Tools CLI (since v1.8.1).
+2. By using the git command and cloning the repository.
+3. By downloading it as a zip file from the repository.
+
+You can use the `elven-tools init-dapp` command. It will:
+- download the code
+- install npm dependencies
+- copy the .env.example into .env.local (required step in all cases)
+
+The other way is to clone the repository using the git command:
 
 ```
 git clone https://github.com/ElvenTools/elven-tools-dapp.git
 ```
 
-or you can also download it as a zip file using this URL:
+And finally, you can also download it as a zip file using this URL:
 
 ```
 https://github.com/ElvenTools/elven-tools-dapp/archive/refs/heads/main.zip
@@ -45,6 +56,8 @@ You can also download a specific version of it. Check the release and download t
 
 ### Install npm dependencies
 
+This step is handled automatically by `elven-tools init-dapp`. Otherwise, you would need to do that manually.
+
 When you have the code, you need to install all npm dependencies. Just run:
 
 ```
@@ -52,6 +65,8 @@ npm install
 ```
 
 ### Configure basic .env variables
+
+The `elven-tools init-dapp` command will copy .env.example into .env.local. So you would only need to change the variables. Otherwise, you would need to do that manually.
 
 The Elven Tools Dapp uses a .env file for crucial environment variables. These are:
 

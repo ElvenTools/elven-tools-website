@@ -47,7 +47,9 @@ Check all commands [here](/docs/cli-commands.html)
 
 ### Custom configuration options
 
-Below is an example of a `.elventoolsrc` config file with default values. You don't have to change the `config.ts` file. It is for library usage. `.elventoolsrc` is the only config file that should be used. It is not required if you will work on the devnet with the defined tag branch of the Smart Contract. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered—the same directory as the one where the `walletKey.pem` file is located.
+**All of the configuration options are set by default, so you don't have to configure them if you will accept the defaults.**
+
+Below is an example of a `.elventoolsrc` config file with default values. You don't have to change the `config.ts` file. It is for library usage. `.elventoolsrc` is the only config file that should be used. It is not required if you will work on the devnet. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered—the same directory as the one where the `walletKey.pem` file is located.
 
 ```json
 {
@@ -107,6 +109,9 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "enableDisableAllowlistGasLimit": 6000000,
     "isDropActiveFunctionName": "isDropActive",
     "tokensPerOneTx": 95
+  },
+  "minterDapp": {
+    "version": "{tag version here, for example: v1.0.3}"
   },
   "collectionNftOwners": {
     "apiCallsPerSecond": 5
