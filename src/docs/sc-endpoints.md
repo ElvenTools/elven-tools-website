@@ -51,7 +51,8 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `populateAllowlist` - You can set up the allowlist by populating the storage with addresses. Keep 320 addresses as max per one transaction. Otherwise, it could reach the max gas limit.
 - `enableAllowlist` - You can enable to allowlist. Only then will it work. Remember about that.
 - `disableAllowlist` - Tou can disable the allowlist and keep standard minting functionality
-
+- `clearAllowlist` - It will clear the whole allowlist. The best is to keep a max of 1300 addresses in the allowlist at a time. Of course, if only you plan to clear it later. If you keep more and want to clear it, you can reach the gas limit for a transaction. So it would be best to split the allowlist per drop, keep it as small as possible and clear it each time.
+- `removeAllowlistAddress` - removes a single address from allowlist
 
 ### Endpoints for all
 

@@ -19,6 +19,7 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
 - `elven-tools collection-nft-owners` - get collection nft owners using the collection ticker ([see more](/docs/recipes#how-to-get-owners-addresses-using-the-collection-ticker))
 - `elven-tools deploy nft-minter` - deploys the smart contract (by default from the defined tag branch using the devnet, can be configured)
+- `elven-tools init-dapp` - initialize the Nextjs Minter Dapp in custom directory
 
 ### nft-minter commands
 
@@ -54,3 +55,5 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools nft-minter is-allowlist-enabled` - check if allowlist is currently enabled,
 - `elven-tools nft-minter get-allowlist-address-check` - check if provided address is included in the allowlist,
 - `elven-tools nft-minter is-drop-active` - checks if there is an active drop at the moment
+- `elven-tools nft-minter clear-allowlist` - It will clear the whole allowlist. The best is to keep a max of 1300 addresses in the allowlist at a time. Of course, if only you plan to clear it later. If you keep more and want to clear it, you can reach the gas limit for a transaction. So it would be best to split the allowlist per drop, keep it as small as possible and clear it each time.
+- `elven-tools nft-minter remove-allowlist-address` - removes a single address from allowlist

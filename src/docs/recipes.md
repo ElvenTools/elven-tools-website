@@ -151,6 +151,18 @@ elven-tools nft-minter is-allowlist-enabled
 elven-tools nft-minter get-allowlist-address-check
 ```
 
+You will be able to clear the allowlist with:
+```
+elven-tools nft-minter clear-allowlist
+```
+
+It will clear the whole allowlist because the process is quite heavy. The best is to keep max 1300 addresses in the allowlist at a time. Of course, if only you plan to clear it later. If you keep more and want to clear it, you can reach the gas limit for a transaction. So it would be best to split the allowlist per drop, keep it as small as possible and clear it each time.
+
+You can also remove a single address by:
+```
+elven-tools nft-minter remove-allowlist-address
+```
+
 Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all SC endpoints [here](/docs/sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
 
 <div class="embeded-media-container">

@@ -108,7 +108,11 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "disableAllowlistFnName": "disableAllowlist",
     "enableDisableAllowlistGasLimit": 6000000,
     "isDropActiveFunctionName": "isDropActive",
-    "tokensPerOneTx": 95
+    "tokensPerOneTx": 95,
+    "clearAllowlistFnName": "clearAllowlist",
+    "clearAllowlistBaseGasLimit": 5000000,
+    "removeAllowlistAddressFnName": "removeAllowlistAddress",
+    "removeAllowlistAddressLimit": 5000000,
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

@@ -221,7 +221,7 @@ The following step would be to prepare the 'allowlist'. I could get addresses fr
 I will prepare the drop to be adequate to the 'allowlist' addresses when the list is in place. So, for example, if I would like to have three tokens per address per drop, and my 'allowlist' has 100 addresses, I would set the drop to 300 tokens max. 
 
 <div class="docs-info-box">
-<strong>Important!</strong> The first version of the allowlist is not clearable. All added addresses will always stay there until minting the whole collection. So be careful with drops and allowlist. I recommend adding only one allowlist without drops and waiting till all addresses are claimed or till the allowlist is disabled, or creating only one allowlist for the first drop. 
+<strong>Important!</strong>Because of the gas limits, it is advised to keep the allowlist as small as possible if you plan to clear it with `elven-tools nft-minter clear-allowlist`. It should be ok to max 1300 addresses at a time. With more, when you would like to clear it, you can reach the transaction gas limit, and the transaction will fail. The best is to keep the allowlists small and use drops to make more of them.
 </div>
 
 <div class="docs-info-box">
