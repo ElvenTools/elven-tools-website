@@ -54,7 +54,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 ```json
 {
   "chain": "devnet",
-  "customProxyGateway": "https://devnet-gateway.elrond.com",
+  "customProxyGateway": "https://devnet-api.elrond.com",
   "nftMinterSc": {
     "version": "{tag version here or branch name, for example: v1.2.0}",
     "deployGasLimit": 120000000,
@@ -113,6 +113,9 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "clearAllowlistBaseGasLimit": 5000000,
     "removeAllowlistAddressFnName": "removeAllowlistAddress",
     "removeAllowlistAddressLimit": 5000000,
+    "isMintingPausedFnName": "isMintingPaused",
+    "getTotalSupplyFnName": "getTotalSupply",
+    "getTotalSupplyOfCurrentDropFnName": "getTotalSupplyOfCurrentDrop"
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

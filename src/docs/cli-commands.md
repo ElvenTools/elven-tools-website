@@ -57,3 +57,6 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 - `elven-tools nft-minter is-drop-active` - checks if there is an active drop at the moment
 - `elven-tools nft-minter clear-allowlist` - It will clear the whole allowlist. The best is to keep a max of 1300 addresses in the allowlist at a time. Of course, if only you plan to clear it later. If you keep more and want to clear it, you can reach the gas limit for a transaction. So it would be best to split the allowlist per drop, keep it as small as possible and clear it each time.
 - `elven-tools nft-minter remove-allowlist-address` - removes a single address from allowlist
+- `elven-tools nft-minter is-minting-paused` - checks if the minting is paused,
+- `elven-tools nft-minter get-total-supply` - returns the total supply for the collection,
+- `elven-tools nft-minter get-total-supply-of-current-drop` - returns the supply of current drop

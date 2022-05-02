@@ -76,6 +76,9 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `getAllowlistSize` - This is mainly to check if the allowlist has the correct size after populating it with addresses.
 - `isAllowlistEnabled` - This is an important check to ensure that the allowlist is enabled. Only then will it work.
 - `isDropActive` - This is for checking if there is currently a drop active.
+- `getTotalSupply` - This is for checking the total supply
+- `getTotalSupplyOfCurrentDrop` - This is for checking the supply of the current drop
+- `isMintingPaused` - This is for checking if the minting process is now paused
 
 ### How to interact with endpoints
 
