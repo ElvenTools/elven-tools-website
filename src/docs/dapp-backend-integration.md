@@ -31,7 +31,6 @@ There are three important things here:
 
 The public key can be fetched using the user's address and erdjs methods. You can do this like that: 
 
-(erdjs v9.2.4 on which the Elven Tools Dapp is based for now)
 ```
 import { Address, UserPublicKey } from '@elrondnetwork/erdjs'
 
