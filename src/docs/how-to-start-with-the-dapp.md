@@ -40,6 +40,10 @@ You can use the `elven-tools init-dapp` command. It will:
 - install npm dependencies
 - copy the .env.example into .env.local (required step in all cases)
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Erjabk7d0HU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 The other way is to clone the repository using the git command:
 
 ```
@@ -56,7 +60,7 @@ You can also download a specific version of it. Check the release and download t
 
 ### Install npm dependencies
 
-This step is handled automatically by `elven-tools init-dapp`. Otherwise, you would need to do that manually.
+**This step is handled automatically by `elven-tools init-dapp`. Otherwise, you would need to do that manually.**
 
 When you have the code, you need to install all npm dependencies. Just run:
 
