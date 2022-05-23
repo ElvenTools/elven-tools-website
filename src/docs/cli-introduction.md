@@ -57,6 +57,8 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
   "customProxyGateway": "https://devnet-api.elrond.com",
   "nftMinterSc": {
     "version": "{tag version here or branch name, for example: v1.2.0}",
+    "deployNftMinterSC": "<nft_minter_smart_contract_address_here> when you want to switch between chains or you want to use the cli as buyer",
+    "tokenSelingPrice": "<price_of_the_nft_here> when you want to switch between chains or you want to use the cli as buyer",
     "deployGasLimit": 120000000,
     "issueCollectionTokenGasLimit": 80000000,
     "issueValue": "0.05",
