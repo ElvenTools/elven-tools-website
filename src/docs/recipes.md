@@ -242,13 +242,9 @@ From version 1.6.0 there is additional command `elven-tools collection-nft-owner
 
 Additionally, you can also filter by metadata JSON file name. It is an optional step.
 
-From v1.8.5 you can also generate an additional file that will aggregate tokens and count them per address. It will be available only when you don select the unique addresses only option.
-
-For now, the functionality does only that. Maybe in the future, it will be extended.
-
 **Important**: It will work only with the API endpoint, not the gateway. Elven Tools CLI, by default, uses the API endpoint. So it should work by default, but you need to remember that.
 
-How to use it? You need to use at least version 1.6.0 of the CLI. You can check it by `elven-tools -v`, and you would need to use the command `elven-tools collection-nft-owners`. Then there are three prompts. You would need to provide the collection ticker and answer two questions about whether you want to filter not unique addresses and smart contract addresses.
+How to use it? You need to use at least version 1.6.0 of the CLI. You can check it by `elven-tools -v`, and you would need to use the command `elven-tools collection-nft-owners`. Then there are prompts. You would need to provide the collection ticker and answer two questions about whether you want to filter smart contract addresses.
 
 Because of how the API works, we need to do calls with a max size of 100 items. Here we also have calls that are limited to 5 per second. You can change this limit in the configuration file. Check how [here](/docs/cli-introduction#custom-configuration-options). If you need to change this setting, in the config file, there should be an entry:
 
@@ -265,29 +261,18 @@ When is the address not unique? It is when one address will have more than one N
 
 ```
 elven-tools collection-nft-owners
-
 ✔ Provide the collection ticker
  … EAPES-8f3c1f
-✔ Do you want to include only unique addresses?
- › No
 ✔ Do you want to exclude smart contract addresses?
  › Yes
-✔ Do you want to get a separate file with the NFT number count per address?
- › Yes
-✔ Do you want to filter by metadata JSON file name? Provide names without the extension separated by a comma (example: 123,555,9999) [you can ommit that, just press enter]
+✔ Do you want to filter by metadata JSON file name? Provide names without the extension separated by a comma (example: 123,555,9999) [you can ommit that, just confirm empty]
  … 
-There is 10000 tokens in that collection.
-Done, 2454 addresses saved. Without smart contract addresses.
+There are 10000 tokens in that collection.
+Done, 1042 addresses saved. Without smart contract addresses.
 ```
 
-General overview:
 <div class="embeded-media-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Li1Lf6h-ksU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-Aggregate the tokens count:
-<div class="embeded-media-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_Q3VnE4QndE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4vM_y25uaq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 **You can also do filtering by metadata JSON filename:**
