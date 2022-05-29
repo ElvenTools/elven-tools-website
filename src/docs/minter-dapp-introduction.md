@@ -91,7 +91,7 @@ There are a couple of reasons. The most important are:
 
 - [Dapp structure](/docs/dapp-structure.html) - here, you will learn about the essential components of the Dapp
 - [Soon...] Dapp configuration walkthrough - here, you will learn how to configure the Dapp properly
-- [Soon...] Dapp deployment - here, you will learn how to deploy the Dapp using Netlify or Vercel
+- [Dapp deployment](/docs/dapp-deployment.html) - here, you will learn how to deploy the Dapp using Netlify or Vercel
 - [Soon...] Dapp API proxy - how it works - here, you will learn how the API proxy and 'guard' middleware works
 - [Soon...] Quick intro to Chakra UI and NextJS with links - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
 - [Soon...] Dapp React prebuilt hooks, components, and utilities - here, you will learn about all the custom React hooks and tools which can be used in many different ways
