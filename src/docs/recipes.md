@@ -293,6 +293,8 @@ There is 1000 tokens in that collection.
 Done, 2 addresses saved.
 ```
 
+If you are interested in generating a **CSV** file, you can use the [elven-tools-collection-owners-csv](https://github.com/ElvenTools/elven-tools-collection-owners-csv) script, which will do that. The input file is the output of the `elven-tools collection-nft-owners`. You'll find the input and output examples in the [data](https://github.com/ElvenTools/elven-tools-collection-owners-csv/tree/main/data) folder.
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
