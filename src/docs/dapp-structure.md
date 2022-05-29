@@ -64,13 +64,15 @@ There are also hooks responsible for auth providers initialization, like Maiar m
 
 [useLogin](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/auth/useLogin.tsx) hook includes all auth providers. This is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
 
+See more here [Dapp React hooks and components](/docs/dapp-react-hooks-and-components.html)
+
 ### NextJS pages + api configuration
 
 With the Elven Tools Dapp, you are not limited to what you will see at the beginning. You can add more pages and change whatever you want. All is based on [NextJS](https://nextjs.org/) framework, a complete full-stack solution.
 
 In the [pages](https://github.com/ElvenTools/elven-tools-dapp/tree/main/pages) directory, you will find actual pages. The NextJS framework builds the routing based on this directory. You can read more about it here: [Pages](https://nextjs.org/docs/basic-features/pages).
 
-As you will see, there is also the [api]() directory inside the `pages`. Here you will find a configuration for the API endpoint. In this case, we have there the middleware logic, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers.
+As you will see, there is also the api directory inside the `pages`. Here you will find a configuration for the API endpoint. In this case, we have there the middleware logic, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers.
 
 ### React custom UI components
 
@@ -81,6 +83,8 @@ Finally, there are, of course, custom UI components. You will find them in the [
 - [MintForm](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/MintForm.tsx) - this one will render the for minting with the input for the number of tokens to mint and all required states
 
 Other essential parts are mainly specific to the current use case, so the minting dapp. But remember that you can use this Dapp is the boilerplate for any project you want to build.
+
+See more here [Dapp React hooks and components](/docs/dapp-react-hooks-and-components.html)
 
 ### What's next?
 

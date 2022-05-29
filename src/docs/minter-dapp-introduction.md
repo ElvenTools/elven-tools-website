@@ -94,6 +94,6 @@ There are a couple of reasons. The most important are:
 - [Dapp deployment](/docs/dapp-deployment.html) - here, you will learn how to deploy the Dapp using Netlify or Vercel
 - [Soon...] Dapp API proxy - how it works - here, you will learn how the API proxy and 'guard' middleware works
 - [Soon...] Quick intro to Chakra UI and NextJS with links - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
-- [Soon...] Dapp React prebuilt hooks, components, and utilities - here, you will learn about all the custom React hooks and tools which can be used in many different ways
+- [Dapp React prebuilt hooks, components, and utilities](/docs/dapp-react-hooks-and-components.html) - here, you will learn about all the custom React hooks and tools which can be used in many different ways
 - [Dapp backend integration](/docs/dapp-backend-integration.html) - here you will learn how to extend your dapp and verify the user on the backend side when needed
 - Other docs will pop up when needed...
