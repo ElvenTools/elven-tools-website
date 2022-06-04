@@ -28,5 +28,5 @@ Here you will find common problems when using the Elven Tools. In the future, th
 
 **Problem**: The problem occurs when setting the roles for the collection token with `elven-tools nft-minter set-roles` \
 **Cause**: There is a time required between issuing the token and assigning the roles. The transaction can fail if the setting roles command is fired too quickly. \
-**Solution**: Wait could of seconds and call the command again.
+**Solution**: Wait a couple of seconds and call the command again.
 
