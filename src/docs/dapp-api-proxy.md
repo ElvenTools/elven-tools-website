@@ -18,6 +18,8 @@ Think of the Dapp API proxy as the Nextjs API rewrites on the backend side. Why 
 
 ### How the API rewrite works
 
+Reminder, the Elven Tools Dapp code is [here](https://github.com/ElvenTools/elven-tools-dapp).
+
 In the `.env.example` (and later in your proper `.env.local`) file, you will find a variable `ELROND_CUSTOM_API`. By default, there will be a public Elrond API endpoint, but this is a place for your custom API endpoint. The endpoint won't be exposed on the frontend. So you can use services such as Tatum or BlastAPI and put there your custom endpoint. This way, you will make it private but still usable by your dapp and only by it.
 
 Ok, so far, so good. Your endpoint won't be visible in public. What's next?
@@ -44,3 +46,7 @@ Ok, now you think my endpoint is proxied and hidden, but it is still public, and
 NextJS should block other hosts from accessing its API by default, but our `/api/*` endpoint is still accessible using Postman or any other App or CLI tool. So, as an additional check, the  Elven Tools Dapp implements optional middleware that checks the `referer` header. It will check if the referer is the same as defined in the `API_ALLOWED_DAPP_HOST` env variable. Otherwise, it will throw the `403 Forbidden`. You can find the middleware in the `pages/api/_middleware.ts`.
 
 There is one caveat with that approach, if you want to test your API through proxy/rewrite using some third-party tool or even the browser, you won't be able to do that because of the middleware, but don't worry. It is all optional. To disable the guard, it is enough to remove the `API_ALLOWED_DAPP_HOST` from your `.env.local`. Still, remember that the proxied API will be the same as your primary API endpoint, so you can always test everything from outside the dapp using your original API endpoint.
+
+### What's next?
+
+Check more topics [here](/docs/minter-dapp-introduction.html#more-detailed-docs).
