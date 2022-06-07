@@ -72,7 +72,7 @@ With the Elven Tools Dapp, you are not limited to what you will see at the begin
 
 In the [pages](https://github.com/ElvenTools/elven-tools-dapp/tree/main/pages) directory, you will find actual pages. The NextJS framework builds the routing based on this directory. You can read more about it here: [Pages](https://nextjs.org/docs/basic-features/pages).
 
-As you will see, there is also the api directory inside the `pages`. Here you will find a configuration for the API endpoint. In this case, we have there the middleware logic, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers.
+As you will see, there is also the api directory inside the `pages`. Here you will find a configuration for the API endpoint. In this case, we have there the middleware logic, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers. Read more about it here: [Dapp API Proxy](/docs/dapp-api-proxy.html).
 
 ### React custom UI components
 
