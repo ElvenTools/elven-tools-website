@@ -60,7 +60,7 @@ The whole logic is based on custom React hooks. There are many of them, but gene
 
 The most difficult to understand and, at the same time, the most important would be probably `useElrondNetworkSync`. It is responsible for syncing the whole network, auth providers, and user accounts. It is essential to call it as soon as possible. If needed, you can also optimize component rerenders. The Elven Tools Dapp already has some of the optimization implemented.
 
-There are also hooks responsible for auth providers initialization, like Maiar mobile app, browser extension, and web wallet. Some hooks will serve the info about the user, auth status, etc. 
+There are also hooks responsible for auth providers initialization, like Maiar mobile app, browser extension, Ledger, and web wallet. Some hooks will serve the info about the user, auth status, etc. 
 
 [useLogin](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/auth/useLogin.tsx) hook includes all auth providers. This is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
 

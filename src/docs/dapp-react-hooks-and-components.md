@@ -43,10 +43,10 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
 
 #### useLogin()
 
-The hook is responsible for providing a common interface for all login methods (web wallet, maiar app, browser extension). Under the hood it uses three separate hooks: `useWebWalletLogin`, `useMobileAppLogin`, `useExtensionLogin`.
+The hook is responsible for providing a common interface for all login methods (web wallet, maiar app, browser extension and Ledger). Under the hood it uses three separate hooks: `useWebWalletLogin`, `useMobileAppLogin`, `useExtensionLogin`.
 
 ```jsx
-const { login, isLoggedIn, error, walletConnectUri } = useLogin();
+const { login, isLoggedIn, error, walletConnectUri, getHWAccounts } = useLogin();
 ```
 
 The `login` function is a trigger function and it takes the `LoginMethodEnum` as type argument.
@@ -77,6 +77,14 @@ export const useLogin = (params?: Login) => {
     error: extensionLoginError,
   } = useExtensionLogin(params);
 
+  const {
+    login: ledgerLogin,
+    isLoggedIn: ledgerIsLoggedIn,
+    isLoggingIn: ledgerIsLoggingIn,
+    error: ledgerLoginError,
+    getHWAccounts,
+  } = useLedgerLogin(params);
+
   const login = async (type: LoginMethodsEnum) => {
     if (type === LoginMethodsEnum.extension) {
       await extensionLogin();
@@ -87,22 +95,38 @@ export const useLogin = (params?: Login) => {
     if (type === LoginMethodsEnum.walletconnect) {
       await mobileLogin();
     }
+    if (type === LoginMethodsEnum.ledger) {
+      await ledgerLogin(ledgerAccountIndex);
+    }
     return null;
   };
 
   return {
     walletConnectUri,
+    getHWAccounts,
     login,
-    isLoggedIn: webIsLoggedIn || mobileIsLoggedIn || extensionIsLoggedIn,
-    isLoggingIn: webIsLoggingIn || mobileIsLoggingIn || extensionIsLoggingIn,
-    error: webLoginError || mobileLoginError || extensionLoginError,
+    isLoggedIn:
+      webIsLoggedIn ||
+      mobileIsLoggedIn ||
+      extensionIsLoggedIn ||
+      ledgerIsLoggedIn,
+    isLoggingIn:
+      webIsLoggingIn ||
+      mobileIsLoggingIn ||
+      extensionIsLoggingIn ||
+      ledgerIsLoggingIn,
+    error:
+      webLoginError ||
+      mobileLoginError ||
+      extensionLoginError ||
+      ledgerLoginError,
   };
 };
 ```
 
 #### LoginModalButton
 
-The component provides the `Connect` button with the modal, which will contain another three buttons for three different authentication possibilities (Maiar Mobile App, Maiar Defi Wallet - browser extension, Elrond Web Wallet). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
+The component provides the `Connect` button with the modal, which will contain another four buttons for three different authentication possibilities (Maiar Mobile App, Maiar Defi Wallet - browser extension, Elrond Web Wallet, Ledger). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
 
 ```jsx
 import { LoginModalButton } from "../tools/LoginModalButton";

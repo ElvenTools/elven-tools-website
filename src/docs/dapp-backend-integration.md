@@ -18,7 +18,7 @@ Sometimes, with more extensive apps and more logic, like managing custom informa
 
 Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup. Here are basic steps on how you could verify the user on the backend side of your dapp: 
 
-1. Login user using one of the dapp auth providers (Web Wallet, browser extension, Maiar mobile app).
+1. Login user using one of the dapp auth providers (Web Wallet, browser extension, Maiar mobile app and Ledger).
 2. When logging in, pass the custom token. It can be a randomly generated hash.
 3. You will get the signature back. It will also be saved in the local storage in the browser.
 4. You already have an address, a custom token, and a signature at this stage. You can send it to your backend and verify it.
