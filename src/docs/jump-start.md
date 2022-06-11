@@ -61,11 +61,15 @@ File saved as walletKey.pem
 
 Derive PEM is a command which will take your seed phrase and create the key file for signing every transaction. Without it, you won't be able to use the elven-tools cli. The good thing is that you will need to do this only once. And then run every command in the same directory where the `walletKey.pem` file will land after running this command.
 
+**Important**: You need to use the correct wallet. If you want to deploy the smart contract on the devnet, please use the devnet seed phrase and ensure that your wallet has some funds. You can use the faucet in the devnet web wallet to get some fake EGLD for testing.
+
 <div class="docs-error-box">
   Don't share your PEM file with anyone. It is the main key to your wallet—the same as the seed phrases. The elven-tools don't send any data to the Internet. It works with it only in your local file system.
 </div>
 
-After you generate the PEM file, you can run all other commands. Let's walk through the whole process here.
+After you generate the PEM file, you can run all other commands. But remember that your wallet needs funds. Otherwise, it won't work. Each transaction takes fees. 
+
+Let's walk through the whole process here.
 
 The first command will be `elven-tools deploy nft-minter`. It takes the Smart Contract code from its repository and tries to deploy it on behalf of the user whose walletKey.pem file is generated in this directory. It will ask a couple of questions. Let's explain them here.
 

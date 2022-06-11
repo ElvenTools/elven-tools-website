@@ -46,10 +46,12 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
 The hook is responsible for providing a common interface for all login methods (web wallet, maiar app, browser extension and Ledger). Under the hood it uses three separate hooks: `useWebWalletLogin`, `useMobileAppLogin`, `useExtensionLogin`.
 
 ```jsx
-const { login, isLoggedIn, error, walletConnectUri, getHWAccounts } = useLogin();
+const { login, isLoggedIn, error, walletConnectUri, getHWAccounts } = useLogin(params);
 ```
 
 The `login` function is a trigger function and it takes the `LoginMethodEnum` as type argument.
+
+The `params` for `useLogin` are: `token` and `callbackRoute`, both are optional. You will need to use a custom-generated token to get the auth signature back after connecting with one of 4 auth providers. The callback route can be used for some of the providers to be able to redirect the user after logging in.
 
 The `useLogin` hook looks like:
 
@@ -141,6 +143,8 @@ The component is used as a small wrapper where we need to be in the authenticate
 It can display the spinner and also the fallback React element.
 
 **Important** Do not wrap it in big sections of the code. Its purpose is to be used multiple times on as small blocks as possible.
+
+But all code 'blocks' in your app that require the network and auth sync should be wrapped with it.
 
 ```jsx
 <Authenticated
