@@ -110,5 +110,11 @@ console.log(
 );
 ```
 
+Also please check the quick walkthrough video:
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/e2ope5WgOuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 You will find the full working example in the repository prepared by [@borispoehland](https://github.com/borispoehland). Check it out: [
 elven-tools-dapp-with-auth](https://github.com/borispoehland/elven-tools-dapp-with-auth). Be aware that the repository can be outdated.
