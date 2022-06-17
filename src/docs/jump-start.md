@@ -23,9 +23,8 @@ githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/do
 3. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
 4. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
 5. `elven-tools nft-minter set-roles` -> roles for the issued token
-6. `elven-tools nft-minter shuffle` -> this one should be called at least one. It can be called at any time by anyone
-7. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
-8. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
+6. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
+7. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
 
 There is also a video which shows it. So I recommend you to check it out:
 
@@ -73,8 +72,6 @@ Let's walk through the whole process here.
 
 The first command will be `elven-tools deploy nft-minter`. It takes the Smart Contract code from its repository and tries to deploy it on behalf of the user whose walletKey.pem file is generated in this directory. It will ask a couple of questions. Let's explain them here.
 
-When deploying using the CLI tool, it will also trigger the `populateIndexes` transactions, depending on the amount of the tokens provided. You can also call it by hand if something goes wrong. Always check the transactions after deployment on the Elrond explorer. This operation is mandatory, so if you don't use the CLI you would need to do it by yourself.
-
 ```bash
 elven-tools deploy nft-minter
 ✔ Decide if the contract can be upgraded in the future.
@@ -106,11 +103,6 @@ elven-tools deploy nft-minter
  … optional_provenance_hash_here
 Deployment transaction executed: success
 Deployment tx: https://devnet-explorer.elrond.com/transactions/6c78b4f9adbf4e04e84e5ffe8bfed577ee2ad080c039fb3c3db1199c5d1d413c
-Populating indexes transaction executed!
-Populate indexes tx (1): https://devnet-explorer.elrond.com/transactions/284addb23c3d6ec4809fcca1394a5827574aaf68397e0baf703c718c6319bd7a
-Populating indexes transaction executed!
-Populate indexes tx (2): https://devnet-explorer.elrond.com/transactions/254793bd5a005548f234d4efda54313fd8079e834ac9fe679f124d0a1bcf6a9b
-Smart Contract address: erd1qqqqqqqqqqqqqpgqetmlnt8t8u9nll6l87we9wsp60m602pselesmc86cg
 ```
 
 You will be asked one by one. The prompts are helpful. You don't have to worry about proper arguments preparation. The first three questions are about metadata for code. You need to decide if your smart contract should be payable or upgradable. There are hints for that. You can also read about it [here](https://docs.elrond.com/developers/developer-reference/code-metadata/).
@@ -152,13 +144,6 @@ The last mandatory command is `elven-tools nft-minter set-roles`. It will assign
 ```bash
 elven-tools nft-minter set-roles
 Transaction: https://devnet-explorer.elrond.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
-```
-
-You would also need to call the `elven-tools nft-minter shuffle` at least once. This one is accessible for everyone. Everyone can call it to change the following index, which will be minted without knowing precisely what it will be.
-
-```bash
-elven-tools nft-minter shuffle
-Transaction: https://devnet-explorer.elrond.com/transactions/c9248963f37e95ce81e58b06a6a8edc2872f48919302ca8d2914dcf3107aac19
 ```
 
 The following steps can be different on what you want to achieve. You can start minting directly or set up so-called 'drops' where you will define how many tokens will be minted in one drop. You can also always start or pause the minting process. What is necessary is that the contract will always mint randomly in all cases. Let's see how it looks when we want just to start the minting: `elven-tools nft-minter start-minting` and `elven-tools nft-minter mint` You will be asked to provide how many tokens you would wish to mint. Remember that the Smart Contract will have limits per one address. See how to check them later in this article.
