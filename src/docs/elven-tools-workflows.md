@@ -73,7 +73,7 @@ To start minting, you have to run the command:
 elven-tools nft-minter start-minting
 ```
 
-Of course, we assume that the Smart Contract is correctly deployed, the collection token is issued, it has proper roles, and the shuffle endpoint was called at least once. Again, you will find all about it here: [Elven Tools Jumpstart](/docs/jump-start.html). Please let me know if something there is still not clear. I will improve the docs.
+Of course, we assume that the Smart Contract is correctly deployed, the collection token is issued and it has proper roles. Again, you will find all about it here: [Elven Tools Jumpstart](/docs/jump-start.html). Please let me know if something there is still not clear. I will improve the docs.
 
 That's it. Now your community can freely buy and mint the tokens till the end of the collection. You don't have to do anything more. Of course, you can still pause the minting:
 

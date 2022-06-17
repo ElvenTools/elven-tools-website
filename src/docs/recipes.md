@@ -332,16 +332,6 @@ The `output.json` file will be created as temporary storage, which keeps the cre
 
 You don't have to think about it much.
 
-### Why do we need the populateIndexes endpoint
-
-The endpoint is required for the initial setup of the Smart Contract. You don't have to think about it when you use the CLI. It will be automatically called when deploying the Smart Contract.
-
-Its task is to populate the VecMapper storage with the indexes. These indexes are used to handle the random minting process. Without them, it would be less performant to provide such functionality for many tokens.
-
-If you don't use the CLI, you need to perform this operation by hand after the Smart Contract is deployed. Remember that there will always be a limit per one transaction. You can check it in the [internal config file](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts) search for `populateIndexesMaxBatchSize`. So basically, you would need to split the number of your tokens into more than one transaction if there is more of them than the limit.
-
-There is also a CLI command because sometimes, something may go wrong. So then you will need to run the `elven-tools nft-minter populate-indexes` and provide the number of tokens keeping in mind the limits per transaction.
-
 ### Why do we need the shuffle endpoint
 
 The endpoint will set the following index to mint. It is important here that it will randomly select it from the indexes left to mint. This endpoint is also public, so everyone can call the transaction and change the following index to mint. It assures that the process is random, and everyone can impact that.
