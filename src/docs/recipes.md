@@ -86,11 +86,24 @@ To switch to your custom API endpoint, you would need to add in your `.elventool
 ```
 {
   "chain": "devnet",
-  "customProxyGateway": "https://devnet-api.elrond.com"
+  "apiProviderEndpoint": "https://devnet-api.elrond.com"
 }
 ```
 
-Here is an example with the default API endpoint for the devnet. You can do the same for the testnet and mainnet.
+It is an example of the default API endpoint for the devnet. You can do the same for the testnet and mainnet.
+
+When you need to use the Gateway instead API, you can configure it like that:
+
+```
+{
+  "chain": "devnet",
+  "gatewayProviderEndpoint": "https://devnet-gateway.elrond.com"
+}
+```
+
+It is an example with the default Gateway endpoint for the devnet. You can do the same for the testnet and mainnet.
+
+Important! When nothing is provided, the CLI will use the default, public Elrond API endpoint (api.elrond.com, devnet-api.elrond.com, testnet-api.elrond.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
 
 ### How to use allowlist
 
