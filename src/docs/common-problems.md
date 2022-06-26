@@ -30,3 +30,10 @@ Here you will find common problems when using the Elven Tools. In the future, th
 **Cause**: There is a time required between issuing the token and assigning the roles. The transaction can fail if the setting roles command is fired too quickly. \
 **Solution**: Wait a couple of seconds and call the command again.
 
+### 'Account not found' - problem with the account
+
+`Request error on url [accounts/erd1...]: [Account not found]`
+
+**Problem**: The problem can occur with any CLI command, any transaction
+**Cause**: The problem occurs when something is wrong with the network, or the devnet/testnet was reset, and your wallet doesn't exist anymore (doesn't have funds).
+**Solution**: Double check your wallet, check if it works properly, and check if there are no problems with devnet/testnet if you use them. If so, then wait till the network works again.
