@@ -34,6 +34,6 @@ Here you will find common problems when using the Elven Tools. In the future, th
 
 `Request error on url [accounts/erd1...]: [Account not found]`
 
-**Problem**: The problem can occur with any CLI command, any transaction
-**Cause**: The problem occurs when something is wrong with the network, or the devnet/testnet was reset, and your wallet doesn't exist anymore (doesn't have funds).
+**Problem**: The problem can occur with any CLI command, any transaction  \
+**Cause**: The problem occurs when something is wrong with the network, or the devnet/testnet was reset, and your wallet doesn't exist anymore (doesn't have funds).  \
 **Solution**: Double check your wallet, check if it works properly, and check if there are no problems with devnet/testnet if you use them. If so, then wait till the network works again.
