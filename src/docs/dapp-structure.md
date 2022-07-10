@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/dapp-structure.html"
 twitterTitle: "Elven Tools Dapp structure - Elrond custom NextJS Dapp"
 twitterDescription: "The Elven Tools Dapp files structure and logic behind all crucial parts."
 twitterUrl: "https://www.elven.tools/docs/dapp-structure.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/dapp-structure.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-structure.md"
 ---
 
 Here you will find a description of all crucial parts of the Dapp and how all is structured. Besides that, you'll find more detailed descriptions of each piece in other sections.
@@ -37,7 +37,7 @@ The global state configuration sits in the [store](https://github.com/ElvenTools
 The state is also synchronized with the localStorage to be able to reinitialize all required states on hard refresh. You will find such entries in the localStorage:
 
 ```
-elven_tools_dapp__account: {"address":"","nonce":0,"balance":""}
+elven_tools_dapp__account: {"address":"","nonce":0,"balance":"", "addressIndex": 0}
 ```
 
 ```
@@ -52,7 +52,7 @@ The Dapp requires an initial configuration. It will be described in more detail 
 
 The most important would be to set up .env variables. You'll find the example here: [.env.example](https://github.com/ElvenTools/elven-tools-dapp/blob/main/.env.example). For deployment, you will also need to set them up. It can differ for different hosting providers or workflows. We will check the most simple ones, Netlify and Vercel, in separate docs sections.
 
-The other place for configuration is the [config](https://github.com/ElvenTools/elven-tools-dapp/tree/main/config). There are four different config files. The one for UI configuration, mostly Chakra UI variables. The one for the smart contract configuration. This is the copy of the data configured on the contract, but it helps keep the low number of API calls. Otherwise, every Dapp usage would generate a couple of queries for static data. Even with the cache, it can still be problematic. There is also a config for the network and static data for the Minter use case. Like the team, faq, etc.
+The other place for configuration is the [config](https://github.com/ElvenTools/elven-tools-dapp/tree/main/config). There are four different config files. The one for UI configuration, mostly Chakra UI variables, the config for the network and static data for the Minter use case. Like the team, faq, etc.
 
 ### React custom hooks
 
@@ -60,9 +60,12 @@ The whole logic is based on custom React hooks. There are many of them, but gene
 
 The most difficult to understand and, at the same time, the most important would be probably `useElrondNetworkSync`. It is responsible for syncing the whole network, auth providers, and user accounts. It is essential to call it as soon as possible. If needed, you can also optimize component rerenders. The Elven Tools Dapp already has some of the optimization implemented.
 
-There are also hooks responsible for auth providers initialization, like Maiar mobile app, browser extension, Ledger, and web wallet. Some hooks will serve the info about the user, auth status, etc. 
+Some hooks will serve the user's information, auth status, etc. There are also hooks responsible for auth providers initialization, like Maiar mobile app, browser extension, Ledger, and web wallet. And also, there are hooks responsible for querying smart contracts and making transactions.
 
-[useLogin](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/auth/useLogin.tsx) hook includes all auth providers. This is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
+For example: 
+
+- [useLogin](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/auth/useLogin.tsx) hook includes all auth providers. It is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
+- [useElvenScQuery](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/interaction/elvenScHooks/useElvenScQuery.tsx) is responsible of querying the Elven Tools Smart Contract.
 
 See more here [Dapp React hooks and components](/docs/dapp-react-hooks-and-components.html)
 
@@ -72,14 +75,16 @@ With the Elven Tools Dapp, you are not limited to what you will see at the begin
 
 In the [pages](https://github.com/ElvenTools/elven-tools-dapp/tree/main/pages) directory, you will find actual pages. The NextJS framework builds the routing based on this directory. You can read more about it here: [Pages](https://nextjs.org/docs/basic-features/pages).
 
-As you will see, there is also the api directory inside the `pages`. Here you will find a configuration for the API endpoint. In this case, we have there the middleware logic, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers. Read more about it here: [Dapp API Proxy](/docs/dapp-api-proxy.html).
+As you will see, the API directory is also inside the `pages`. Here you will find a configuration for the API endpoint. In this case, it is only a fallback endpoint for rewrites in case of no allowed calls to the API.
+
+We also have the middleware logic for API, which will block the usage of the API by third-party services. Only the same host will be able to use it, so our instance of the Dapp. You can always disable that, but it is beneficial when you care about the API traffic. Most useful for paid API providers. Read more about it here: [Dapp API Proxy](/docs/dapp-api-proxy.html).
 
 ### React custom UI components
 
 Finally, there are, of course, custom UI components. You will find them in the [components](https://github.com/ElvenTools/elven-tools-dapp/tree/main/components) directory. There is quite a lot of them. Most important are: 
 
-- [LoginComponent](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/LoginComponent.tsx) - this one will handle all auth processes. It will render all auth providers buttons and connect them using the useLogin hook
-- [LoginModalButton](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/LoginModalButton.tsx) - the button that also includes the modal wrapper for the LoginComponent
+- [LoginComponent](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/core/LoginComponent.tsx) - this one will handle all auth processes. It will render all auth providers buttons and connect them using the useLogin hook
+- [LoginModalButton](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/core/LoginModalButton.tsx) - the button that also includes the modal wrapper for the LoginComponent
 - [MintForm](https://github.com/ElvenTools/elven-tools-dapp/blob/main/components/MintForm.tsx) - this one will render the for minting with the input for the number of tokens to mint and all required states
 
 Other essential parts are mainly specific to the current use case, so the minting dapp. But remember that you can use this Dapp is the boilerplate for any project you want to build.

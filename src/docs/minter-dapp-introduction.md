@@ -11,10 +11,12 @@ ogUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
 twitterTitle: "Minter Dapp template - introduction"
 twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
 twitterUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/minter-dapp-introduction.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/minter-dapp-introduction.md"
 ---
 
-Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with the Elven Tools Smart Contract. It is a minter dapp based on the [NextJS](https://nextjs.org/) framework, which gives many possibilities for modifications and extending it.
+Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with the Elven Tools Smart Contract. 
+
+It is a minter dapp based on the [NextJS](https://nextjs.org/) framework, which gives many possibilities for modifications and extending.
 
 - [Elven Tools Dapp repository](https://github.com/ElvenTools/elven-tools-dapp)
 - [Elven Tools Dapp live demo](https://dapp-demo.elven.tools/) (you can mint some NFTs on the devnet here!)
@@ -44,11 +46,11 @@ There are a couple of reasons. The most important are:
 
 ### Why the API endpoint is proxied?
 
-1. Allows hiding the API endpoint under the same domain `www.your-domain.com/api`.
+1. Allows hiding the API endpoint under the same domain `www.your-domain.com/api/elrond`.
 2. No one will be able to use this endpoint from outside the Dapp.
 3. When used with no public API, You can hide the API keys which need to be attached to the endpoint.
-4. Usage of the public Elrond API is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
-5. It will still work well with the public Elrond API.
+4. Usage of the public Elrond API for production release is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
+5. Anyway, proxied API will still work well with the public Elrond API.
 
 ### Why written with Typescript and not JavaScript only?
 
@@ -73,12 +75,8 @@ There are a couple of reasons. The most important are:
 7. Built with accessibility in mind.
 8. A lot of ready-to-use components.
 
-### Why separate configuration for the Smart Contract data?
-
-1. This is basically for static data such as smart contract address, collection ticker, etc. It is mainly to save the API resources. Otherwise, all users will call the API endpoint a lot of times.
-2. In the future, it will be available as an option. The default behavior would be to query the smart contract with better caching.
-
-### Below, you will find a sneak peek video:
+### Below, you will find a sneak peek video
+(here with old approach to configuration, new vid soon)
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ATSxD3mD4dc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -90,10 +88,11 @@ There are a couple of reasons. The most important are:
 ### More detailed docs
 
 - [Dapp structure](/docs/dapp-structure.html) - here, you will learn about the essential components of the Dapp
-- [Soon...] Dapp configuration walkthrough - here, you will learn how to configure the Dapp properly
-- [Dapp deployment](/docs/dapp-deployment.html) - here, you will learn how to deploy the Dapp using Netlify or Vercel
 - [Dapp API proxy](/docs/dapp-api-proxy.html) - here, you will learn how the API proxy and 'guard' middleware works
-- [Soon...] Quick intro to Chakra UI and NextJS with links - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
-- [Dapp React prebuilt hooks, components, and utilities](/docs/dapp-react-hooks-and-components.html) - here, you will learn about all the custom React hooks and tools which can be used in many different ways
 - [Dapp backend integration](/docs/dapp-backend-integration.html) - here you will learn how to extend your dapp and verify the user on the backend side when needed
+- [Dapp deployment](/docs/dapp-deployment.html) - here, you will learn how to deploy the Dapp using Netlify or Vercel
+- [Dapp React prebuilt hooks, components, and utilities](/docs/dapp-react-hooks-and-components.html) - here, you will learn about all the custom React hooks and tools which can be used in many different ways
+- [Soon...] Quick intro to Chakra UI and NextJS with links - here, you will learn how to modify the Dapp using included tools like Chakra UI and NextJS
+- [Soon...] Dapp configuration walkthrough - here, you will learn how to configure the Dapp properly
+
 - Other docs will pop up when needed...

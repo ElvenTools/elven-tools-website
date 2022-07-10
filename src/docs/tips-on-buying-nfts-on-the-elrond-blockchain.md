@@ -117,4 +117,4 @@ Hopefully, I explained a couple of the most important things when someone is int
 Be aware that these are only my opinions. I am primarily a developer, so I'm not an expert in marketing, selling, and promoting stuff. I wrote from a developer's perspective and a person who would like to buy some NFTs at some moment in time.
 
 [Contact me!](/about.html) 
-Follow me on [GitHub](https://github.com/juliancwirko) and [Twitter](https://twitter.com/JulianCwirko).
+Follow me on [GitHub](https://github.com/ElvenTools) and [Twitter](https://twitter.com/JulianCwirko).

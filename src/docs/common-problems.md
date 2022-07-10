@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/common-problems.html"
 twitterTitle: "Elven Tools CLI tool - Common problems"
 twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/common-problems.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/common-problems.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/common-problems.md"
 ---
 
 Here you will find common problems when using the Elven Tools. In the future, there will be more improvements, good error messages, etc.

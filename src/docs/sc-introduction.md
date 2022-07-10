@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
 twitterTitle: "Smart Contract version 1 - introduction"
 twitterDescription: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/sc-introduction.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/sc-introduction.md"
 ---
 
 NFT minter Smart Contract v1

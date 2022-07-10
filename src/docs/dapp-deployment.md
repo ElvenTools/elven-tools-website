@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/dapp-deployment.html"
 twitterTitle: "Elven Tools Dapp deployment - Elrond custom NextJS Dapp"
 twitterDescription: Elven Tools Dapp walkthrough on deploying the app using Netlify and Vercel."
 twitterUrl: "https://www.elven.tools/docs/dapp-deployment.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/dapp-deployment.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-deployment.md"
 ---
 
 Let's look at the two most convenient and popular hosting providers out there. They are not only rich in features but also have an outstanding developer experience.

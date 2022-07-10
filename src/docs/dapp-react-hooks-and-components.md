@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/dapp-react-hooks-and-components.html"
 twitterTitle: "Elven Tools Dapp React hooks and components - Elrond custom NextJS Dapp"
 twitterDescription: "The Elven Tools Dapp React hooks and components that can be used in different combinations."
 twitterUrl: "https://www.elven.tools/docs/dapp-react-hooks-and-components.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/dapp-react-hooks-and-components.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-react-hooks-and-components.md"
 ---
 
 Below you will find the list of most essential utilities, hooks, and components with examples that are actual code from the Dapp. You can search them in the code to better understand how they work.
@@ -186,7 +186,7 @@ const mint = async (tokensAmount: number) => {
 
 #### useScQuery()
 
-The hook uses useSWR under the hood and can be triggered on a component mount or remotely on some action. It has two different states for the pending action. For initial load and on revalidate. It also takes one of two return data types: 'int' and 'string'. You can still use the string type for boolean and check if you will get `01`, which is `true`. For now, it assumes that you know what data type will be returned by a smart contract.
+The hook uses [useSWR](https://swr.vercel.app/) under the hood and can be triggered on a component mount or remotely on some action. It has two different states for the pending action. For initial load and on revalidate. It also takes one of three return data types: 'number', 'string', and 'boolean'. It will implement a result parser based on type definitions in the future.
 
 ```jsx
 const {
@@ -195,14 +195,32 @@ const {
   isLoading, // pending state for initial load
   isValidating, // pending state for each revalidation of the data, for example using the mutate
   error,
-} = useScQuery({
-  type: SCQueryType.INT, // can be int or string
+} = useScQuery<number>({
+  type: SCQueryType.NUMBER, // can be number, string or boolean
   payload: {
     scAddress: mintSmartContractAddress,
     funcName: queryFunctionName,
     args: [],
   },
   autoInit: false, // you can enable or disable the trigger of the query on the component mount
+});
+```
+
+#### useElvenScQuery()
+
+The hook is specific to the Elven Tools Smart Contract and is prepared to query only defined smart contracts. Internally it uses `useScQuery,` and in most cases, you would want to use it instead of the `useScQuery`. At least using the Dapp for Elven Tools Smart Contract interaction.
+
+```jsx
+import { SCQueryType } from '../hooks/interaction/useScQuery';
+(...)
+const {
+  data,
+  fetch,
+  isLoading,
+} = useElvenScQuery<boolean>({
+  funcName: 'isAllowlistEnabled',
+  type: SCQueryType.BOOLEAN,
+  autoInit: Boolean(address && !mintingPaused),
 });
 ```
 
