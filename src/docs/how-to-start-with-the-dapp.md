@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/how-to-start-with-the-dapp.html"
 twitterTitle: "How to start with the Dapp - Elrond custom NextJS Dapp"
 twitterDescription: "A quick intro to the Elven Tools Dapp - custom Elrond frontend app. You'll learn how to start using it."
 twitterUrl: "https://www.elven.tools/docs/how-to-start-with-the-dapp.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/how-to-start-with-the-dapp.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/how-to-start-with-the-dapp.md"
 ---
 
 In this section, I'll explain how to start with the Elven Tools Dapp. You will find the repository here: [ElvenTools/elven-tools-dapp](https://github.com/ElvenTools/elven-tools-dapp).
@@ -21,9 +21,8 @@ There are a couple of steps to run it locally and start working on modifications
 1. Clone/Download the repository code
 2. Install npm dependencies
 3. Configure basic .env variables
-4. Configure smart contract information (optionally other things too).
-5. Run the dapp locally
-6. Prepare it for deployment
+4. Run the dapp locally
+5. Prepare it for deployment
 
 The only essential thing here will be the sufficiently configured Node environment. I recommend using the LTS versions of Node and being careful with permissions on your system. The best is to use the Node version manager. I recommend [NVM](https://github.com/nvm-sh/nvm). Also, the best would be to work on Linux/macOS or Windows with a Linux subsystem.
 
@@ -75,6 +74,9 @@ The `elven-tools init-dapp` command will copy .env.example into .env.local. So y
 The Elven Tools Dapp uses a .env file for crucial environment variables. These are:
 
 - the chain type (devnet, testnet, mainnet),
+- the Elven Tools smart contract address
+- the mint function name
+- the mint base gase limit
 - the API endpoint
 - the public API proxy endpoint
 - the Dapp hostname
@@ -85,13 +87,20 @@ Variables with the `NEXT_PUBLIC_` prefix can be read by every user interacting w
 
 Read more about env vars in NextJS here: [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables).
 
-### Configure smart contract information
+### Smart Contract configuration
 
-The Elven Tools Dapp is prepared to work with properly configured and deployed Elven Tools Smart Contract. There is an additional configuration for the smart contract to save some API calls and traffic, which is essential in the case of paid third-party API providers. You will find it in the `config` directory [here](https://github.com/ElvenTools/elven-tools-dapp/blob/main/config/nftSmartContract.ts). Each variable is described so that I won't repeat it here. 
+The Dapp will query smart contract for all setup data, like:
+- if minting is paused
+- if there are drops enabled
+- if the allowlist is enabled
+- how many tokens were already minted
+- what are the tokens limits, also per address
 
-Remember that this config should always sync with the smart contract. Otherwise, the Dapp will show incorrect data or stop working. In the future, it will be served as an option. By default, the data will be queried on the smart contract.
+All that information will be automatically loaded, so if you change something using the Elven Tools CLI, for example, configure a drop, it will automatically update the Dapp state (after refresh).
 
-In the same directory, there are also other configuration files. All should also be descriptive there. These are mainly UI-based configurations, like the Chakra UI theme configuration or static data for the Dapp. You can review them and change whatever you need.
+### Other configuration
+
+You will find a few less important configuration settings in the `config` directory, mainly for the UI. All are readable, so there is no need to describe them here. The dapp should work on the devnet with an adequately deployed smart contract even without those settings.
 
 ### Run the dapp locally
 

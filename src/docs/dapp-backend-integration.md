@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/dapp-backend-integration.html"
 twitterTitle: "Elven Tools Dapp backend integration - Elrond custom NextJS Dapp"
 twitterDescription: "Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup."
 twitterUrl: "https://www.elven.tools/docs/dapp-backend-integration.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/dapp-backend-integration.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-backend-integration.md"
 ---
 
 Sometimes, with more extensive apps and more logic, like managing custom information about users, etc., there is a need to implement user verification on the app's backend side. The Minter Dapp doesn't require the backend verification to work. It uses a public blockchain, and the user signs every transaction, but still, it is good to know how to extend it.
@@ -31,7 +31,7 @@ There are three important things here:
 
 The public key can be fetched using the user's address and erdjs methods. You can do this like that: 
 
-```
+```typescript
 import { UserPublicKey } from '@elrondnetwork/erdjs-walletcore/out/userKeys';
 import { UserVerifier } from "@elrondnetwork/erdjs-walletcore";
 (...)
@@ -41,21 +41,21 @@ const verifier = new UserVerifier(pubKey);
 
 The message is more complicated than just the custom token. We would need to prepare the message like that: 
 
-```
+```typescript
 const msg = 'erdUserAddressHere' + 'yourCustomTokenHere' + JSON.stringify({});
 ```
 
 Then you would need to prepare the Signature instance:
 
-```
+```typescript
 import { Signature } from '@elrondnetwork/erdjs/out/signature';
 (...)
 const signature = new Signature(Buffer.from(msg, 'hex'));
 ```
 
-And finally, you can verify it:
+And finally, you can verify it on the backend side (erdjs will work only in Node backend):
 
-```
+```typescript
 import { SignableMessage } from "@elrondnetwork/erdjs";
 (...)
 const signMessage = new SignableMessage({

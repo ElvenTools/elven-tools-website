@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/sc-endpoints.html"
 twitterTitle: "Smart Contract version 1 - endpoints review"
 twitterDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
 twitterUrl: "https://www.elven.tools/docs/sc-endpoints.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/sc-endpoints.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/sc-endpoints.md"
 ---
 
 Below you'll find all endpoints with a short description. You can always see the complete code [here](https://github.com/ElvenTools/elven-nft-minter-sc).

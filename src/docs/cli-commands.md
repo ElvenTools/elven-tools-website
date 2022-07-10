@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/cli-commands.html"
 twitterTitle: "Elven Tools CLI tool - commands"
 twitterDescription: "Here you will find all CLI commands with short descriptions."
 twitterUrl: "https://www.elven.tools/docs/cli-commands.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/cli-commands.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/cli-commands.md"
 ---
 
 ### General commands

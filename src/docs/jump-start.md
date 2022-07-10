@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/jump-start.html"
 twitterTitle: "Elven Tools CLI tool - jump start!"
 twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/jump-start.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/jump-start.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/jump-start.md"
 ---
 
 <div class="docs-info-box">Remember that the CLI uses public API endpoints by default. You can switch to the custom ones. Read more how to do this <a href="/docs/recipes.html#custom-api-endpoints">here</a>.</div>
@@ -39,7 +39,7 @@ Check how to start with it here: [How to start with the Dapp](/docs/how-to-start
 
 The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
-Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/juliancwirko/nft-art-maker).
+Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/ElvenTools/nft-art-maker).
 
 In the end, you will have a set of generated images and metadata JSON files corresponding to each. It can look like `1.png` and `1.json`. Then you would need to pack them and upload them to the IPFS. The IPFS is the only recommended decentralized hosting on the Elrond chain, at least for now. You can upload the files using for example the [Pinata](https://www.pinata.cloud/) or [NFT.storage](https://nft.storage/). When you do that, you will get the CIDs, a [content identifier](https://docs.ipfs.io/concepts/content-addressing/) for your assets. With that, we can start using the elven-tools cli. Let's jump to it right now.
 

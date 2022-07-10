@@ -11,7 +11,7 @@ ogUrl: "https://www.elven.tools/docs/recipes.html"
 twitterTitle: "Elven Tools CLI tool - recipes"
 twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/recipes.html"
-githubUrl: "https://github.com/juliancwirko/elven-tools-website/edit/main/src/docs/recipes.md"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/recipes.md"
 ---
 
 Here are ready-to-use recipes and more information on real-life use cases.
