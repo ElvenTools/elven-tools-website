@@ -308,6 +308,34 @@ Done, 2 addresses saved.
 
 If you are interested in generating a **CSV** file, you can use the [elven-tools-collection-owners-csv](https://github.com/ElvenTools/elven-tools-collection-owners-csv) script, which will do that. The input file is the output of the `elven-tools collection-nft-owners`. You'll find the input and output examples in the [data](https://github.com/ElvenTools/elven-tools-collection-owners-csv/tree/main/data) folder.
 
+### How to distribute tokens to NFT owners
+
+From version 1.12.0, it is possible to automatically reuse the `nft-collection-owners.json` so the output from the `elven-tools collection-nft-owners` and distribute EGLD, ESDT, or MetaESDT tokens to the collection NFT owners.
+
+The functionality is based on the currently used PEM key file. It works without connection to the NFT minter smart contract or any other custom smart contract.
+
+You can use it with any PEM wallet file. You can also do this not only with your collection.
+
+How does it work?
+
+1. You need to run the `elven-tools collection-nft-owners` and generate the `nft-collection-owners.json` as in the section above.
+2. You would need to run the `elven-tools distribute-to-owners` command.
+3. Choose the token type (EGLD, ESDT, MetaESDT)
+4. Provide the token id in case of ESDT or MetaESDT
+5. Provide the amount per address
+
+Remember that you need to be sure that you use the proper chain type (devnet, testnet, mainnet) and that you have an adequate amount of the token on the wallet corresponding to the PEM file. Use `elven-tools derive-pem` to derive the PEM file.
+
+To change the chain type, use the configuration file. Create a `.elventoolsrc` config file and add:
+
+```
+{
+  "chain": "mainnet"
+}
+```
+
+Check [here](/docs/recipes.html#how-to-use-the-configuration-file) how to work with the config file.
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
