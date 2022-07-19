@@ -18,7 +18,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
 - `elven-tools collection-nft-owners` - get collection nft owners using the collection ticker ([see more](/docs/recipes.html#how-to-get-owners-addresses-using-the-collection-ticker))
-- `elven-tools distribute-to-owners` - Distribute EGLD/ESDT/MetaESDT to the collection owners. It will take the addresses from `nft-collection-owners.json`. Se the command above and docs about it [here](/docs/recipes.html#how-to-distribute-tokens-to-nft-owners)
+- `elven-tools distribute-to-owners` - Distribute EGLD/ESDT/SFT/MetaESDT to the collection owners. It will take the addresses from `nft-collection-owners.json`. Se the command above and docs about it [here](/docs/recipes.html#how-to-distribute-tokens-to-nft-owners)
 - `elven-tools deploy nft-minter` - deploys the smart contract (by default from the defined tag branch using the devnet, can be configured)
 - `elven-tools init-dapp` - initialize the Nextjs Minter Dapp in custom directory
 

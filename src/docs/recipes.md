@@ -310,7 +310,7 @@ If you are interested in generating a **CSV** file, you can use the [elven-tools
 
 ### How to distribute tokens to NFT owners
 
-From version 1.12.0, it is possible to automatically reuse the `nft-collection-owners.json` so the output from the `elven-tools collection-nft-owners` and distribute EGLD, ESDT, or MetaESDT tokens to the collection NFT owners.
+From version 1.12.1, it is possible to automatically reuse the `nft-collection-owners.json` so the output from the `elven-tools collection-nft-owners` and distribute EGLD, ESDT, SFT or MetaESDT tokens to the collection NFT owners.
 
 The functionality is based on the currently used PEM key file. It works without connection to the NFT minter smart contract or any other custom smart contract.
 
@@ -320,9 +320,11 @@ How does it work?
 
 1. You need to run the `elven-tools collection-nft-owners` and generate the `nft-collection-owners.json` as in the section above.
 2. You would need to run the `elven-tools distribute-to-owners` command.
-3. Choose the token type (EGLD, ESDT, MetaESDT)
+3. Choose the token type (EGLD, ESDT, SFT, MetaESDT)
 4. Provide the token id in case of ESDT or MetaESDT
 5. Provide the amount per address
+
+After all, you will get the `distribution-log.json` with all transactions, addresses, and status. 
 
 Remember that you need to be sure that you use the proper chain type (devnet, testnet, mainnet) and that you have an adequate amount of the token on the wallet corresponding to the PEM file. Use `elven-tools derive-pem` to derive the PEM file.
 
