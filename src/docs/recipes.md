@@ -338,6 +338,20 @@ To change the chain type, use the configuration file. Create a `.elventoolsrc` c
 
 Check [here](/docs/recipes.html#how-to-use-the-configuration-file) how to work with the config file.
 
+Alternatively, if you haven't used the `elven-tools collection-nft-owners` to generate the `nft-collection-owners.json` and have addresses from some other source, then you can prepare a file with the same name and the same structure. You can omit 'tokens' and 'tokensCount' there. It should still work. The structure will be:
+
+```json
+[
+  { "owner": "erd1...." },
+  { "owner": "erd1...." },
+  { "owner": "erd1...." }
+]
+```
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SreoFeyOUPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### CLI for a buyer
 
 You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
