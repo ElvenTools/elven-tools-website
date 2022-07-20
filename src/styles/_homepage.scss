@@ -48,10 +48,6 @@
     font-size: 18px;
   }
 
-  @media screen and (max-width: 560px) {
-    margin-bottom: 30px;
-  }
-
   @media screen and (max-width: 1366px) {
     margin-top: 40px;
   }
@@ -60,6 +56,13 @@
     font-weight: 800;
     text-decoration: none;
   }
+}
+
+.homepage-lead-subtitle-small {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .homepage-lead-accent {
@@ -84,10 +87,16 @@
     font-weight: 400;
     background-color: $color-main-contrast;
     transition: background-color .2s, color .2s;
+    min-width: 200px;
+    margin: auto 5px;
 
     &:hover {
       color: $color-main-contrast;
       background-color: $color-main-light;
+    }
+
+    @media screen and (max-width: 495px) {
+      margin-bottom: 10px;
     }
   }
 }
@@ -138,6 +147,10 @@
   line-height: 1.6;
   font-size: 15px;
   text-align: center;
+
+  .homepage-lead-column-bold {
+    font-weight: 600;
+  }
 }
 
 .homepage-lead-column-title {
