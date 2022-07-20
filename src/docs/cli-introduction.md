@@ -122,6 +122,9 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
   },
   "collectionNftOwners": {
     "apiCallsPerSecond": 5
+  },
+  "distributeToOwners": {
+    "apiCallsPerSecond": 5
   }
 }
 ```

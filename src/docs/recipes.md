@@ -330,9 +330,19 @@ Remember that you need to be sure that you use the proper chain type (devnet, te
 
 To change the chain type, use the configuration file. Create a `.elventoolsrc` config file and add:
 
-```
+```json
 {
   "chain": "mainnet"
+}
+```
+
+There is a rate limit when distributing the tokens. It is five calls per second. You can increase that by using the configuration file, add:
+
+```json
+{
+  "distributeToOwners": {
+    "apiCallsPerSecond": 5
+  }
 }
 ```
 
