@@ -4,17 +4,17 @@ title: 'Additional functionalities of Elven Tools'
 publicationDate: '2022-07-24'
 tags:
   - articles
-excerpt: "The CLI also has some additional tools and separated helper scripts. Let's see what they are."
+excerpt: "The CLI also has some additional tools and there are also separated helper scripts. Let's see what we have here."
 ogTitle: "Additional functionalities of Elven Tools"
-ogDescription: "The CLI also has some additional tools and separated helper scripts. Let's see what they are."
+ogDescription: "The CLI also has some additional tools and there are also separated helper scripts. Let's see what we have here."
 ogUrl: "https://www.elven.tools/docs/additional-functionalities-of-elven-tools.html"
 twitterTitle: "Additional functionalities of Elven Tools"
-twitterDescription: "The CLI also has some additional tools and separated helper scripts. Let's see what they are."
+twitterDescription: "The CLI also has some additional tools and there are also separated helper scripts. Let's see what we have here."
 twitterUrl: "https://www.elven.tools/docs/additional-functionalities-of-elven-tools.html"
 ---
 
 Elven Tools CLI is mainly used to simplify and help when deploying and interacting with the Elven Tools smart contract. Read more about that here: [Elven Tools workflows](https://www.elven.tools/docs/elven-tools-workflows.html).
-It is its main functionality. But the CLI also has some additional tools and separated helper scripts. Let's see what they are.
+It is its main functionality. But the CLI also has some additional tools and there are also separated helper scripts. Let's see what they are.
 
 ### Get NFT owners
 
