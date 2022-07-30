@@ -37,3 +37,11 @@ Here you will find common problems when using the Elven Tools. In the future, th
 **Problem**: The problem can occur with any CLI command, any transaction  \
 **Cause**: The problem occurs when something is wrong with the network, or the devnet/testnet was reset, and your wallet doesn't exist anymore (doesn't have funds).  \
 **Solution**: Double check your wallet, check if it works properly, and check if there are no problems with devnet/testnet if you use them. If so, then wait till the network works again.
+
+### Ttimeout of 10000ms exceeded
+
+`Request error on url [accounts/erd1...]: [Error: timeout of 10000ms exceeded]`
+
+**Problem**: The public API which is in use by default isn't responding on time  \
+**Cause**: The problem occurs when the network isn't responding fast. There is a limit of 10 seconds. Then the connection is closed.  \
+**Solution**: You could try again, and if a couple of tries don't help, you would need to change the API provider. Check how [here](https://www.elven.tools/docs/recipes.html#custom-api-endpoints). Or you can wait some time for the public API to be in better shape.
