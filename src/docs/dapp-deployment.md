@@ -39,7 +39,7 @@ They built a lot of tools and ready-to-use configurations. Let's see what Ntlify
 
 How is it possible? 
 
-Netlify services uses special NextJS [build pluging](https://github.com/netlify/netlify-plugin-nextjs). Don't worry. If you build on Netlify, you don't have to install it. It will be handled automatically.
+Netlify services uses special NextJS [build plugin](https://github.com/netlify/netlify-plugin-nextjs). Don't worry. If you build on Netlify, you don't have to install it. It will be handled automatically.
 
 Ok, but what you should do to prepare the Elven Tools Dapp for the deployment. Let's go through the steps. Let's assume that you've cloned the repository and provided changes. Then, when you need to deploy, you can follow these steps: You will also be able to see the walkthrough video below.
 
@@ -51,6 +51,7 @@ Ok, but what you should do to prepare the Elven Tools Dapp for the deployment. L
 
 For more details on deploying a NextJS app, check the [official docs](https://docs.netlify.com/). And for this specific case, please watch the walkthrough video below:
 
+Be aware that there were changes in the env vars list, the video is older, you will always find actual list in the `.env.example` file
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/SQN-0XMxibU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
