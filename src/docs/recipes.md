@@ -259,7 +259,7 @@ Additionally, you can also filter by metadata JSON file name. It is an optional 
 
 How to use it? You need to use at least version 1.6.0 of the CLI. You can check it by `elven-tools -v`, and you would need to use the command `elven-tools collection-nft-owners`. Then there are prompts. You would need to provide the collection ticker and answer two questions about whether you want to filter smart contract addresses.
 
-Because of how the API works, we need to do calls with a max size of 100 items. Here we also have calls that are limited to 5 per second. You can change this limit in the configuration file. Check how [here](/docs/cli-introduction#custom-configuration-options). If you need to change this setting, in the config file, there should be an entry:
+Because of how the API works, we need to do calls with a max size of 100 items. Here we also have calls that are limited to 5 per second. You can change this limit in the configuration file. Check how [here](/docs/cli-introduction.html#custom-configuration-options). If you need to change this setting, in the config file, there should be an entry:
 
 ```
 {
