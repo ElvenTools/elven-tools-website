@@ -374,14 +374,14 @@ You can also use the CLI tool when you are only a buyer, not an owner of the Sma
 {
   "nftMinterSc": {
     "deployNftMinterSC": "<nft_minter_smart_contract_address_here>",
-    "tokenSelingPrice": "<price_of_the_nft_here>"
+    "tokenSellingPrice": "<price_of_the_nft_here>"
   }
 }
 ```
 
 You would need only these two settings to be able to buy. Of course, the contract owner should prepare everything and start the minting process.
 
-The `tokenSelingPrice` here is a format with 18 zeros. So 1 EGLD is 1000000000000000000.
+The `tokenSellingPrice` here is a format with 18 zeros. So 1 EGLD is 1000000000000000000.
 The `deployNftMinterSC` here is an address of the contract. The owner should share it.
 
 4. The last would be to call the mint command: `elven-tools nft-minter mint`. You will be asked about the number of tokens to mint. There will be limits. You would know them. You can [query the contract to check them](/docs/sc-endpoints.html#smart-contract-queries).

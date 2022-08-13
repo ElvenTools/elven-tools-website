@@ -91,7 +91,7 @@ elven-tools deploy nft-minter
  › .png
 ✔ Provide amount of tokens in collection:
  … 10000
-✔ Provide the seling price (ex. 0.5 for 0.5 EGLD):
+✔ Provide the selling price (ex. 0.5 for 0.5 EGLD):
  … 0.01
 ✔ Total tokens limit per one address per whole collection:
  … 6
