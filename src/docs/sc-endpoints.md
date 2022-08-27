@@ -43,7 +43,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 - `setNewPrice` - You can change the price for each NFT at any time. The best is to do this when configuring the next drop.
 - `changeBaseCids` - You can change the CIDs for images and metadata, but only when there is no NFTs minted yet. Otherwise, it doesn't make sense because the collection will be unsynchronized.
 - `setNewTokensLimitPerAddress` - You can change the limit of tokens per single address in any given time.
-- `giveaway` - You can organize the giveaway by providing the address and amount of tokens to send. It will mint and send tokens without the payment.
+- `giveaway` - You can organize the giveaway by providing the addresses and amount of tokens per one address. It will mint and send tokens without the payment.
 - `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from minting are directly sent to the contract owner after each mint.
 - `populateAllowlist` - You can set up the allowlist by populating the storage with addresses. Keep 320 addresses as max per one transaction. Otherwise, it could reach the max gas limit.
 - `enableAllowlist` - You can enable to allowlist. Only then will it work. Remember about that.

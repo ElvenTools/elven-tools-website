@@ -196,7 +196,7 @@ Ok, let's see how to use it:
 elven-tools nft-minter giveaway
 ```
 
-You will be asked to provide the addresses in the CLI prompt. You can give/mint the tokens in this special case even when the whole minting process is paused.
+You will be asked to provide the addresses in the CLI prompt or you can also provide them using the `giveaway.json` file. You can give/mint the tokens in this special case even when the whole minting process is paused.
 
 Remember that they will still be minted randomly. In the spirit of fair distribution, there is no way to choose a particular one to send.
 
