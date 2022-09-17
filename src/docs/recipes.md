@@ -358,19 +358,33 @@ There is a rate limit when distributing the tokens. It is five calls per second.
 
 Check [here](/docs/recipes.html#how-to-use-the-configuration-file) how to work with the config file.
 
+From version 1.15.2, you can use an optional multiplier functionality. When distributing the amount will be multiplied by the number of NFTs owned by an address.
+
 Alternatively, if you haven't used the `elven-tools collection-nft-owners` to generate the `nft-collection-owners.json` and have addresses from some other source, then you can prepare a file with the same name and the same structure. You can omit 'tokens' and 'tokensCount' there. It should still work. The structure will be:
 
 ```json
 [
-  { "owner": "erd1...." },
-  { "owner": "erd1...." },
-  { "owner": "erd1...." }
+  { "owner": "erd1....", "tokensCount": 3 },
+  { "owner": "erd1....", "tokensCount": 1 },
+  { "owner": "erd1....", "tokensCount": 1 }
 ]
 ```
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/SreoFeyOUPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+```bash
+elven-tools distribute-to-owners
+
+✔ What do you want to distribute? Choose the token type.
+ › EGLD
+✔ Please provide the amount of the EGLD to send per one address (ex. 1 is 1 EGLD)
+ … 1
+? You can multiply the amount to distribute by the number of NFTs tokens owned. Do you want to do that? › - Use arrow-keys. Return to submit.
+❯   No
+    Yes
+```
 
 ### CLI for a buyer
 
