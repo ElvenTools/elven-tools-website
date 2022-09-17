@@ -24,7 +24,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 
 ### nft-minter commands
 
-- `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the Elrond chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection.
+- `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the Elrond chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for NFTs. You can also opt-out of adding the edition number to the name.
 - `elven-tools nft-minter set-roles` [only owner] - for now, the command sets the critical role for the collection handle. It is a 'create nft' role.
 - `elven-tools nft-minter start-minting` [only owner] - by default, after deploying the smart contract, the minting is disabled. You would need to start it
 - `elven-tools nft-minter pause-minting` [only owner] - you can also pause it at any moment

@@ -21,7 +21,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 1. `npm install -g elven-tools` -> install the npm library (you would need to have Node configured on the system)
 2. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
 3. `elven-tools deploy nft-minter` -> provide all the data. There will be a couple of prompts
-4. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker, be careful. They should be short. The ticker should be capitalized
+4. `elven-tools nft-minter issue-collection-token` -> provide the name and ticker. You can also provide a separate name for NFTs. You can also opt-out of adding the edition number to the name.
 5. `elven-tools nft-minter set-roles` -> roles for the issued token
 6. `elven-tools nft-minter start-minting` -> starts the minting. By default, it is paused at start
 7. `elven-tools nft-minter mint` -> mint tokens, provide the amount, be careful. There will be custom limits per address
@@ -128,15 +128,17 @@ The following mandatory command which you would use is issuing the collection to
 ```bash
 elven-tools nft-minter issue-collection-token
 ✔ Enter the name for the collection token (ex. MyName123). 
-Avoid spaces and special characters
- … TestCollectionName
+(3-20 characters, alphanumeric only)
+ … TestOnly
 ✔ Enter the ticker for the collection token (ex. MYNAME). 
-Avoid spaces and special characters. Keep it short and capitalize.
- … TCLN
-⠼ Processing transaction...
-Transaction: https://devnet-explorer.elrond.com/transactions/762adbb2485697c5b20a09ca28ff6bd4f0b11238ce57bee99d24c8ebd7a1d826
-Your collection token id:  TCLN-416d0e
-Also saved in the output.json file.
+(3-10 characters, alphanumeric and uppercase only)
+ … TSTONL
+✔ Do you want to remove the edition number from the name? (example: 'name #1' when there is 1.json and 1.png) › No
+✔ Enter the name for NFTs. If not provided, the name of the collection will be used. (Optional)
+ … Separate NFT name
+
+Transaction status: success
+Transaction link: https://devnet-explorer.elrond.com/transactions/a06da61a1d138a73c569ed0e13ecbda4176768aa19cb37254cce1aab318c229f
 ```
 
 The last mandatory command is `elven-tools nft-minter set-roles`. It will assign the obligatory role, which allows for new NFT tokens creation. Here there won't be any prompts, at least for now. Only a transaction will take the token data from the output.json file and assign the roles.
