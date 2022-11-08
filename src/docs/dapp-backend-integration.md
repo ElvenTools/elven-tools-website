@@ -5,10 +5,10 @@ publicationDate: '2022-04-19'
 tags:
   - minter dapp
 excerpt: "Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup."
-ogTitle: "Elven Tools Dapp backend integration - Elrond custom NextJS Dapp"
+ogTitle: "Elven Tools Dapp backend integration - MultiversX custom NextJS Dapp"
 ogDescription: "Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup."
 ogUrl: "https://www.elven.tools/docs/dapp-backend-integration.html"
-twitterTitle: "Elven Tools Dapp backend integration - Elrond custom NextJS Dapp"
+twitterTitle: "Elven Tools Dapp backend integration - MultiversX custom NextJS Dapp"
 twitterDescription: "Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup."
 twitterUrl: "https://www.elven.tools/docs/dapp-backend-integration.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-backend-integration.md"

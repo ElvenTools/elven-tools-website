@@ -24,7 +24,7 @@ All scenarios can be modified and improved. These are probably the most often us
 
 ### What is possible and what's not
 
-The first version of the Smart Contract works on the trendy principle of a 'candy machine'. You can read more about it here: [Tips on buying NFTs on the Elrond blockchain](/docs/tips-on-buying-nfts-on-the-elrond-blockchain.html). 
+The first version of the Smart Contract works on the trendy principle of a 'candy machine'. You can read more about it here: [Tips on buying NFTs on the MultiversX blockchain](/docs/tips-on-buying-nfts-on-the-multiversx-blockchain.html). 
 
 In general, you pay, and you get randomly selected NFT. In the article linked above, you will find some more thoughts about the pros and cons of such a solution, but here let's focus on exactly what you can do and what you can't.
 
@@ -240,7 +240,7 @@ Please keep in mind that this is a quick idea for example purposes. Do it as you
 
 ### Summary
 
-Here are a couple of ideas on preparing the Smart Contract to sell the NFT collection on the Elrond blockchain.
+Here are a couple of ideas on preparing the Smart Contract to sell the NFT collection on the MultiversX blockchain.
 
 Hopefully, it will be helpful, and the examples will help better understand the idea behind all the existing endpoints on the Smart Contract.
 

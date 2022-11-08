@@ -1,19 +1,19 @@
 ---
 layout: 'docs'
-title: 'Use of IPFS in the Elrond NFT ecosystem'
+title: 'Use of IPFS in the MultiversX NFT ecosystem'
 publicationDate: '2022-03-26'
 tags:
   - articles
-excerpt: "IPFS storage is a crucial part of every NFT ecosystem, not only the Elrond. It allows storing and accessing data in a decentralized and trustless way."
-ogTitle: "Use of IPFS in the Elrond NFT ecosystem"
-ogDescription: "IPFS storage is a crucial part of every NFT ecosystem, not only the Elrond. It allows storing and accessing data in a decentralized and trustless way."
-ogUrl: "https://www.elven.tools/docs/use-of-ipfs-in-the-elrond-nft-ecosystem.html"
-twitterTitle: "Use of IPFS in the Elrond NFT ecosystem"
-twitterDescription: "IPFS storage is a crucial part of every NFT ecosystem, not only the Elrond. It allows storing and accessing data in a decentralized and trustless way."
-twitterUrl: "https://www.elven.tools/docs/use-of-ipfs-in-the-elrond-nft-ecosystem.html"
+excerpt: "IPFS storage is a crucial part of every NFT ecosystem, not only the MultiversX. It allows storing and accessing data in a decentralized and trustless way."
+ogTitle: "Use of IPFS in the MultiversX NFT ecosystem"
+ogDescription: "IPFS storage is a crucial part of every NFT ecosystem, not only the MultiversX. It allows storing and accessing data in a decentralized and trustless way."
+ogUrl: "https://www.elven.tools/docs/use-of-ipfs-in-the-multiversx-nft-ecosystem.html"
+twitterTitle: "Use of IPFS in the MultiversX NFT ecosystem"
+twitterDescription: "IPFS storage is a crucial part of every NFT ecosystem, not only the MultiversX. It allows storing and accessing data in a decentralized and trustless way."
+twitterUrl: "https://www.elven.tools/docs/use-of-ipfs-in-the-multiversx-nft-ecosystem.html"
 ---
 
-IPFS storage is a crucial part of every NFT ecosystem, not only the Elrond. I found that there is a lot of misunderstanding about why it is required and how it works. I won't describe the IPFS in detail, and it doesn't make sense because there are many excellent articles about it on the Internet that I am about to link. What I would like to do is to explain the basics in the context of Elrond NFTs.
+IPFS storage is a crucial part of every NFT ecosystem, not only the MultiversX. I found that there is a lot of misunderstanding about why it is required and how it works. I won't describe the IPFS in detail, and it doesn't make sense because there are many excellent articles about it on the Internet that I am about to link. What I would like to do is to explain the basics in the context of MultiversX NFTs.
 
 ### What we will tackle here:
 
@@ -24,7 +24,7 @@ IPFS storage is a crucial part of every NFT ecosystem, not only the Elrond. I fo
   - Pinning, why it is essential?
   - What is an IPFS gateway?
   - Where can I learn more about IPFS?
-- How is it used in the Elrond ecosystem?
+- How is it used in the MultiversX ecosystem?
 - Helpful IPFS services and tools.
 
 ### IPFS basic intro.
@@ -89,7 +89,7 @@ What is also worth mentioning is that you can use the IPFS URI schema in a Brave
 
 - [ipfs://bafybeigdsbu4tkfzn23ufjugvzo4ht7myazyxl6gtecywtj4vlyvekqxea/7894.png](ipfs://bafybeigdsbu4tkfzn23ufjugvzo4ht7myazyxl6gtecywtj4vlyvekqxea/7894.png)
 
-You will find a list of gateways [here](https://ipfs.github.io/public-gateway-checker/). Remember that also Elrond provides a custom IPFS gateway. See the same example below: 
+You will find a list of gateways [here](https://ipfs.github.io/public-gateway-checker/). Remember that also MultiversX provides a custom IPFS gateway. See the same example below: 
 
 - [https://media.elrond.com/nfts/asset/bafybeigdsbu4tkfzn23ufjugvzo4ht7myazyxl6gtecywtj4vlyvekqxea/7894.png](https://media.elrond.com/nfts/asset/bafybeigdsbu4tkfzn23ufjugvzo4ht7myazyxl6gtecywtj4vlyvekqxea/7894.png)
 
@@ -104,27 +104,27 @@ Besides all links from previous chapters, I will leave a couple of links below. 
 - Youtube channel: [https://www.youtube.com/c/IPFSbot](https://www.youtube.com/c/IPFSbot)
 - Awesome IPFS GitHub repo: [https://github.com/ipfs/awesome-ipfs](https://github.com/ipfs/awesome-ipfs)
 
-### How is it used in the Elrond ecosystem?
+### How is it used in the MultiversX ecosystem?
 
-Finally, let's jump into the Elrond ecosystem and see how we can use the IPFS when creating the NFTs on the Elrond chain.
+Finally, let's jump into the MultiversX ecosystem and see how we can use the IPFS when creating the NFTs on the MultiversX chain.
 
-The main concept of the NFT token on the Elrond blockchain is that it is the ESDT token, so the standard Elrond token, but with additional metadata. 
+The main concept of the NFT token on the MultiversX blockchain is that it is the ESDT token, so the standard MultiversX token, but with additional metadata. 
 
-There are no strict rules on what your NFT token should look like. I mean, what structure its attributes should have. The main field for keeping the data on-chain is the 'attributes' field. I won't focus much on how NFTs work on the Elrond blockchain because it is a topic for many different articles, and it was already covered partially. Also, see the [official docs on it](https://docs.elrond.com/developers/nft-tokens/).
+There are no strict rules on what your NFT token should look like. I mean, what structure its attributes should have. The main field for keeping the data on-chain is the 'attributes' field. I won't focus much on how NFTs work on the MultiversX blockchain because it is a topic for many different articles, and it was already covered partially. Also, see the [official docs on it](https://docs.elrond.com/developers/nft-tokens/).
 
 When preparing the NFT, we need to split the data of our NFT token into the small batch, which will be kept on-chain, and all other stuff that will be kept off-chain using IPFS decentralized storage. 
 
-On Elrond, for on-chain, we will keep only the information about the CIDs for the metadata JSON file with all additional data like traits, description, etc., and the actual asset CID and probably file names. Let's take a closer look and take the example from Elven Tools.
+On MultiversX, for on-chain, we will keep only the information about the CIDs for the metadata JSON file with all additional data like traits, description, etc., and the actual asset CID and probably file names. Let's take a closer look and take the example from Elven Tools.
 
 Here is the example of the NFT minted using the Elven Tools: [https://devnet-explorer.elrond.com/nfts/FTDD-5cdeea-03](https://devnet-explorer.elrond.com/nfts/FTDD-5cdeea-03).
 
 You will see that we have two assets linked using the IPFS gateway. The most popular gateway. The JSON file is the metadata for our token. You can preview its content, but this isn't important for now. The metadata file is added there, but this isn't a standard. The Elven Tools allows choosing if you want it there or not. It isn't required because the information about the metadata CID is located in the attributes. They are not displayed in the explorer directly. But when you preview the API response for this token, you will find that attributes are a base64 encoded string that after decoding will give you something like that: `metadata:bafybeifjntwejc7k7dedfaavravhnosc7xe4ceu5zmobjhhbob32uyu57m/93.json`. So the same CID and file name as in the assets in the explorer.
 
-Based on that, the Elrond API services will prepare additional data for your token. Like media and metadata objects. So it is essential to have such entry in your attributes field.
+Based on that, the MultiversX API services will prepare additional data for your token. Like media and metadata objects. So it is essential to have such entry in your attributes field.
 
-For now, the only supported decentralized storage seems to be IPFS, but I think this is ok. IPFS is the most popular way of storing content in a decentralized manner. But Elrond's services for that will probably be extended in the future. For example, with the Arweave support.
+For now, the only supported decentralized storage seems to be IPFS, but I think this is ok. IPFS is the most popular way of storing content in a decentralized manner. But MultiversX's services for that will probably be extended in the future. For example, with the Arweave support.
 
-To sum up. Metadata, images, and all other assets should be kept off-chain using IPFS because it is much cheaper. The CID for the metadata and assets is critical in how Elrond API services work. The CID and file name for the metadata file should be provided in the 'attributes' field with the defined format and encoded with base64. This will open the door to proper operations on the NFT data and prepare appropriate API responses. It is also used for thumbnails generation and optimizations for assets serving. The metadata JSON file CID in the assets section is optional. Some of the marketplaces require that.
+To sum up. Metadata, images, and all other assets should be kept off-chain using IPFS because it is much cheaper. The CID for the metadata and assets is critical in how MultiversX API services work. The CID and file name for the metadata file should be provided in the 'attributes' field with the defined format and encoded with base64. This will open the door to proper operations on the NFT data and prepare appropriate API responses. It is also used for thumbnails generation and optimizations for assets serving. The metadata JSON file CID in the assets section is optional. Some of the marketplaces require that.
 
 ### Helpful IPFS services and tools.
 
@@ -149,6 +149,6 @@ Another important thing is to keep in mind that even if you, as the collection c
 
 ### Summary
 
-Hopefully, I was able to explain some basics and show you the path where you could start learning about decentralized storage and IPFS. The Elven Tools is prepared to consume the IPFS and keep the Elrond best practices so feel free to play around and test things.
+Hopefully, I was able to explain some basics and show you the path where you could start learning about decentralized storage and IPFS. The Elven Tools is prepared to consume the IPFS and keep the MultiversX best practices so feel free to play around and test things.
 
 If you want to contact me, you will find all communication channels here: [www.elven.tools/about.html](https://www.elven.tools/about.html).

@@ -38,4 +38,4 @@ The last but not least functionality not directly related to the NFT minting is 
 
 ### Summary
 
-There will be more tools related to the PFP NFT collections handling. There are also planned new smart contracts, so stay tuned. And if you want a similar CLI tool, but more general, not specific to the NFTs, please check the [Buildo Begins](https://github.com/ElrondDevGuild/buildo-begins). It is a tool to simplify common operations on the Elrond blockchain and also a couple of helper tools. Like generating the herotag or using Elrond data converters.
+There will be more tools related to the PFP NFT collections handling. There are also planned new smart contracts, so stay tuned. And if you want a similar CLI tool, but more general, not specific to the NFTs, please check the [Buildo Begins](https://github.com/xdevguild/buildo-begins). It is a tool to simplify common operations on the MultiversX blockchain and also a couple of helper tools. Like generating the herotag or using MultiversX data converters.

@@ -5,10 +5,10 @@ publicationDate: "2022-04-19"
 tags:
   - minter dapp
 excerpt: "The Elven Tools Dapp API proxy - how the API proxy and 'guard' middleware works."
-ogTitle: "Elven Tools Dapp API proxy - Elrond custom NextJS Dapp"
+ogTitle: "Elven Tools Dapp API proxy - MultiversX custom NextJS Dapp"
 ogDescription: "The Elven Tools Dapp API proxy - you will learn how the API proxy and 'guard' middleware works."
 ogUrl: "https://www.elven.tools/docs/dapp-api-proxy.html"
-twitterTitle: "Elven Tools Dapp API proxy - Elrond custom NextJS Dapp"
+twitterTitle: "Elven Tools Dapp API proxy - MultiversX custom NextJS Dapp"
 twitterDescription: "The Elven Tools Dapp API proxy - you will learn how the API proxy and 'guard' middleware works."
 twitterUrl: "https://www.elven.tools/docs/dapp-api-proxy.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-api-proxy.md"
@@ -20,7 +20,7 @@ Think of the Dapp API proxy as the Nextjs API rewrites on the backend side. Why 
 
 Reminder, the Elven Tools Dapp code is [here](https://github.com/ElvenTools/elven-tools-dapp).
 
-In the `.env.example` (and later in your proper `.env.local`) file, you will find a variable `ELROND_CUSTOM_API`. By default, there will be a public Elrond API endpoint, but this is a place for your custom API endpoint. The endpoint won't be exposed on the frontend. So you can use services such as Tatum or BlastAPI and put there your custom endpoint. This way, you will make it private but still usable by your dapp and only by it.
+In the `.env.example` (and later in your proper `.env.local`) file, you will find a variable `ELROND_CUSTOM_API`. By default, there will be a public MultiversX API endpoint, but this is a place for your custom API endpoint. The endpoint won't be exposed on the frontend. So you can use services such as Tatum or BlastAPI and put there your custom endpoint. This way, you will make it private but still usable by your dapp and only by it.
 
 There is also `NEXT_PUBLIC_ELROND_API`, which will define the public API proxy. The best is to make it a subset of the `/api`, so by default, it is `/api/elrond`.
 

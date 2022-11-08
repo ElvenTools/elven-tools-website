@@ -5,9 +5,9 @@
     "orientation": "portrait",
     "scope": "/",
     "start_url": "/",
-    "name": "Elven Tools - NFTs on the Elrond Blockchain",
+    "name": "Elven Tools - NFTs on the MultiversX Blockchain",
     "short_name": "Elven Tools",
-    "description": "Open Source toolset for launching NFTs collections on the Elrond blockchain.",
+    "description": "Open Source toolset for launching NFTs collections on the MultiversX blockchain.",
     "icons": [
       {
         "src": "/assets/images/icon-192x192.png",

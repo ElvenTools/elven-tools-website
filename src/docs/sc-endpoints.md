@@ -53,7 +53,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 
 ### Endpoints for all
 
-- `mint` - The main mint/buy function. The smart contract works like a candy machine. You pay, and it randomly mints the NFT for you. Then it sends it into your wallet. The NFTs on the Elrond network are ESDT standardized tokens.
+- `mint` - The main mint/buy function. The smart contract works like a candy machine. You pay, and it randomly mints the NFT for you. Then it sends it into your wallet. The NFTs on the MultiversX network are ESDT standardized tokens.
 - `shuffle` - To be more transparent, the Smart Contract has a public endpoint that allows everyone to trigger the shuffling mechanism which is also triggered after every mint. This additional functionality ensures that the process is random, and anyone can set the following index.
 
 ### Smart Contract queries (also for all, by design)

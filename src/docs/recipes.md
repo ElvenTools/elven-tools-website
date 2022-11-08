@@ -34,7 +34,7 @@ It is good to build the Smart Contract locally and deploy it from the file syste
 
 As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building the Smart Contract locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter`.
 
-If you need some help working with the Smart Contract in the Elrond ecosystem, please check docs and my article [here](https://www.julian.io/articles/elrond-smart-contracts.html).
+If you need some help working with the Smart Contract in the MultiversX ecosystem, please check docs and my article [here](https://www.julian.io/articles/elrond-smart-contracts.html).
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/TivnKJsyLH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -103,7 +103,7 @@ When you need to use the Gateway instead API, you can configure it like that:
 
 It is an example with the default Gateway endpoint for the devnet. You can do the same for the testnet and mainnet.
 
-Important! When nothing is provided, the CLI will use the default, public Elrond API endpoint (api.elrond.com, devnet-api.elrond.com, testnet-api.elrond.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
+Important! When nothing is provided, the CLI will use the default, public MultiversX API endpoint (api.elrond.com, devnet-api.elrond.com, testnet-api.elrond.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
 
 ### How to use allowlist
 
@@ -247,7 +247,7 @@ As always, you can call the giveaway endpoint without the CLI. Check them in the
 
 ### How to claim dev rewards
 
-In the Elrond ecosystem, each Smart Contract will get the share of the fees as a development reward. So the developer of the contract will get some share because this is an open source Smart Contract. It will generate these rewards for everyone who deploys it. You can claim them by using: `elven-tools nft-minter claim-dev-rewards`. Remember that this will only work for the owner of the Smart Contract.
+In the MultiversX ecosystem, each Smart Contract will get the share of the fees as a development reward. So the developer of the contract will get some share because this is an open source Smart Contract. It will generate these rewards for everyone who deploys it. You can claim them by using: `elven-tools nft-minter claim-dev-rewards`. Remember that this will only work for the owner of the Smart Contract.
 
 As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
 

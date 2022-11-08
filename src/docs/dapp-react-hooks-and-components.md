@@ -5,10 +5,10 @@ publicationDate: "2022-04-17"
 tags:
   - minter dapp
 excerpt: "The Elven Tools Dapp React hooks and components that can be used in different combinations."
-ogTitle: "Elven Tools Dapp React hooks and components - Elrond custom NextJS Dapp"
+ogTitle: "Elven Tools Dapp React hooks and components - MultiversX custom NextJS Dapp"
 ogDescription: "The Elven Tools Dapp React hooks and components that can be used in different combinations."
 ogUrl: "https://www.elven.tools/docs/dapp-react-hooks-and-components.html"
-twitterTitle: "Elven Tools Dapp React hooks and components - Elrond custom NextJS Dapp"
+twitterTitle: "Elven Tools Dapp React hooks and components - MultiversX custom NextJS Dapp"
 twitterDescription: "The Elven Tools Dapp React hooks and components that can be used in different combinations."
 twitterUrl: "https://www.elven.tools/docs/dapp-react-hooks-and-components.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-react-hooks-and-components.md"
@@ -128,7 +128,7 @@ export const useLogin = (params?: Login) => {
 
 #### LoginModalButton
 
-The component provides the `Connect` button with the modal, which will contain another four buttons for three different authentication possibilities (Maiar Mobile App, Maiar Defi Wallet - browser extension, Elrond Web Wallet, Ledger). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
+The component provides the `Connect` button with the modal, which will contain another four buttons for three different authentication possibilities (Maiar Mobile App, Maiar Defi Wallet - browser extension, Web Wallet, Ledger). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
 
 ```jsx
 import { LoginModalButton } from "../tools/LoginModalButton";

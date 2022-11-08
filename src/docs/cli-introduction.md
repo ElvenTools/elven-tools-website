@@ -23,8 +23,8 @@ npm install elven-tools -g
 ### What is it?
 
 - The CLI tool helps to:
-  - deploy the NFT minter Smart Contract on the Elrond blockchain
-  - interact with the NFT minter Smart Contract on the Elrond blockchain
+  - deploy the NFT minter Smart Contract on the MultiversX blockchain
+  - interact with the NFT minter Smart Contract on the MultiversX blockchain
 
 For now it is designed to deploy the contract: [elven-nft-minter-sc](https://github.com/ElvenTools/elven-nft-minter-sc).
 

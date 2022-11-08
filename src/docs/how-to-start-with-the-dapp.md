@@ -4,12 +4,12 @@ title: 'How to start with the Dapp'
 publicationDate: '2022-04-23'
 tags:
   - minter dapp
-excerpt: "A quick intro to the Elven Tools Dapp - custom Elrond frontend app. You'll learn how to start using it."
-ogTitle: "How to start with the Dapp - Elrond custom NextJS Dapp"
-ogDescription: "A quick intro to the Elven Tools Dapp - custom Elrond frontend app. You'll learn how to start using it."
+excerpt: "A quick intro to the Elven Tools Dapp - custom MultiversX frontend app. You'll learn how to start using it."
+ogTitle: "How to start with the Dapp - MultiversX custom NextJS Dapp"
+ogDescription: "A quick intro to the Elven Tools Dapp - custom MultiversX frontend app. You'll learn how to start using it."
 ogUrl: "https://www.elven.tools/docs/how-to-start-with-the-dapp.html"
-twitterTitle: "How to start with the Dapp - Elrond custom NextJS Dapp"
-twitterDescription: "A quick intro to the Elven Tools Dapp - custom Elrond frontend app. You'll learn how to start using it."
+twitterTitle: "How to start with the Dapp - MultiversX custom NextJS Dapp"
+twitterDescription: "A quick intro to the Elven Tools Dapp - custom MultiversX frontend app. You'll learn how to start using it."
 twitterUrl: "https://www.elven.tools/docs/how-to-start-with-the-dapp.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/how-to-start-with-the-dapp.md"
 ---

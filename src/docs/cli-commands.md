@@ -24,7 +24,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 
 ### nft-minter commands
 
-- `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the Elrond chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for NFTs. You can also opt-out of adding the edition number to the name.
+- `elven-tools nft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the MultiversX chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for NFTs. You can also opt-out of adding the edition number to the name.
 - `elven-tools nft-minter set-roles` [only owner] - for now, the command sets the critical role for the collection handle. It is a 'create nft' role.
 - `elven-tools nft-minter start-minting` [only owner] - by default, after deploying the smart contract, the minting is disabled. You would need to start it
 - `elven-tools nft-minter pause-minting` [only owner] - you can also pause it at any moment
@@ -32,7 +32,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 - `elven-tools nft-minter giveaway` [only owner] - as an owner, you can give some random tokens to other addresses. ([see more](/docs/recipes.html#how-to-use-the-giveaway))
 - `elven-tools nft-minter set-drop` [only owner] - you can also split the minting into drops. These are 'waves' of minting where you can change prices and promote each one (v1 doesn't include any logic for revealing the CIDs with delay, the revealed NFTs will be sent in every drop). ([see more](/docs/recipes.html#how-to-use-drops))
 - `elven-tools nft-minter unset-drop` [only owner] - you can also disable the drop and pause minting
-- `elven-tools nft-minter claim-dev-rewards` [only owner] - as an owner of the Smart Contract, you can always claim the developer rewards. Read more about them in the Elrond docs. ([see more](/docs/recipes.html#how-to-claim-dev-rewards))
+- `elven-tools nft-minter claim-dev-rewards` [only owner] - as an owner of the Smart Contract, you can always claim the developer rewards. Read more about them in the MultiversX docs. ([see more](/docs/recipes.html#how-to-claim-dev-rewards))
 - `elven-tools nft-minter change-base-cids` [only owner] - you can change base IPFS CIDs only before any NFT was minted. Otherwise, it doesn't make sense to do that.
 - `elven-tools nft-minter set-new-tokens-limit-per-address` [only owner] - it is possible to change the limits per address which are configured when deploying the Smart Contract
 - `elven-tools nft-minter claim-sc-funds` [only owner] - this is treated as a fallback for royalties. The Smart Contract will receive the royalties as the creator, so there has to be a way to get them back. In the future the Smart Contract will probably also have dedicated claim functionality to be able to call the marketplace and get the royalties because some of the marketplaces don't send them automatically. ([see more](/docs/recipes.html#how-to-claim-royalties-and-other-funds))

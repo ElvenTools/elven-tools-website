@@ -4,12 +4,12 @@ title: 'SC Introduction'
 publicationDate: '2022-01-25'
 tags:
   - smart contract
-excerpt: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
+excerpt: "You are reading about the Smart Contract designed for the MultiversX blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 ogTitle: "Smart Contract version 1 - introduction"
-ogDescription: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
+ogDescription: "You are reading about the Smart Contract designed for the MultiversX blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
 twitterTitle: "Smart Contract version 1 - introduction"
-twitterDescription: "You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
+twitterDescription: "You are reading about the Smart Contract designed for the MultiversX blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens"
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/sc-introduction.md"
 ---
@@ -18,7 +18,7 @@ NFT minter Smart Contract v1
 
 <div class="docs-info-box ">Be aware that the Smart Contract doesn't have any audits. It has complete functionality for the first version, but it is still needs some improvements. Test it first on the devnet/testnet.</div>
 
-You are reading about the Smart Contract designed for the Elrond blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens from a previously configured collection. It does it in a randomized way. 
+You are reading about the Smart Contract designed for the MultiversX blockchain. Its primary purpose is to provide a simple logic for minting and buying NFT tokens from a previously configured collection. It does it in a randomized way. 
 
 ### Version 1 supports
 
@@ -49,7 +49,7 @@ All are mandatory operations and should be done only once. Make the transactions
 
 The best way of using it will be with [Elven Tools CLI tool](/docs/cli-introduction.html). It has a lot of valuable functions integrated with the smart contract, so deploying or interacting is simple. You can deploy the smart contract directly from its repository. Almost no coding skills are required in this case.
 
-You can also take a more standard path and use [erdpy](https://docs.elrond.com/sdk-and-tools/erdpy/erdpy/) for that. Erdpy is an official CLI SDK for Elrond blockchain based on Python. For more information, check the [blog post](https://www.julian.io/articles/elrond-smart-contracts.html).
+You can also take a more standard path and use [erdpy](https://docs.elrond.com/sdk-and-tools/erdpy/erdpy/) for that. Erdpy is an official CLI SDK for MultiversX blockchain based on Python. For more information, check the [blog post](https://www.julian.io/articles/elrond-smart-contracts.html).
 
 ### Limitations and caveats
 

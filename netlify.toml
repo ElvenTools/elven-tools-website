@@ -5,3 +5,11 @@
 [[redirects]]
   from = "/docs/landing-page.html"
   to = "/docs/minter-dapp-introduction.html"
+
+[[redirects]]
+  from = "/docs/tips-on-buying-nfts-on-the-elrond-blockchain.html"
+  to = "/docs/tips-on-buying-nfts-on-the-multiversx-blockchain.html"
+
+[[redirects]]
+  from = "/docs/use-of-ipfs-in-the-elrond-nft-ecosystem.html"
+  to = "/docs/use-of-ipfs-in-the-multiversx-nft-ecosystem.html"

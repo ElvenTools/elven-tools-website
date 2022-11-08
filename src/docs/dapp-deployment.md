@@ -5,10 +5,10 @@ publicationDate: '2022-04-18'
 tags:
   - minter dapp
 excerpt: "Elven Tools Dapp walkthrough on deploying the app using Netlify and Vercel."
-ogTitle: "Elven Tools Dapp deployment - Elrond custom NextJS Dapp"
+ogTitle: "Elven Tools Dapp deployment - MultiversX custom NextJS Dapp"
 ogDescription: "Elven Tools Dapp walkthrough on deploying the app using Netlify and Vercel."
 ogUrl: "https://www.elven.tools/docs/dapp-deployment.html"
-twitterTitle: "Elven Tools Dapp deployment - Elrond custom NextJS Dapp"
+twitterTitle: "Elven Tools Dapp deployment - MultiversX custom NextJS Dapp"
 twitterDescription: Elven Tools Dapp walkthrough on deploying the app using Netlify and Vercel."
 twitterUrl: "https://www.elven.tools/docs/dapp-deployment.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-deployment.md"

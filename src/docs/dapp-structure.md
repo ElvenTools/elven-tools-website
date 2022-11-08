@@ -5,10 +5,10 @@ publicationDate: '2022-04-21'
 tags:
   - minter dapp
 excerpt: "The Elven Tools Dapp files structure and logic behind all crucial parts."
-ogTitle: "Elven Tools Dapp structure - Elrond custom NextJS Dapp"
+ogTitle: "Elven Tools Dapp structure - MultiversX custom NextJS Dapp"
 ogDescription: "The Elven Tools Dapp files structure and logic behind all crucial parts."
 ogUrl: "https://www.elven.tools/docs/dapp-structure.html"
-twitterTitle: "Elven Tools Dapp structure - Elrond custom NextJS Dapp"
+twitterTitle: "Elven Tools Dapp structure - MultiversX custom NextJS Dapp"
 twitterDescription: "The Elven Tools Dapp files structure and logic behind all crucial parts."
 twitterUrl: "https://www.elven.tools/docs/dapp-structure.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/dapp-structure.md"

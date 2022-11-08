@@ -49,8 +49,8 @@ There are a couple of reasons. The most important are:
 1. Allows hiding the API endpoint under the same domain `www.your-domain.com/api/elrond`.
 2. No one will be able to use this endpoint from outside the Dapp.
 3. When used with no public API, You can hide the API keys which need to be attached to the endpoint.
-4. Usage of the public Elrond API for production release is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
-5. Anyway, proxied API will still work well with the public Elrond API.
+4. Usage of the public MultiversX API for production release is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
+5. Anyway, proxied API will still work well with the public MultiversX API.
 
 ### Why written with Typescript and not JavaScript only?
 

@@ -1,24 +1,24 @@
 ---
 layout: 'docs'
-title: 'Tips on buying NFTs on the Elrond blockchain'
+title: 'Tips on buying NFTs on the MultiversX blockchain'
 publicationDate: '2022-01-25'
 tags:
   - articles
-excerpt: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
-ogTitle: "Tips on buying NFTs on the Elrond blockchain"
-ogDescription: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
+excerpt: "There are a couple of things that you should check when you are buying the NFTs on the MultiversX blockchain. And a couple of differences in comparison with other chains."
+ogTitle: "Tips on buying NFTs on the MultiversX blockchain"
+ogDescription: "There are a couple of things that you should check when you are buying the NFTs on the MultiversX blockchain. And a couple of differences in comparison with other chains."
 ogUrl: "https://www.elven.tools/docs/sc-introduction.html"
-twitterTitle: "Tips on buying NFTs on the Elrond blockchain"
-twitterDescription: "There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison with other chains."
+twitterTitle: "Tips on buying NFTs on the MultiversX blockchain"
+twitterDescription: "There are a couple of things that you should check when you are buying the NFTs on the MultiversX blockchain. And a couple of differences in comparison with other chains."
 twitterUrl: "https://www.elven.tools/docs/sc-introduction.html"
 ---
 
-There are a couple of things that you should check when you are buying the NFTs on the Elrond blockchain. And a couple of differences in comparison to other chains. I don't want to focus on the supply and demand aspect because you should always do your own research before buying anything. I want to focus on the technological and communication-like elements here. 
+There are a couple of things that you should check when you are buying the NFTs on the MultiversX blockchain. And a couple of differences in comparison to other chains. I don't want to focus on the supply and demand aspect because you should always do your own research before buying anything. I want to focus on the technological and communication-like elements here. 
 
 ### What we will tackle in the article:
 
 1. Minting through the Smart Contract. How is it done?
-2. The Smart Contracts on the Elrond blockchain are upgradeable by default.
+2. The Smart Contracts on the MultiversX blockchain are upgradeable by default.
 3. Collection ticker and how to verify it.
 4. Project website with the roadmap and people behind it.
 5. Utility over 'art' unless not randomly generated.
@@ -27,7 +27,7 @@ Remember, these are just my opinions. You can always disagree, and I will like t
 
 ### Minting through the Smart Contract. How is it done?
 
-Elrond blockchain treats the NFTs as native ESDT tokens with additional metadata, so it isn't required to have the Smart Contract to own them. And it isn't even needed to have a Smart Contract to mint them. 
+MultiversX blockchain treats the NFTs as native ESDT tokens with additional metadata, so it isn't required to have the Smart Contract to own them. And it isn't even needed to have a Smart Contract to mint them. 
 
 Still, the minting process and distribution should be done using a Smart Contract because this is fair and trustworthy. The Smart Contract is a mediator between your EGLD and the NFT, which should be sent to you. Otherwise, some third-party wallet will be doing that, and in such a case, we need to trust the third party. So it is not a decentralized process.
 
@@ -35,20 +35,20 @@ The best would be to see the Smart Contract's code or at least be able to verify
 
 There are a couple of ways to prepare the minting and distribution process. All of them have pros and cons. 
 
-**Let's take a look at two of them in the context of the Elrond blockchain:**
+**Let's take a look at two of them in the context of the MultiversX blockchain:**
 
 - 'Candy machine'
 - 'Raffle'
 
 The candy machine's method of minting works like a candy machine (surprise, surprise). The Smart Contract is usually preconfigured to manage the minting process. The buyer sends the amount of EGLD defined on the Smart Contract, and in exchange, they will get randomly minted NFT on their wallet. It is a relatively straightforward way of doing that, and it is ok. Its main pros are simplicity and transparent rules, so the buyers are not confused. They pay, and they see it on the wallet. It is also simpler to set up and maintain, and because of randomization in the minting process, even with automated scripts, it will be hard to snipe the best NFTs. In most cases, this is the way the projects mint.
 
-The candy machine has its cons. The most important one is that when you want to mint in some batches spread in time, the first couple of NFTs will reveal the assets. At least in the Elrond ecosystem, it won't be possible to send the NFT and then change its assets URIs. The only option would be to upload the assets to the IPFS later, but this is a poor experience.
+The candy machine has its cons. The most important one is that when you want to mint in some batches spread in time, the first couple of NFTs will reveal the assets. At least in the MultiversX ecosystem, it won't be possible to send the NFT and then change its assets URIs. The only option would be to upload the assets to the IPFS later, but this is a poor experience.
 
 Is it a big problem? Some would say that even better because these NFTs can influence the price, and with the second batch of minting, the operator will know better what a new price should be for the next official drop. If the first 1000 NFTs are doing great on the secondary market and the price is high. Then the subsequent official minting can be better marketed, and the price can be managed better.
 
 Other cons of the candy machine way of minting are that it is more prone to automated bots, and also, people from many different time zones will probably not have a chance to take part. 
 
-There are a couple of solutions to these concerns. One would be not to send the tokens right away but to keep them and let the people claim them later after the whole collection is minted. Like with everything, this can be done with hybrid approaches, but most likely, it will be a Raffle minting process. Let's see how it could work on the Elrond blockchain and what the ideas are for it.
+There are a couple of solutions to these concerns. One would be not to send the tokens right away but to keep them and let the people claim them later after the whole collection is minted. Like with everything, this can be done with hybrid approaches, but most likely, it will be a Raffle minting process. Let's see how it could work on the MultiversX blockchain and what the ideas are for it.
 
 **The Raffle can work in two ways:**
 
@@ -63,19 +63,19 @@ There is also a more entertaining way of doing that, incorporating the SFTs. Eac
 
 Why sell the SFT on the secondary market? Because the owner will be able to swap it for the real NFT when the time is right. Remember that the operator should also correctly communicate it.
 
-### The Smart Contracts on the Elrond blockchain are upgradeable by default.
+### The Smart Contracts on the MultiversX blockchain are upgradeable by default.
 
-It is worth mentioning that the Smart Contracts on the Elrond blockchain are by default upgradeable (and this is not only Elrond's specific case). What does it mean? It means that the operator can change the logic on the smart contract at every moment, even when the minting process is ongoing. In most cases, it is good because they will react quickly in case of bugs, and probably this is the way it will always work. But remember that it can also be used in a way that is not good for the participants. For example, some scam projects can release a proper Smart Contract, but then after the funds are on it, they can change its code and block all the funds. 
+It is worth mentioning that the Smart Contracts on the MultiversX blockchain are by default upgradeable (and this is not only MultiversX's specific case). What does it mean? It means that the operator can change the logic on the smart contract at every moment, even when the minting process is ongoing. In most cases, it is good because they will react quickly in case of bugs, and probably this is the way it will always work. But remember that it can also be used in a way that is not good for the participants. For example, some scam projects can release a proper Smart Contract, but then after the funds are on it, they can change its code and block all the funds. 
 
 Ok, so what should you do with this kind of knowledge as a buyer? In most cases, projects won't show the Smart Contract's code anyway. So the best you can do is know about such possibilities and check how the project communicates them. Will they talk about changes or rather keep them in secret. It is why some kind of validation of the Smart Contracts is required, as I wrote before.
 
 What can the project do to gain more trust? I will write more about the community's communication later, but how it is appropriately managed is through multisig. So there should be more than one person on the team to be able to upgrade the contract. There should be a requirement for multiple keys to authorize such a transaction. But let's be honest, the minting Smart Contracts and projects around them are usually relatively small, and probably no one will use that. Still, it is worth knowing about it, and it will be a perfect point in the marketing of a project.
 
-How to check if a Smart Contract is upgradable or not? When you go to the Elrond Explorer and search for the project's Smart Contract, you will be able to see a badge. For example, let's take randomly one of the Smart Contracts on the mainnet: [explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt](https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt). There is a badge `UPGRADEABLE` under the properties section.
+How to check if a Smart Contract is upgradable or not? When you go to the MultiversX Explorer and search for the project's Smart Contract, you will be able to see a badge. For example, let's take randomly one of the Smart Contracts on the mainnet: [explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt](https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt). There is a badge `UPGRADEABLE` under the properties section.
 
 ### Collection ticker and how to verify it.
 
-On the Elrond blockchain, you would need to issue a collection token with a ticker in a short format, such as `ABCD-1a2e3`. It is an identifier for the NFT collection. For example, you can always check it in the Elrond Explorer, [explorer.elrond.com/collections/EGIRL-443b95](https://explorer.elrond.com/collections/EGIRL-443b95).
+On the MultiversX blockchain, you would need to issue a collection token with a ticker in a short format, such as `ABCD-1a2e3`. It is an identifier for the NFT collection. For example, you can always check it in the MultiversX Explorer, [explorer.elrond.com/collections/EGIRL-443b95](https://explorer.elrond.com/collections/EGIRL-443b95).
 
 What is important here is that the project should always clearly communicate the official and only legit collection ticker. Because many scams will try to copy the collection, educating the buyers about that is always essential.
 
@@ -112,7 +112,7 @@ The list can probably go a lot further. There are many use cases, but we are all
 
 ### Summary
 
-Hopefully, I explained a couple of the most important things when someone is interested in some NFT project on the Elrond Blockchain, but not only on the Elrond. Some of the guides are pretty universal.
+Hopefully, I explained a couple of the most important things when someone is interested in some NFT project on the MultiversX Blockchain, but not only on the MultiversX. Some of the guides are pretty universal.
 
 Be aware that these are only my opinions. I am primarily a developer, so I'm not an expert in marketing, selling, and promoting stuff. I wrote from a developer's perspective and a person who would like to buy some NFTs at some moment in time.
 
