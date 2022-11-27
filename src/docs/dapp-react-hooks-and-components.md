@@ -164,6 +164,26 @@ But all code 'blocks' in your app that require the network and auth sync should 
 </Authenticated>
 ```
 
+#### ProtectedPageWrapper
+
+The wrapper component that checks if users are logged in and redirects to chosen path if they are not. You should wrap whole page content with it. You should use it only for pages that should be accessible for logged in users. Remember that this is only client side check.
+
+```jsx
+const Profile = () => {
+  return (
+    <ProtectedPageWrapper>
+      <MainLayout>
+        <HeaderMenu>
+          <HeaderMenuButtons enabled={['auth', 'about', 'mint']} />
+        </HeaderMenu>
+        <ProfileUserData />
+        <ProfileNFTsList />
+      </MainLayout>
+    </ProtectedPageWrapper>
+  );
+};
+```
+
 #### useScTransaction()
 
 The hook provides all that is required for triggering smart contract transactions. useScTransaction can also take a callback function as an argument.
@@ -221,6 +241,20 @@ const {
   funcName: 'isAllowlistEnabled',
   type: SCQueryType.BOOLEAN,
   autoInit: Boolean(address && !mintingPaused),
+});
+```
+
+#### useApiCall()
+
+The hook provides a convenient way of doing custom API calls unrelated to transactions or smart contract queries. By default it will use MultiversX API endpoint. But it can be any type of API, not only MultiversX API. In that case you would need to pass the { baseEndpoint: "https://some-api.com" } in options
+
+```jsx
+const { data, isLoading, isValidating, fetch, error } = useApiCall<Token[]>({
+  url: `/accounts/<some_erd_address_here>/tokens`, // can be any API endpoint without the host, because it is already handled internally
+  autoInit: true, // similar to useScQuery
+  type: 'get', // can be get, post, delete, put
+  payload: {},
+  options: {}
 });
 ```
 
