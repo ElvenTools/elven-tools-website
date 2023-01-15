@@ -18,7 +18,7 @@ Sometimes, with more extensive apps and more logic, like managing custom informa
 
 Elven Tools Dapp is an excellent base for building more complicated stuff on it. It uses the NextJS framework, so you also have a free backend setup. Here are basic steps on how you could verify the user on the backend side of your dapp: 
 
-1. Login user using one of the dapp auth providers (Web Wallet, browser extension, Maiar mobile app, and Ledger).
+1. Login user using one of the dapp auth providers (Web Wallet, browser extension, xPortal mobile app, and Ledger).
 2. Pass the custom token when logging in using the `useLogin()` hook. You can do this by passing additional parameter: `useLogin({ token: 'someTokenHashHere' })`. It can be a randomly generated hash or some other solution for that.
 3. You will get the signature back. It will also be saved in the local storage in the browser.
 4. You already have an address, a custom token, and a signature at this stage. You can send it to your backend and verify it.
@@ -29,11 +29,11 @@ There are three important things here:
 1. What message will we verify? 
 2. How to verify it?
 
-The public key can be fetched using the user's address and erdjs methods. You can do this like that: 
+The public key can be fetched using the user's address and sdk-core methods. You can do this like that: 
 
 ```typescript
-import { UserPublicKey } from '@elrondnetwork/erdjs-walletcore/out/userKeys';
-import { UserVerifier } from "@elrondnetwork/erdjs-walletcore";
+import { UserPublicKey } from '@multiversx/sdk-wallet/out/userKeys';
+import { UserVerifier } from "@multiversx/sdk-wallet";
 (...)
 const pubKey = new UserPublicKey(address.pubkey());
 const verifier = new UserVerifier(pubKey);
@@ -48,15 +48,15 @@ const msg = 'erdUserAddressHere' + 'yourCustomTokenHere' + JSON.stringify({});
 Then you would need to prepare the Signature instance:
 
 ```typescript
-import { Signature } from '@elrondnetwork/erdjs/out/signature';
+import { Signature } from '@multiversx/sdk-core/out/signature';
 (...)
 const signature = new Signature(Buffer.from(msg, 'hex'));
 ```
 
-And finally, you can verify it on the backend side (erdjs will work only in Node backend):
+And finally, you can verify it on the backend side (sdk-core is TS/JS library):
 
 ```typescript
-import { SignableMessage } from "@elrondnetwork/erdjs";
+import { SignableMessage } from "@multiversx/sdk-core";
 (...)
 const signMessage = new SignableMessage({
     address: address,
@@ -71,10 +71,10 @@ You would also need to handle the expiration for the JWT token. The expiry for t
 ### Full code example
 
 ```typescript
-import { Address, SignableMessage } from "@elrondnetwork/erdjs";
-import { Signature } from '@elrondnetwork/erdjs/out/signature';
-import { UserPublicKey } from '@elrondnetwork/erdjs-walletcore/out/userKeys';
-import { UserVerifier } from "@elrondnetwork/erdjs-walletcore";
+import { Address, SignableMessage } from "@multiversx/sdk-core";
+import { Signature } from '@multiversx/sdk-core/out/signature';
+import { UserPublicKey } from '@multiversx/sdk-wallet/out/userKeys';
+import { UserVerifier } from "@multiversx/sdk-wallet";
 
 function verifySignedMessage(message: string, sig: string, wallet: string) {
   try {

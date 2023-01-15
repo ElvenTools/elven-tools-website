@@ -28,7 +28,7 @@ Remember that the Dapp is built with the NextJS framework. It is good to know at
 
 ### Global state
 
-The Dapp does not include the [dapp-core](https://github.com/ElrondNetwork/dapp-core) library, it handles all using only [erdjs SDK](https://github.com/ElrondNetwork/elrond-sdk-erdjs), so it requires its global state management.
+The Dapp does not include the [sdk-dapp](https://github.com/multiversx/mx-sdk-dapp) library, it handles all using only [sdk-core](https://github.com/multiversx/mx-sdk-js-core), so it requires its global state management.
 
 The Elven Tools Dapp uses [valtio](https://github.com/pmndrs/valtio) - a simple but compelling state management library for React. You'll read more about it in their docs. The most important is to know where it is used in the code and why.
 
@@ -58,9 +58,9 @@ The other place for configuration is the [config](https://github.com/ElvenTools/
 
 The whole logic is based on custom React hooks. There are many of them, but generally, the logic isn't very complicated. You'll find them here: [hook](https://github.com/ElvenTools/elven-tools-dapp/tree/main/hooks). 
 
-The most difficult to understand and, at the same time, the most important would be probably `useElrondNetworkSync`. It is responsible for syncing the whole network, auth providers, and user accounts. It is essential to call it as soon as possible. If needed, you can also optimize component rerenders. The Elven Tools Dapp already has some of the optimization implemented.
+The most difficult to understand and, at the same time, the most important would be probably `useNetworkSync`. It is responsible for syncing the whole network, auth providers, and user accounts. It is essential to call it as soon as possible. If needed, you can also optimize component rerenders. The Elven Tools Dapp already has some of the optimization implemented.
 
-Some hooks will serve the user's information, auth status, etc. There are also hooks responsible for auth providers initialization, like Maiar mobile app, browser extension, Ledger, and web wallet. And also, there are hooks responsible for querying smart contracts and making transactions.
+Some hooks will serve the user's information, auth status, etc. There are also hooks responsible for auth providers initialization, like xPortal mobile app, browser extension, Ledger, and web wallet. And also, there are hooks responsible for querying smart contracts and making transactions.
 
 For example: 
 

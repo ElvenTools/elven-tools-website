@@ -81,16 +81,16 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 
 The simplest way is to use the Elven Tools CLI, check how in the [Jump start](/docs/jump-start.html) article or the [CLI introduction](/docs/cli-introduction.html).
 
-If you don't want to use the CLI, you need to do the queries and transaction calls using the [erdjs SDK](https://github.com/ElrondNetwork/elrond-sdk-erdjs) or [erdpy](https://docs.elrond.com/sdk-and-tools/erdpy/erdpy/).
+If you don't want to use the CLI, you need to do the queries and transaction calls using the [sdk-core](https://github.com/multiversx/mx-sdk-js-core) or [erdpy](https://github.com/multiversx/mx-sdk-dapp).
 
-Check the examples for `erdjs`:
+Check the examples for `sdk-core`:
 
-- [Smart Contract transaction](https://github.com/ElrondNetwork/elrond-sdk-erdjs#creating-smart-contract-transactions) 
-- [Smart Contract query](https://github.com/ElrondNetwork/elrond-sdk-erdjs#querying-smart-contracts)
+- [Smart Contract transaction](https://docs.multiversx.com/sdk-and-tools/sdk-js/sdk-js-cookbook#contract-interactions) 
+- [Smart Contract query](https://docs.multiversx.com/sdk-and-tools/sdk-js/sdk-js-cookbook#contract-queries)
 
-You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-tools-cli) source code, where I also used the erdjs SDK.
+You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-tools-cli) source code, where I also used the MultiversX JS SDK.
 
 Check the examples for `erdpy`:
 
-- [Command Line Interface](https://github.com/ElrondNetwork/elrond-sdk-erdpy/blob/main/erdpy/CLI.md) 
+- [Command Line Interface](https://github.com/multiversx/mx-sdk-py-cli/blob/main/erdpy/CLI.md) 
 - [Blog post with usage examples](https://www.julian.io/articles/elrond-smart-contracts.html)

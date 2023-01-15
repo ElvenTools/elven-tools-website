@@ -110,13 +110,13 @@ Finally, let's jump into the MultiversX ecosystem and see how we can use the IPF
 
 The main concept of the NFT token on the MultiversX blockchain is that it is the ESDT token, so the standard MultiversX token, but with additional metadata. 
 
-There are no strict rules on what your NFT token should look like. I mean, what structure its attributes should have. The main field for keeping the data on-chain is the 'attributes' field. I won't focus much on how NFTs work on the MultiversX blockchain because it is a topic for many different articles, and it was already covered partially. Also, see the [official docs on it](https://docs.elrond.com/developers/nft-tokens/).
+There are no strict rules on what your NFT token should look like. I mean, what structure its attributes should have. The main field for keeping the data on-chain is the 'attributes' field. I won't focus much on how NFTs work on the MultiversX blockchain because it is a topic for many different articles, and it was already covered partially. Also, see the [official docs on it](https://docs.multiversx.com/tokens/nft-tokens).
 
 When preparing the NFT, we need to split the data of our NFT token into the small batch, which will be kept on-chain, and all other stuff that will be kept off-chain using IPFS decentralized storage. 
 
 On MultiversX, for on-chain, we will keep only the information about the CIDs for the metadata JSON file with all additional data like traits, description, etc., and the actual asset CID and probably file names. Let's take a closer look and take the example from Elven Tools.
 
-Here is the example of the NFT minted using the Elven Tools: [https://devnet-explorer.elrond.com/nfts/FTDD-5cdeea-03](https://devnet-explorer.elrond.com/nfts/FTDD-5cdeea-03).
+Here is the example of the NFT minted using the Elven Tools: [https://devnet-explorer.multiversx.com/nfts/FTDD-5cdeea-03](https://devnet-explorer.multiversx.com/nfts/FTDD-5cdeea-03).
 
 You will see that we have two assets linked using the IPFS gateway. The most popular gateway. The JSON file is the metadata for our token. You can preview its content, but this isn't important for now. The metadata file is added there, but this isn't a standard. The Elven Tools allows choosing if you want it there or not. It isn't required because the information about the metadata CID is located in the attributes. They are not displayed in the explorer directly. But when you preview the API response for this token, you will find that attributes are a base64 encoded string that after decoding will give you something like that: `metadata:bafybeifjntwejc7k7dedfaavravhnosc7xe4ceu5zmobjhhbob32uyu57m/93.json`. So the same CID and file name as in the assets in the explorer.
 

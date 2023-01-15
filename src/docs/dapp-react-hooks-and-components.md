@@ -20,7 +20,7 @@ There are much more hooks and tools, but most of them are already used in the on
 
 The code samples are not ready to copy and paste. Please search them in the code.
 
-#### useElrondNetworkSync()
+#### useNetworkSync()
 
 The hook is responsible for synchronizing the network on each refresh. It should be used in the root component. Here is the `_app.tsx`.
 
@@ -29,10 +29,10 @@ Why not the context wrapper? Because context wrappers with auth state data check
 This way, you can check the auth state in chosen places. You are not forced to do this constantly for the whole document tree.
 
 ```jsx
-import { useElrondNetworkSync } from "../hooks/auth/useElrondNetworkSync";
+import { useNetworkSync } from "../hooks/auth/useNetworkSync";
 
 const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
-  useElrondNetworkSync();
+  useNetworkSync();
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
@@ -43,7 +43,7 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
 
 #### useLogin()
 
-The hook is responsible for providing a common interface for all login methods (web wallet, maiar app, browser extension and Ledger). Under the hood it uses three separate hooks: `useWebWalletLogin`, `useMobileAppLogin`, `useExtensionLogin`.
+The hook is responsible for providing a common interface for all login methods (web wallet, xPortal app, browser extension and Ledger). Under the hood it uses three separate hooks: `useWebWalletLogin`, `useMobileAppLogin`, `useExtensionLogin`.
 
 ```jsx
 const { login, isLoggedIn, error, walletConnectUri, getHWAccounts } = useLogin(params);
@@ -128,7 +128,7 @@ export const useLogin = (params?: Login) => {
 
 #### LoginModalButton
 
-The component provides the `Connect` button with the modal, which will contain another four buttons for three different authentication possibilities (Maiar Mobile App, Maiar Defi Wallet - browser extension, Web Wallet, Ledger). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
+The component provides the `Connect` button with the modal, which will contain another four buttons for three different authentication possibilities (xPortal Mobile App, MultiversX Defi Wallet - browser extension, Web Wallet, Ledger). You should be able to use it in any place on the website. It also includes the `LoginComponent` (login buttons).
 
 ```jsx
 import { LoginModalButton } from "../tools/LoginModalButton";

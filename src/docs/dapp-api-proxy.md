@@ -22,7 +22,7 @@ By default, the Dapp provides the `.env.example`, configured not to use the API 
 
 You have three options:
 
-1. By commenting this out the dapp will use the default MultiversX api endpoint (e.g. https://devnet-api.elrond.com) \
+1. By commenting this out the dapp will use the default MultiversX api endpoint (e.g. https://devnet-api.multiversx.com) \
   **Note**: `MULTIVERSX_PRIVATE_API` needs to be removed/commented out.
 2. Set this to an absolute address to use a custom MultiversX api endpoint
    (e.g. http://dev.mydomain.com) \
@@ -58,7 +58,7 @@ async rewrites() {
 },
 ```
 
-It is pretty simple. As you can see, we redirect all `/api/multiversx/*` (NEXT_PUBLIC_MULTIVERSX_API) calls to the proper API endpoint. So the only API endpoint that will be visible on the frontend side is `/api/multiversx/*` and all that is provided by your service provider. Sometimes it can be the same functionality as for api.elrond.com, and sometimes it will be limited to functionality from gateway.elrond.com. Depends on the `MULTIVERSX_PRIVATE_API` setup.
+It is pretty simple. As you can see, we redirect all `/api/multiversx/*` (NEXT_PUBLIC_MULTIVERSX_API) calls to the proper API endpoint. So the only API endpoint that will be visible on the frontend side is `/api/multiversx/*` and all that is provided by your service provider. Sometimes it can be the same functionality as for api.multiversx.com, and sometimes it will be limited to functionality from gateway.multiversx.com. Depends on the `MULTIVERSX_PRIVATE_API` setup.
 
 Ok, now you think my endpoint is proxied and hidden, but it is still public, and anyone can use it, right? Not really. See why.
 

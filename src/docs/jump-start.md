@@ -102,10 +102,10 @@ elven-tools deploy nft-minter
 ✔ Provide the provenance hash (sha256 hash of all images) [optional]:
  … optional_provenance_hash_here
 Deployment transaction executed: success
-Deployment tx: https://devnet-explorer.elrond.com/transactions/6c78b4f9adbf4e04e84e5ffe8bfed577ee2ad080c039fb3c3db1199c5d1d413c
+Deployment tx: https://devnet-explorer.multiversx.com/transactions/6c78b4f9adbf4e04e84e5ffe8bfed577ee2ad080c039fb3c3db1199c5d1d413c
 ```
 
-You will be asked one by one. The prompts are helpful. You don't have to worry about proper arguments preparation. The first three questions are about metadata for code. You need to decide if your smart contract should be payable or upgradable. There are hints for that. You can also read about it [here](https://docs.elrond.com/developers/developer-reference/code-metadata/).
+You will be asked one by one. The prompts are helpful. You don't have to worry about proper arguments preparation. The first three questions are about metadata for code. You need to decide if your smart contract should be payable or upgradable. There are hints for that. You can also read about it [here](https://docs.multiversx.com/developers/developer-reference/code-metadata).
 
 The following prompt is where you would need to provide your CIDs. It can be a different CID for metadata and images, but it can also be the same CID. It depends on how you store your files in the IPFS. 
 
@@ -138,14 +138,14 @@ elven-tools nft-minter issue-collection-token
  … Separate NFT name
 
 Transaction status: success
-Transaction link: https://devnet-explorer.elrond.com/transactions/a06da61a1d138a73c569ed0e13ecbda4176768aa19cb37254cce1aab318c229f
+Transaction link: https://devnet-explorer.multiversx.com/transactions/a06da61a1d138a73c569ed0e13ecbda4176768aa19cb37254cce1aab318c229f
 ```
 
 The last mandatory command is `elven-tools nft-minter set-roles`. It will assign the obligatory role, which allows for new NFT tokens creation. Here there won't be any prompts, at least for now. Only a transaction will take the token data from the output.json file and assign the roles.
 
 ```bash
 elven-tools nft-minter set-roles
-Transaction: https://devnet-explorer.elrond.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
+Transaction: https://devnet-explorer.multiversx.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
 ```
 
 The following steps can be different on what you want to achieve. You can start minting directly or set up so-called 'drops' where you will define how many tokens will be minted in one drop. You can also always start or pause the minting process. What is necessary is that the contract will always mint randomly in all cases. Let's see how it looks when we want just to start the minting: `elven-tools nft-minter start-minting` and `elven-tools nft-minter mint` You will be asked to provide how many tokens you would wish to mint. Remember that the Smart Contract will have limits per one address. See how to check them later in this article.
@@ -155,7 +155,7 @@ elven-tools nft-minter start-minting
 ✔ Are you sure that you want to proceed?
  › Yes
 ⠼ Processing transaction...
-Transaction: https://devnet-explorer.elrond.com/transactions/8260437c4a2296169cf7bd925f135223529029ad8e1b3f2b535ee7f07ef3672c
+Transaction: https://devnet-explorer.multiversx.com/transactions/8260437c4a2296169cf7bd925f135223529029ad8e1b3f2b535ee7f07ef3672c
 
 elven-tools nft-minter mint
 ✔ Provide how many tokens should be minted.
@@ -163,7 +163,7 @@ Take into account possible limitations set on the Smart Contract (ex 3 for three
  … 2
 ✔ Are you sure that you want to proceed?
  › Yes
-Transaction: https://devnet-explorer.elrond.com/transactions/15194f779bebc31babdc7711f685a4bf0560c9a0484f6e644a40a1a0ee2f94ef
+Transaction: https://devnet-explorer.multiversx.com/transactions/15194f779bebc31babdc7711f685a4bf0560c9a0484f6e644a40a1a0ee2f94ef
 ```
 
 Check out examples of scenarios with all that possibilities: [Elven Tools workflows](/docs/elven-tools-workflows.html).
@@ -190,7 +190,7 @@ get-minted-per-address-per-drop
 ```
 ...and more, check `elven-tools nft-minter --help` for the whole list.
 
-With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.elrond.com/sdk-and-tools/rest-api/virtual-machine/).
+With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.multiversx.com/sdk-and-tools/rest-api/virtual-machine).
 
 Elven Tools also provides the Minter Dapp for the NFT launch, which strictly integrates with the Smart Contract. It have a lot of useful widgets.
 

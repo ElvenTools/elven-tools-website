@@ -77,7 +77,7 @@ Remember, you don't have to change the `config.ts` file. It is for library usage
 
 ### Custom API endpoints
 
-It is always advisable to use the custom API endpoints custom proxies for production-ready apps. Even with this tool, it is better to use the custom one. You can read more about how to set up your architecture [here](https://docs.elrond.com/integrators/observing-squad/).
+It is always advisable to use the custom API endpoints custom proxies for production-ready apps. Even with this tool, it is better to use the custom one. You can read more about how to set up your architecture [here](https://docs.multiversx.com/integrators/observing-squad).
 
 Suppose you don't have the resources to do that. You can find third-party services which do that as a service.
 
@@ -86,7 +86,7 @@ To switch to your custom API endpoint, you would need to add in your `.elventool
 ```
 {
   "chain": "devnet",
-  "apiProviderEndpoint": "https://devnet-api.elrond.com"
+  "apiProviderEndpoint": "https://devnet-api.multiversx.com"
 }
 ```
 
@@ -97,13 +97,13 @@ When you need to use the Gateway instead API, you can configure it like that:
 ```
 {
   "chain": "devnet",
-  "gatewayProviderEndpoint": "https://devnet-gateway.elrond.com"
+  "gatewayProviderEndpoint": "https://devnet-gateway.multiversx.com"
 }
 ```
 
 It is an example with the default Gateway endpoint for the devnet. You can do the same for the testnet and mainnet.
 
-Important! When nothing is provided, the CLI will use the default, public MultiversX API endpoint (api.elrond.com, devnet-api.elrond.com, testnet-api.elrond.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
+Important! When nothing is provided, the CLI will use the default, public MultiversX API endpoint (api.multiversx.com, devnet-api.multiversx.com, testnet-api.multiversx.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
 
 ### How to use allowlist
 
@@ -136,7 +136,7 @@ Populating addresses from the allowlist.json file:
  
 ✔ Are you sure that you want to proceed?
  › Yes
-Transaction: https://devnet-explorer.elrond.com/transactions/4a3b63edc1cf00c8025c025926db033964e4625fa5ddcd316b880787f3c8094f
+Transaction: https://devnet-explorer.multiversx.com/transactions/4a3b63edc1cf00c8025c025926db033964e4625fa5ddcd316b880787f3c8094f
 ```
 
 Example:
@@ -151,7 +151,7 @@ You will be providing addresses by hand.
 ✔ Provide the list of addresses. Max 320 addresses per one transaction.
 You can add more by sending more transactions. Separate them with comma (","):
  … erd1puseeussfftajfj92ezqtfp0ca6u0s2thu7n64cyw6m37ef8dh0sekwt27, erd18yxxeuf2fkwlwgrnc3chjyf4gl3429qpp5fqynhzf2gn6hs3h8dqu7zt7n
-Transaction: https://devnet-explorer.elrond.com/transactions/f8bf7de010629e32008bebb1ba5681a008f23afaf949e0e565ea3bbf41bd80fd
+Transaction: https://devnet-explorer.multiversx.com/transactions/f8bf7de010629e32008bebb1ba5681a008f23afaf949e0e565ea3bbf41bd80fd
 ```
 
 Remember that you will always need to enable the allowlist after populating it. Otherwise, it will be ignored. You can enable and disable it using: `elven-tools nft-minter enable-allowlist` and `elven-tools nft-minter disable-allowlist`.
@@ -193,7 +193,7 @@ Example:
 elven-tools nft-minter set-drop
 ✔ Provide the amount of the tokens for the drop:
  … 2500
-Transaction: https://devnet-explorer.elrond.com/transactions/915a9b115d01dbc0026e91ab889284018bd51cee8a030804dbb5da600c1bdd25
+Transaction: https://devnet-explorer.multiversx.com/transactions/915a9b115d01dbc0026e91ab889284018bd51cee8a030804dbb5da600c1bdd25
 
 elven-tools nft-minter mint
 ✔ Provide how many tokens should be minted.
@@ -201,7 +201,7 @@ Take into account possible limitations set on the Smart Contract (ex 3 for three
  … 2
 ✔ Are you sure that you want to proceed?
  › Yes
-Transaction: https://devnet-explorer.elrond.com/transactions/8954262fea15e63705d696fcfeb92874a4c10239703b5a6631fd7f989c494ba8
+Transaction: https://devnet-explorer.multiversx.com/transactions/8954262fea15e63705d696fcfeb92874a4c10239703b5a6631fd7f989c494ba8
 ```
 
 There are also SC queries that allow checking a couple of things. These are: 

@@ -71,11 +71,11 @@ Ok, so what should you do with this kind of knowledge as a buyer? In most cases,
 
 What can the project do to gain more trust? I will write more about the community's communication later, but how it is appropriately managed is through multisig. So there should be more than one person on the team to be able to upgrade the contract. There should be a requirement for multiple keys to authorize such a transaction. But let's be honest, the minting Smart Contracts and projects around them are usually relatively small, and probably no one will use that. Still, it is worth knowing about it, and it will be a perfect point in the marketing of a project.
 
-How to check if a Smart Contract is upgradable or not? When you go to the MultiversX Explorer and search for the project's Smart Contract, you will be able to see a badge. For example, let's take randomly one of the Smart Contracts on the mainnet: [explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt](https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt). There is a badge `UPGRADEABLE` under the properties section.
+How to check if a Smart Contract is upgradable or not? When you go to the MultiversX Explorer and search for the project's Smart Contract, you will be able to see a badge. For example, let's take randomly one of the Smart Contracts on the mainnet: [explorer.multiversx.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt](https://explorer.multiversx.com/accounts/erd1qqqqqqqqqqqqqpgqxwakt2g7u9atsnr03gqcgmhcv38pt7mkd94q6shuwt). There is a badge `UPGRADEABLE` under the properties section.
 
 ### Collection ticker and how to verify it.
 
-On the MultiversX blockchain, you would need to issue a collection token with a ticker in a short format, such as `ABCD-1a2e3`. It is an identifier for the NFT collection. For example, you can always check it in the MultiversX Explorer, [explorer.elrond.com/collections/EGIRL-443b95](https://explorer.elrond.com/collections/EGIRL-443b95).
+On the MultiversX blockchain, you would need to issue a collection token with a ticker in a short format, such as `ABCD-1a2e3`. It is an identifier for the NFT collection. For example, you can always check it in the MultiversX Explorer, [explorer.multiversx.com/collections/EGIRL-443b95](https://explorer.multiversx.com/collections/EGIRL-443b95).
 
 What is important here is that the project should always clearly communicate the official and only legit collection ticker. Because many scams will try to copy the collection, educating the buyers about that is always essential.
 
