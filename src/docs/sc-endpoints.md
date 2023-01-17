@@ -93,4 +93,4 @@ You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-too
 Check the examples for `erdpy`:
 
 - [Command Line Interface](https://github.com/multiversx/mx-sdk-py-cli/blob/main/erdpy/CLI.md) 
-- [Blog post with usage examples](https://www.julian.io/articles/elrond-smart-contracts.html)
+- [Blog post with usage examples](https://www.julian.io/articles/multiversx-smart-contracts.html)

@@ -18,7 +18,7 @@ Think of the Dapp API proxy as the Nextjs API rewrites on the backend side. Why 
 
 ### How it works by default
 
-By default, the Dapp provides the `.env.example`, configured not to use the API rewrites and configured to use the official public MultiversX (Elrond) API endpoint. 
+By default, the Dapp provides the `.env.example`, configured not to use the API rewrites and configured to use the official public MultiversX API endpoint. 
 
 You have three options:
 
