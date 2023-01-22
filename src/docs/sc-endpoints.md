@@ -81,7 +81,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 
 The simplest way is to use the Elven Tools CLI, check how in the [Jump start](/docs/jump-start.html) article or the [CLI introduction](/docs/cli-introduction.html).
 
-If you don't want to use the CLI, you need to do the queries and transaction calls using the [sdk-core](https://github.com/multiversx/mx-sdk-js-core) or [erdpy](https://github.com/multiversx/mx-sdk-dapp).
+If you don't want to use the CLI, you need to do the queries and transaction calls using the [sdk-core](https://github.com/multiversx/mx-sdk-js-core) or [sdk-dapp](https://github.com/multiversx/mx-sdk-dapp).
 
 Check the examples for `sdk-core`:
 
@@ -90,7 +90,7 @@ Check the examples for `sdk-core`:
 
 You can also check the [elven-tools-cli](https://github.com/ElvenTools/elven-tools-cli) source code, where I also used the MultiversX JS SDK.
 
-Check the examples for `erdpy`:
+Check the examples for `mxpy`:
 
-- [Command Line Interface](https://github.com/multiversx/mx-sdk-py-cli/blob/main/erdpy/CLI.md) 
+- [Command Line Interface](https://github.com/multiversx/mx-sdk-py-cli/blob/main/CLI.md) 
 - [Blog post with usage examples](https://www.julian.io/articles/multiversx-smart-contracts.html)

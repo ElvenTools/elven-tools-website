@@ -49,7 +49,7 @@ All are mandatory operations and should be done only once. Make the transactions
 
 The best way of using it will be with [Elven Tools CLI tool](/docs/cli-introduction.html). It has a lot of valuable functions integrated with the smart contract, so deploying or interacting is simple. You can deploy the smart contract directly from its repository. Almost no coding skills are required in this case.
 
-You can also take a more standard path and use [erdpy](https://docs.multiversx.com/sdk-and-tools/erdpy/) for that. Erdpy is an official CLI SDK for MultiversX blockchain based on Python. For more information, check the [blog post](https://www.julian.io/articles/multiversx-smart-contracts.html).
+You can also take a more standard path and use [mxpy](https://docs.multiversx.com/sdk-and-tools/sdk-py/mxpy-cli) for that. Mxpy CLI is an official CLI SDK for MultiversX blockchain based on Python. For more information, check the [blog post](https://www.julian.io/articles/multiversx-smart-contracts.html).
 
 ### Limitations and caveats
 

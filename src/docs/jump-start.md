@@ -37,7 +37,7 @@ Check how to start with it here: [How to start with the Dapp](/docs/how-to-start
 
 ### Longer step-by-step guides
 
-The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, erdpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
+The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool. But the best is to use it all together. You can, of course, use the Smart Contract separately using, for example, mxpy, but the elven-tools cli gives you a lot of simplification with the process. You don't have to think about proper arguments because it will ask you for them. Let's see what the workflow could look like.
 
 Let's say that you want to prepare a collection generated randomly from .png layers. You can do this with many tools on the Internet. Btw, please take a look at my [custom solution](https://github.com/ElvenTools/nft-art-maker).
 

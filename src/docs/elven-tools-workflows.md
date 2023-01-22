@@ -49,7 +49,7 @@ There is another version of the contract planned, or it is better to say, a new 
 
 ### Examples of scenarios 
 
-Please keep in mind that these are only my ideas, you don't have to do this that way, and you can mix all possible endpoint calls to achieve your perfect flow. These are just examples to explain why all the endpoints are there. I will also describe how to prepare all of that using the Elven Tools CLI because it is simpler and faster. But you could also prepare the Smart Contract without it, for example, using [erdpy](https://docs.multiversx.com/sdk-and-tools/erdpy/).
+Please keep in mind that these are only my ideas, you don't have to do this that way, and you can mix all possible endpoint calls to achieve your perfect flow. These are just examples to explain why all the endpoints are there. I will also describe how to prepare all of that using the Elven Tools CLI because it is simpler and faster. But you could also prepare the Smart Contract without it, for example, using [mxpy](https://docs.multiversx.com/sdk-and-tools/sdk-py/).
 
 **Let's list all of my ideas on how we can do this first:**
 
