@@ -216,15 +216,50 @@ const {
   isValidating, // pending state for each revalidation of the data, for example using the mutate
   error,
 } = useScQuery<number>({
-  type: SCQueryType.NUMBER, // can be number, string or boolean
+  type: SCQueryType.NUMBER, // can be NUMBER, STRING, BOOLEAN or COMPLEX
   payload: {
     scAddress: mintSmartContractAddress,
     funcName: queryFunctionName,
-    args: [],
+    args: [], // arguments for the query in hex format, you can use sdk-core for that, for example: args: [ new Address('erd1....').hex() ] etc. It will be also simplified in the future.
   },
   autoInit: false, // you can enable or disable the trigger of the query on the component mount
+  abiJSON: yourImportedAbiJSONObject // required for SCQueryType.COMPLEX type
 });
 ```
+
+**Example** with `SCQueryType.COMPLEX`. This type uses `/vm-values/query`, ABI and ResultParser. The ABI JSON contents are required here. You can copy abi.json and import it in the same place you use useScQuery. Put the abi JSON file wherever you like in the codebase. I chose the `config` directory. See the example below:
+
+```jsx
+import { TypedOutcomeBundle } from '@multiversx/sdk-core';
+import abiJSON from '../config/abi.json';
+
+const { data } = useScQuery<TypedOutcomeBundle>({
+  type: SCQueryType.COMPLEX,
+  payload: {
+    scAddress: 'erd1qqq...',
+    funcName: 'yourScFunction',
+    args: [], // args in hex format, use sdk-core for conversion, see above
+  },
+  autoInit: true,
+  abiJSON,
+});
+```
+
+The `data` here will be a `TypedOutcomeBundle`. Which is:
+
+```typescript
+interface TypedOutcomeBundle {
+  returnCode: ReturnCode;
+  returnMessage: string;
+  values: TypedValue[];
+  firstValue?: TypedValue;
+  secondValue?: TypedValue;
+  thirdValue?: TypedValue;
+  lastValue?: TypedValue;
+}
+```
+
+You can then process the data. For example `data.firstValue.valueOf()` or `data.firstValue.toString()` if applicable. The returned type can be further processed using sdk-core.
 
 #### useElvenScQuery()
 
@@ -241,6 +276,8 @@ const {
   funcName: 'isAllowlistEnabled',
   type: SCQueryType.BOOLEAN,
   autoInit: Boolean(address && !mintingPaused),
+  args: [], // args in hex format, use sdk-core for conversion, see above
+  abiJSON // optional if you want to use ABI for parsing more complex data types
 });
 ```
 
