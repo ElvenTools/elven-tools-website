@@ -30,18 +30,18 @@ Remember that the Dapp is built with the NextJS framework. It is good to know at
 
 The Dapp does not include the [sdk-dapp](https://github.com/multiversx/mx-sdk-dapp) library, it handles all using only [sdk-core](https://github.com/multiversx/mx-sdk-js-core), so it requires its global state management.
 
-The Elven Tools Dapp uses [valtio](https://github.com/pmndrs/valtio) - a simple but compelling state management library for React. You'll read more about it in their docs. The most important is to know where it is used in the code and why.
+The Elven Tools Dapp uses [useElven](https://www.useelven.com) which relies on [valtio](https://github.com/pmndrs/valtio) - a simple but compelling state management library for React. You'll read more about it in their docs. The most important is to know where it is used in the code and why.
 
-The global state configuration sits in the [store](https://github.com/ElvenTools/elven-tools-dapp/tree/main/store) directory in the repository. You will find there the auth and network global stores. The 'network' is just a static object which keeps the information of the dapp provider and network provider. It will re-init them on every hard refresh. And for auth, we use global state with valtio.
+The global state configuration sits in the [store](https://github.com/useElven/core/tree/main/src/store) directory in the useElven's repository. You will find there the auth and network global stores. The 'network' is just an object which keeps the information of the dapp provider and network provider. It will re-init them on every hard refresh. And for auth, we use global state with valtio.
 
 The state is also synchronized with the localStorage to be able to reinitialize all required states on hard refresh. You will find such entries in the localStorage:
 
 ```
-elven_tools_dapp__account: {"address":"","nonce":0,"balance":"", "addressIndex": 0}
+useElven_dapp__account: {"address":"","nonce":0,"balance":"", "addressIndex": 0}
 ```
 
 ```
-elven_tools_dapp__loginInfo: {"loginMethod":"","expires":0,"loginToken":"","signature":""}
+useElven_dapp__loginInfo: {"loginMethod":"","expires":0,"loginToken":"","signature":""}
 ```
 
 The state is reused in many places in the app. There are custom Ract hooks for this purpose. We will check them later in the article.
@@ -56,7 +56,7 @@ The other place for configuration is the [config](https://github.com/ElvenTools/
 
 ### React custom hooks
 
-The whole logic is based on custom React hooks. There are many of them, but generally, the logic isn't very complicated. You'll find them here: [hook](https://github.com/ElvenTools/elven-tools-dapp/tree/main/hooks). 
+The whole logic is based on custom React hooks from [useElven](https://www.useelven.com). There are many of them, but generally, the logic isn't very complicated. You'll find them here: [hook](https://github.com/useElven/core/tree/main/src/hooks). 
 
 The most difficult to understand and, at the same time, the most important would be probably `useNetworkSync`. It is responsible for syncing the whole network, auth providers, and user accounts. It is essential to call it as soon as possible. If needed, you can also optimize component rerenders. The Elven Tools Dapp already has some of the optimization implemented.
 
@@ -64,7 +64,7 @@ Some hooks will serve the user's information, auth status, etc. There are also h
 
 For example: 
 
-- [useLogin](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/auth/useLogin.tsx) hook includes all auth providers. It is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
+- [useLogin](https://github.com/useElven/core/blob/main/src/hooks/useLogin.tsx) hook includes all auth providers. It is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
 - [useElvenScQuery](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/interaction/elvenScHooks/useElvenScQuery.tsx) is responsible of querying the Elven Tools Smart Contract.
 
 See more here [Dapp React hooks and components](/docs/dapp-react-hooks-and-components.html)

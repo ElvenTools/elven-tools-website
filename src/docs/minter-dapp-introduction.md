@@ -16,7 +16,7 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 
 Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with the Elven Tools Smart Contract. 
 
-It is a minter dapp based on the [NextJS](https://nextjs.org/) framework, which gives many possibilities for modifications and extending.
+It is a minter dapp based on the [NextJS](https://nextjs.org/) framework and [useElven](https://www.useelven.com), which gives many possibilities for modifications and extending.
 
 - [Elven Tools Dapp repository](https://github.com/ElvenTools/elven-tools-dapp)
 - [Elven Tools Dapp live demo](https://dapp-demo.elven.tools/) (you can mint some NFTs on the devnet here!)
@@ -44,13 +44,15 @@ There are a couple of reasons. The most important are:
 3. There is more control over auth flows with a custom approach. And this is the core of the dapp, so it is critical.
 4. It has too many utilities that, for this case, won't be used.
 
-### Why the API endpoint is proxied?
+### Why the API endpoint could be proxied as an option?
 
 1. Allows hiding the API endpoint under the same domain `www.your-domain.com/api/multiversx`.
 2. No one will be able to use this endpoint from outside the Dapp.
 3. When used with no public API, You can hide the API keys which need to be attached to the endpoint.
 4. Usage of the public MultiversX API for production release is always a bad idea in such a dapp, so it seems to be a perfect solution for third-party providers.
 5. Anyway, proxied API will still work well with the public MultiversX API.
+
+Con: It will impact your backend performance.
 
 ### Why written with Typescript and not JavaScript only?
 
