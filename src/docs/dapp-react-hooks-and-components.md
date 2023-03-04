@@ -26,6 +26,8 @@ The template is based on `@useelven/core` npm library.
 
 - [@useelven/hooks docs](https://www.useElven.com) - React hooks for MultiversX blockchain
 
+`useNetworkSync` hook from `useElven` takse whole custom configuration. Elven Tools Dapp is based pn .env variables that are passed to `useNetworkSync`. These are for now `chainType` and optionally API endpoint.
+
 Besides that, there are custom React components that will help you with development.
 
 #### LoginModalButton
