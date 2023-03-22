@@ -76,6 +76,7 @@
 }
 
 .homepage-docs-button-section {
+  margin-bottom: 60px;
 
   a {
     display: inline-block;
@@ -235,4 +236,116 @@
 
 .homepage-code-try-desc {
   margin-bottom: 80px;
+}
+
+.homepage-slogan {
+  font-size: 80px;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 70px;
+  padding-top: 40px;
+  line-height: 1;
+
+  &.secondary {
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 60px;
+
+    @media screen and (max-width: 760pxhomepage-lead) {
+      font-size: 40px;
+      padding-top: 30px;
+    }
+  
+    @media screen and (max-width: 600px) {
+      font-size: 40px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 65px;
+    padding-top: 30px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 36px;
+  }
+}
+
+.demo-tiles {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  &.smaller {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.last-tiles-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .demo-tile {
+    border-radius: 8px;
+    min-width: 200px;
+    border: 1px solid $color-main-borders;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: box-shadow 100ms ease, transform 100ms ease;
+    color: $color-main-dark;
+    text-decoration: none;
+    text-align: center;
+    background-color: $color-main-light;
+
+    &:hover {
+      box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0px 20px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px;
+    }
+
+    .link-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 80px;
+        height:  80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+
+        &.wider {
+          width: 160px;
+        }
+      }
+    }
+
+    .text {
+      line-height: 1.1;
+      font-size: 14px;
+      font-weight: 600;
+
+      &.bigger {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+  }
 }
