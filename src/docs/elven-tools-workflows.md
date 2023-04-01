@@ -13,7 +13,7 @@ twitterDescription: "How exactly should one work with the Elven Tools? Let's see
 twitterUrl: "https://www.elven.tools/docs/elven-tools-workflows.html"
 ---
 
-Many possible endpoints on the [Smart Contract](/docs/sc-introduction.html). There is also a lot of documentation [here](/docs/jump-start.html) and [there](/docs/cli-introduction.html). But how exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs.
+Many possible endpoints on the [NFT Smart Contract](/docs/nft-sc-introduction.html). There is also a lot of documentation [here](/docs/jump-start.html) and [there](/docs/cli-introduction.html). But how exactly should one work with the Elven Tools? Let's see the options and how you could sell and distribute your NFTs.
 
 ### What we will tackle here
 
@@ -244,4 +244,4 @@ Here are a couple of ideas on preparing the Smart Contract to sell the NFT colle
 
 Hopefully, it will be helpful, and the examples will help better understand the idea behind all the existing endpoints on the Smart Contract.
 
-There will probably be more improvements. Please let me know if you will find a bug or have some ideas to improve the toolset. You can write to me directly: [Twitter](https://twitter.com/JulianCwirko) and [Telegram](https://t.me/JulianCwirko). Or you can report an issue on GitHub for the Smart Contract [here](https://github.com/ElvenTools/elven-nft-minter-sc/issues) and the CLI [here](https://github.com/ElvenTools/elven-tools-cli/issues).
+There will probably be more improvements. Please let me know if you will find a bug or have some ideas to improve the toolset. You can write to me directly: [Twitter](https://twitter.com/JulianCwirko). Or you can report an issue on GitHub for the Smart Contract [here](https://github.com/ElvenTools/elven-nft-minter-sc/issues) and the CLI [here](https://github.com/ElvenTools/elven-tools-cli/issues).

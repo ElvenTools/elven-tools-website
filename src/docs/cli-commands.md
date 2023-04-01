@@ -14,6 +14,11 @@ twitterUrl: "https://www.elven.tools/docs/cli-commands.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/cli-commands.md"
 ---
 
+Here you will find all the CLI commands, whether general, NFT-related, or SFT-related commands. You can also display the commands using the CLI and `help` option:
+- `elven-tools --help`
+- `elven-tools nft-minter --help`
+- `elven-tools sft-minter --help`
+
 ### General commands
 
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
@@ -61,3 +66,10 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 - `elven-tools nft-minter is-minting-paused` - checks if the minting is paused,
 - `elven-tools nft-minter get-total-supply` - returns the total supply for the collection,
 - `elven-tools nft-minter get-total-supply-of-current-drop` - returns the supply of current drop
+
+### sft-minter commands
+
+- `elven-tools sft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the MultiversX chain. All NFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for NFTs. You can also opt-out of adding the edition number to the name
+- `elven-tools sft-minter set-roles` [only owner] - for now, the command sets three critical roles for the collection handle. They are: create, mint and burn roles. 
+- `elven-tools sft-minter create-token` [only owner] - You can create SFT tokens with the defined amount, assets, and attributes. You will be asked for all the data with prompts
+- `elven-tools sft-minter buy` - You can also use the CLI as a buyer and buy SFT tokens using this command. Of course, you can also buy as an owner.

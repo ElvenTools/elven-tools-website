@@ -23,10 +23,12 @@ npm install elven-tools -g
 ### What is it?
 
 - The CLI tool helps to:
-  - deploy the NFT minter Smart Contract on the MultiversX blockchain
-  - interact with the NFT minter Smart Contract on the MultiversX blockchain
+  - deploy the NFT or SFT minter Smart Contract on the MultiversX blockchain
+  - interact with the NFT or SFT minter Smart Contract on the MultiversX blockchain
 
-For now it is designed to deploy the contract: [elven-nft-minter-sc](https://github.com/ElvenTools/elven-nft-minter-sc).
+For now it is designed to deploy contracts: 
+- [elven-tools-nft-minter-sc](https://github.com/ElvenTools/elven-nft-minter-sc).
+- [elven-tools-sft-minter-sc](https://github.com/ElvenTools/elven-tools-sft-minter-sc).
 
 ### How does it work? 
 
@@ -49,7 +51,7 @@ Check all commands [here](/docs/cli-commands.html)
 
 **All of the configuration options are set by default, so you don't have to configure them if you will accept the defaults.**
 
-Below is an example of a `.elventoolsrc` config file with default values. You don't have to change the `config.ts` file. It is for library usage. `.elventoolsrc` is the only config file that should be used. It is not required if you will work on the devnet. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered—the same directory as the one where the `walletKey.pem` file is located.
+Below is an example of a `.elventoolsrc` config file with default values. You don't have to change the `config.ts` file. It is for library usage. `.elventoolsrc` is the only config file that should be used. It is not required if you will work on the devnet. In other cases, you would need to have it. It should be located in the same directory from which the `elven-tools` commands are triggered. The same directory as the one where the `walletKey.pem` file is located. Again, remember that you don't need to provide all these values. They are defaults. You need to provide values when you want to overwrite something.
 
 ```json
 {
@@ -60,7 +62,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "version": "{tag version here or branch name, for example: v1.2.0}",
     "deployNftMinterSC": "<nft_minter_smart_contract_address_here> when you want to switch between chains or you want to use the cli as buyer",
     "tokenSellingPrice": "<price_of_the_nft_here> when you want to switch between chains or you want to use the cli as buyer",
-    "deployGasLimit": 120000000,
+    "deployGasLimit": 80000000,
     "issueCollectionTokenGasLimit": 80000000,
     "issueValue": "0.05",
     "assignRolesGasLimit": 80000000,
@@ -117,6 +119,18 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "getTotalSupplyFnName": "getTotalSupply",
     "getTotalSupplyOfCurrentDropFnName": "getTotalSupplyOfCurrentDrop"
   },
+  "sftMinterSc": {
+    "version": "{tag version here or branch name, for example: v0.1.0}",
+    "deployNftMinterSC": "<nft_minter_smart_contract_address_here> when you want to switch between chains or you want to use the cli as buyer",
+    "deployGasLimit": 30000000,
+    "issueTokenFnName": "issueToken",
+    "issueCollectionTokenGasLimit": 60000000,
+    "issueValue": "0.05",
+    "setLocalRolesFnName": "setLocalRoles",
+    "assignRolesGasLimit": 60000000,
+    "createGasLimit": 20000000,
+    "createTokenFnName": "createToken"
+  },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"
   },
@@ -131,7 +145,7 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
 
 **Whole config with default values:** [config.ts](https://github.com/ElvenTools/elven-tools-cli/blob/main/src/config.ts)
 
-Remember, you don't have to change the `config.ts` file. It is for library usage. You don't have to clone the repository to change the configuration. `.elventoolsrc` is the only config file that should be used.
+Remember, you don't have to change the `config.ts` file. It is for library usage. **You don't have to clone the repository to change the configuration**. `.elventoolsrc` is the only config file that should be used.
 
 ### Limitations and caveats
 
@@ -144,6 +158,5 @@ Please post issues and ideas [here](https://github.com/ElvenTools/elven-tools-cl
 
 ### Contact
 
-- [Telegram](https://t.me/juliancwirko)
 - [Twitter](https://twitter.com/JulianCwirko)
 - julian.cwirko@gmail.com

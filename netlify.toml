@@ -13,3 +13,11 @@
 [[redirects]]
   from = "/docs/use-of-ipfs-in-the-elrond-nft-ecosystem.html"
   to = "/docs/use-of-ipfs-in-the-multiversx-nft-ecosystem.html"
+
+[[redirects]]
+  from = "/docs/sc-introduction.html"
+  to = "/docs/nft-sc-introduction.html"
+
+[[redirects]]
+  from = "/docs/sc-endpoints.html"
+  to = "/docs/nft-sc-endpoints.html"

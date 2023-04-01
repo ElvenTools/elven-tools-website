@@ -13,7 +13,7 @@ twitterDescription: "The CLI also has some additional tools and there are also s
 twitterUrl: "https://www.elven.tools/docs/additional-functionalities-of-elven-tools.html"
 ---
 
-Elven Tools CLI is mainly used to simplify and help when deploying and interacting with the Elven Tools smart contract. Read more about that here: [Elven Tools workflows](https://www.elven.tools/docs/elven-tools-workflows.html).
+Elven Tools CLI is mainly used to simplify and help when deploying and interacting with Elven Tools smart contracts (NFT/SFT). Read more about NFT related workflows here: [Elven Tools workflows](https://www.elven.tools/docs/elven-tools-workflows.html).
 It is its main functionality. But the CLI also has some additional tools and there are also separated helper scripts. Let's see what they are.
 
 ### Get NFT owners

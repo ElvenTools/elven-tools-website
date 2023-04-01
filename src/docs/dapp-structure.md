@@ -65,7 +65,7 @@ Some hooks will serve the user's information, auth status, etc. There are also h
 For example: 
 
 - [useLogin](https://github.com/useElven/core/blob/main/src/hooks/useLogin.tsx) hook includes all auth providers. It is just an abstraction. You could also want to use one of the providers, not all. You'll still be able to do that.
-- [useElvenScQuery](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/interaction/elvenScHooks/useElvenScQuery.tsx) is responsible of querying the Elven Tools Smart Contract.
+- [useElvenScQuery](https://github.com/ElvenTools/elven-tools-dapp/blob/main/hooks/interaction/elvenScHooks/useElvenScQuery.tsx) is responsible of querying Elven Tools smart contracts.
 
 See more here [Dapp React hooks and components](/docs/dapp-react-hooks-and-components.html)
 

@@ -4,12 +4,12 @@ title: "Recipes"
 publicationDate: "2022-01-25"
 tags:
   - intro
-excerpt: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
+excerpt: "The Elven Tools includes smart contracts, CLI tool, and Minter Dapp for NFT/SFT launches. Every part of it can be used as a separate tool."
 ogTitle: "Elven Tools CLI tool - recipes"
-ogDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
+ogDescription: "The Elven Tools includes smart contracts, CLI tool, and Minter Dapp for NFT/SFT launches. Every part of it can be used as a separate tool."
 ogUrl: "https://www.elven.tools/docs/recipes.html"
 twitterTitle: "Elven Tools CLI tool - recipes"
-twitterDescription: "The Elven Tools includes the Smart Contract, CLI tool, and Minter Dapp for NFT launches. Every part of it can be used as a separate tool."
+twitterDescription: "The Elven Tools includes smart contracts, CLI tool, and Minter Dapp for NFT/SFT launches. Every part of it can be used as a separate tool."
 twitterUrl: "https://www.elven.tools/docs/recipes.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/recipes.md"
 ---
@@ -18,23 +18,26 @@ Here are ready-to-use recipes and more information on real-life use cases.
 
 ### How to work with the Smart Contract locally
 
-In most cases, it is good to provide some modifications for the final version of the Smart Contract, such as changing the functions' names to make life harder for the bot's owners. 
+In most cases, it is good to provide some modifications for the final version of the smart contract, such as changing the functions' names to make life harder for the bot's owners. 
 
-It is good to build the Smart Contract locally and deploy it from the file system in such a case. It is possible by default with the Elven Tools CLI. You need to prepare the directory `sc/nft-minter` in the same place where you already have the `walletKey.pem` file and later the `output.json` file. The tree should look like that:
+It is good to build the smart contract locally and deploy it from the file system in such a case. It is possible by default with the Elven Tools CLI. You need to prepare the directory `sc/nft-minter` for NFT minter or `sc/sft-minter` for SFT minter. In the same place where you already have the `walletKey.pem` file and later the `output.json` file. The tree should look like that:
 
 ```bash
 .
 ├── output.json
 ├── sc
-│   └── nft-minter
-│       ├── elven-nft-minter.abi.json
-│       └── elven-nft-minter.wasm
+│   ├── nft-minter
+│   |   ├── elven-nft-minter.abi.json
+│   |   └── elven-nft-minter.wasm
+│   └── sft-minter
+│       ├── elven-tools-sft-minter.abi.json
+│       └── elven-tools-sft-minter.wasm
 ├── walletKey.pem
 ```
 
-As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building the Smart Contract locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter`.
+As you can see, we have the `.abi.json` and `.wasm` files there. You will find them in the `output` directory after building smart contracts locally, and the elven-tools cli tool will take them by default. Remember to only keep the same naming convention for the directories - `sc/nft-minter` and `sc/sft-minter`.
 
-If you need some help working with the Smart Contract in the MultiversX ecosystem, please check docs and my article [here](https://www.julian.io/articles/multiversx-smart-contracts.html).
+If you need some help working with smart contracts in the MultiversX ecosystem, please check docs.
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/TivnKJsyLH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -52,11 +55,15 @@ The configuration file should be named `.elventoolsrc,` or take any compatible n
     "nftMinterSc": {
         "version": "v1.2.0",
         "mintFnName": "mintMe"
+    },
+    "sftMinterSc": {
+        "version": "v0.1.0",
+        "buyFnName": "buyMe"
     }
 }
 ```
 
-In the example above, we define the chain as the 'testnet' (devnet is set by default), and we also define the version for the Smart Contract, `v1.2.0` (the last tag name should always be selected as default). It can also be a branch name. Then we also define the new name for the 'mint' function. You can also change names for other functions and set up different gas limits.
+In the example above, we define the chain as the 'testnet' (devnet is set by default), and we also define the versions for smart contracts. For example `v1.2.0` (the last tag name should always be selected as default). It can also be a branch name. Then we also define new names for the NFT 'mint' function and SFT 'buy' function. You can also change names for other functions and set up different gas limits. 
 
 **You will find all possible options [here](/docs/cli-introduction.html#custom-configuration-options).**
 
@@ -71,7 +78,7 @@ Remember, you don't have to change the `config.ts` file. It is for library usage
 **Important!** The same way as in the example above, you can configure deployment to `mainnet`. Please remember about a couple of things:
 - make sure that you derive the walletKey.pem file from the seed from the mainnet wallet. Make sure that the computer you are using is safe, and no one will take the PEM file from you. Or/and seed phrase,
 - change the `chain` in the config file to the `mainnet`,
-- be careful with Smart Contract versions. By default, the latest version of the CLI will use the newest version of the Smart Contract. Remember that if you have .wasm and .abi files in the `sc/nft-minter` directory, then they will be used instead of the ones from the repository,
+- be careful with smart contracts versions. By default, the latest version of the CLI will use the newest version of smart contract. Remember that if you have .wasm and .abi files in the `sc/nft-minter` or `sc/sft-minter` directory, then they will be used instead of the ones from the repository,
 - test the whole process 'million' times on the devnet, test with small amounts and big amounts, with multiple wallets as buyers, test queries and transactions, buy to the limits, to test them too,
 - **I can't provide individual support**, but I will always try to help.
 
@@ -106,6 +113,8 @@ It is an example with the default Gateway endpoint for the devnet. You can do th
 Important! When nothing is provided, the CLI will use the default, public MultiversX API endpoint (api.multiversx.com, devnet-api.multiversx.com, testnet-api.multiversx.com). When the `gatewayProviderEndpoint` is set, it will always overwrite the `apiProviderEndpoint`.
 
 ### How to use allowlist
+
+**(NFT only for now)**
 
 The allowlist is usually required for the first batch of tokens to distribute them only to chosen addresses. It can be a list of eligible addresses.
 
@@ -176,13 +185,15 @@ You can also remove a single address by:
 elven-tools nft-minter remove-allowlist-address
 ```
 
-Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all SC endpoints [here](/docs/sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
+Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all NFT SC endpoints [here](/docs/nft-sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/rdg6s7KHFt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### How to use drops
+
+**(NFT only for now)**
 
 The drops are, in simple words, batches of tokens to mint. You don't have to use them, but it is usually required because most projects usually split the collection into 'waves' of distribution.
 
@@ -215,13 +226,15 @@ elven-tools nft-minter is-drop-active
 
 They are self-explanatory, but you will find all descriptions under the links below.
 
-Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all SC endpoints [here](/docs/sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
+Remember that you can always use the functionality without using the CLI tool, then you would need to call the same endpoints. You will find all commands for the CLI [here](/docs/cli-commands.html) and all NFT SC endpoints [here](/docs/nft-sc-endpoints.html). Also, check the longer article about [possible workflows](/docs/elven-tools-workflows.html).
 
 <div class="embeded-media-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ZERCb-c-BP4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### How to use the giveaway
+
+**(NFT only for now)**
 
 The `giveaway` functionality is helpful when you want to give some tokens to a particular address. It can be because they are the team members or someone you want to thank. Remember that with Elven Tools, you can't choose the specific token. It will still be randomly selected and minted. When using this functionality, there is no payment—only transaction fees.
 
@@ -247,19 +260,21 @@ As always, you can call the giveaway endpoint without the CLI. Check them in the
 
 ### How to claim dev rewards
 
-In the MultiversX ecosystem, each Smart Contract will get the share of the fees as a development reward. So the developer of the contract will get some share because this is an open source Smart Contract. It will generate these rewards for everyone who deploys it. You can claim them by using: `elven-tools nft-minter claim-dev-rewards`. Remember that this will only work for the owner of the Smart Contract.
+In the MultiversX ecosystem, each smart contract will get the share of the fees as a development reward. So the developer of the contract will get some share. Because this is an open source Smart Contract it will generate these rewards for everyone who deploys it. You can claim them by using: `elven-tools nft-minter claim-dev-rewards` or `elven-tools sft-minter claim-dev-rewards`. Remember that this will only work for the owner of the Smart Contract.
 
-As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
+As always, you can call the claim-dev-rewards endpoint without the CLI. Check them in the SC endpoints section.
 
 ### How to claim royalties and other funds
 
-The Smart Contract is payable by default, so in theory, it is possible to transfer EGLD funds to its address. By definition, this is how marketplaces should send the royalties. There is an `elven-tools nft-minter claim-sc-funds`, which will allow getting all the funds locked on the contract. Of course, only for the owner of the contract.
+Smart contracts are payable by default, so in theory, it is possible to transfer EGLD funds to them. By definition, this is how marketplaces should send the royalties. There is an `elven-tools nft-minter claim-sc-funds` and `elven-tools sft-minter claim-sc-funds`, which will allow getting all the funds locked on the contract. Of course, only for the owner of the contract.
 
-There will also be a dedicated endpoint/command which will call the marketplaces Smart Contracts to claim the royalties because not all of them will send them automatically.
+There will also be a dedicated endpoint/command which will call the marketplaces smart contracts to claim the royalties because not all of them will send them automatically.
 
-As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
+As always, you can call the claim-sc-funds endpoint without the CLI. Check them in the SC endpoints section.
 
 ### How to get owners addresses using the collection ticker
+
+**(NFT only for now)**
 
 From version 1.6.0 there is additional command `elven-tools collection-nft-owners`. It will allow getting owners' addresses, using only the collection ticker. It is useful, for example, when you want to do some promotional giveaway. The functionality will save the addresses in the `nft-collection-owners.json` where the command is triggered.
 
@@ -319,6 +334,8 @@ Done, 2 addresses saved.
 If you are interested in generating a **CSV** file, you can use the [elven-tools-collection-owners-csv](https://github.com/ElvenTools/elven-tools-collection-owners-csv) script, which will do that. The input file is the output of the `elven-tools collection-nft-owners`. You'll find the input and output examples in the [data](https://github.com/ElvenTools/elven-tools-collection-owners-csv/tree/main/data) folder.
 
 ### How to distribute tokens to NFT owners
+
+**(NFT only for now)**
 
 From version 1.12.1, it is possible to automatically reuse the `nft-collection-owners.json` so the output from the `elven-tools collection-nft-owners` and distribute EGLD, ESDT, SFT or MetaESDT tokens to the collection NFT owners.
 
@@ -388,7 +405,7 @@ elven-tools distribute-to-owners
 
 ### CLI for a buyer
 
-You can also use the CLI tool when you are only a buyer, not an owner of the Smart Contract. To do so, you would need to go through 4 steps.
+You can also use the CLI tool when you are only a buyer, not an owner of the smart contract. To do so, you would need to go through 4 steps.
 
 1. Install the CLI: `npm install elven-tools -g`
 2. Derive the PEM file of your wallet: `elven-tools derive-pem` You would need to pass your seed phrase here. No worries, you work on your computer. If it is safe, nothing leaves it because of the CLI too. Never share seed phrases and PEM files with anyone.
@@ -399,16 +416,22 @@ You can also use the CLI tool when you are only a buyer, not an owner of the Sma
   "nftMinterSc": {
     "deployNftMinterSC": "<nft_minter_smart_contract_address_here>",
     "tokenSellingPrice": "<price_of_the_nft_here>"
+  },
+  "sftMinterSc": {
+    "deploySftMinterSC": "<sft_minter_smart_contract_address_here>",
+    "tokenSellingPrice": "<price_of_the_sft_here>"
   }
 }
 ```
 
-You would need only these two settings to be able to buy. Of course, the contract owner should prepare everything and start the minting process.
+You would need only these settings to be able to buy. Of course, the contract owner should prepare everything and start the minting process.
 
 The `tokenSellingPrice` here is a format with 18 zeros. So 1 EGLD is 1000000000000000000.
 The `deployNftMinterSC` here is an address of the contract. The owner should share it.
 
-4. The last would be to call the mint command: `elven-tools nft-minter mint`. You will be asked about the number of tokens to mint. There will be limits. You would know them. You can [query the contract to check them](/docs/sc-endpoints.html#smart-contract-queries).
+4. The last would be:
+  - in case of NFT minter to call the mint command: `elven-tools nft-minter mint`. You will be asked about the number of tokens to mint. There will be limits. You can [query the contract to check them](/docs/nft-sc-endpoints.html#smart-contract-queries).
+  - in case of SFT minter to call the buy command: `elven-tools sft-minter buy`. You will be asked about the number of tokens to mint and SFT nonce number. There will be limits. You can [query the contract to check them](/docs/sft-sc-endpoints.html#smart-contract-queries).
 
 ### What is an output.json file
 
@@ -417,13 +440,17 @@ The `output.json` file will be created as temporary storage, which keeps the cre
 ```json
 {
   "nftMinterScAddress": "erd1qqqqqqqqqqqqqpgq7a0cq90r2kqymtaqysxp7umrcyp04jgmgtkscelhmp",
-  "nftMinterScCollectionSellingPrice": "1000000000000000"
+  "nftMinterScCollectionSellingPrice": "1000000000000000",
+  "sftMinterScAddress": "erd1qqqqqqqqqqqqqpgq7a0cq90r2kqymtaqysxp7umrcyp04jgmgtkscelhmm",
+  "sftMinterScCollectionSellingPrice": "1000000000000000"
 }
 ```
 
-You don't have to think about it much.
+**Important**: In the future the usage of output.json file will be removed and replaced with `.elventoolsrc` file.
 
 ### Why do we need the shuffle endpoint
+
+**(NFT only for now)**
 
 The endpoint will set the following index to mint. It is important here that it will randomly select it from the indexes left to mint. This endpoint is also public, so everyone can call the transaction and change the following index to mint. It assures that the process is random, and everyone can impact that.
 
