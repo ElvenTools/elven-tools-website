@@ -47,4 +47,10 @@ Check how to start with it here: [How to start with the Dapp](/docs/how-to-start
 6. `elven-tools sft-minter create-token` -> create SFT token and provide all required data using prompts
 7. `elven-tools sft-minter buy` -> buy an amount of SFT tokens, it will respect max tokens per address limit
 
+There is also a video which shows it. So I recommend you to check it out:
+
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rMF3ItijHUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+
 - Check longer explanation here: **[CLI SFT Workflow](/docs/cli-sft-workflow.html)**
