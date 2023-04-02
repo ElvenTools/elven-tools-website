@@ -73,3 +73,8 @@ Here you will find all the CLI commands, whether general, NFT-related, or SFT-re
 - `elven-tools sft-minter set-roles` [only owner] - for now, the command sets three critical roles for the collection handle. They are: create, mint and burn roles. 
 - `elven-tools sft-minter create-token` [only owner] - You can create SFT tokens with the defined amount, assets, and attributes. You will be asked for all the data with prompts
 - `elven-tools sft-minter buy` - You can also use the CLI as a buyer and buy SFT tokens using this command. Of course, you can also buy as an owner.
+- `elven-tools sft-minter get-collection-token-name` - returns collection token name
+- `elven-tools sft-minter get-collection-token-id` - returns collection token id
+- `elven-tools sft-minter get-token-display-name` - returns the SFT token display name. Here you need to provide the nonce of the SFT token because there can be more than one. Each can have different supply and attributes
+- `elven-tools sft-minter get-price` - returns current price per one token, you also need to provide the nonce of the SFT token
+- `elven-tools sft-minter get-max-tokens-per-address` - returns the max amount of tokens to buy by one address. You also need to provide the nonce of the SFT token

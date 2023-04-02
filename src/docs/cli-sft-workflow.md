@@ -142,7 +142,11 @@ Every step will update the `output.json` file. So, for example, the Smart Contra
 Not all the commands trigger a Smart Contract transaction. There are also public queries for the Smart Contract, for example: 
 
 ```bash
-TODO
+- getCollectionTokenName
+- getCollectionTokenId
+- getTokenDisplayName
+- getPrice
+- getMaxTokensPerAddress
 ```
 ...and more, check `elven-tools sft-minter --help` for the whole list.
 

@@ -27,7 +27,7 @@ You are reading about the Smart Contract designed for the MultiversX blockchain.
 - creating SFT
 - changing basic setup where it is possible
 
-The user can pay in EGLD and, in return, will get SFT tokens from the previously configured collection. The amount of tokens per address is configured on the smart contract.
+In short, you can issue a collection token and then create multiple SFT tokens with different initial supplies, attributes, and assets. Each token will have a different nonce. All that should be done using the owner's wallet. Then other wallets can buy a specific amount of the SFT token with the particular nonce. The operator of the smart contract (owner) can define the price per single token and max tokens to buy per single address. There will be more functionality in the following versions.
 
 ### Required initial configuration
 
