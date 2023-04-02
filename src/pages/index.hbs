@@ -1,11 +1,11 @@
 {{> head
-title="Open Source toolset for launching NFTs"
-description="Open Source toolset for launching NFTs collections on the MultiversX blockchain."
+title="Open Source toolset for launching NFTs and SFTs"
+description="Open Source toolset for launching NFTs and SFTs collections on the MultiversX blockchain."
 ogTitle="Elven Tools - NFTs on the MultiversX Blockchain"
-ogDescription="Open Source toolset for launching NFTs collections on the MultiversX blockchain."
+ogDescription="Open Source toolset for launching NFTs and SFTs collections on the MultiversX blockchain."
 ogUrl="https://www.elven.tools"
 twitterTitle="Elven Tools - NFTs on the MultiversX Blockchain"
-twitterDescription="Open Source toolset for launching NFTs collections on the MultiversX blockchain."
+twitterDescription="Open Source toolset for launching NFTs and SFTs collections on the MultiversX blockchain."
 twitterUrl="https://www.elven.tools"
 }}
 
@@ -15,7 +15,8 @@ twitterUrl="https://www.elven.tools"
     organization.<br>It should go smoothly. If you encounter any problems, please try again later.</div> --}}
   <div class="homepage-lead">
     <div class="homepage-lead-subtitle">
-      Complete open source toolset for launching NFTs collections on the <a href="https://www.multiversx.com/">MultiversX</a> blockchain.
+      Complete open source toolset for launching NFTs and SFTs collections on the <a
+        href="https://www.multiversx.com/">MultiversX</a> blockchain.
     </div>
     <div class="homepage-lead-subtitle-small">You will also do snapshots, airdrops, tokens distribution!</div>
     <h1>Deploy and mint<span class="homepage-lead-accent">!</span></h1>
@@ -26,22 +27,21 @@ twitterUrl="https://www.elven.tools"
   </div>
   <div class="homepage-lead-columns">
     <div class="homepage-lead-column">
-      <div class="homepage-lead-column-icon-wrap"><a href="/docs/sc-introduction.html" class="homepage-lead-column-icon"
+      <div class="homepage-lead-column-icon-wrap"><a href="/docs/nft-sc-introduction.html" class="homepage-lead-column-icon"
           title="Elven Tools Smart Contract - custom Smart Contract for minting and selling MultiversX NFTs"><img
             height="117px" width="117px" src="{{relativePath 'assets/images/sc.svg'}}"
             alt="Elven Tools Smart Contract" /></a></div>
       <div class="homepage-lead-column-title">
-        <h2><a href="/docs/sc-introduction.html">Smart Contract</a></h2>
+        <h2><a href="/docs/jump-start.html">Smart Contracts</a></h2>
       </div>
-      <div class="homepage-lead-column-desc">It is the first version of a custom <span
-          class="homepage-lead-column-bold">PFP NFT Smart Contract for minting</span>. It is a
-        candy machine style of minting. It will let you run the proper NFT launch. If you need you will be able to
-        modify it. It is <span class="homepage-lead-column-bold">open source</span> code. There will also be a raffle
-        version. Stay tuned!</div>
+      <div class="homepage-lead-column-desc"><span class="homepage-lead-column-bold">NFT and SFT Minter Smart
+          Contracts.</span> They will let you run the proper NFT or/and SFT launches. They are <span
+          class="homepage-lead-column-bold">open-source</span> code. If you need, you can modify them. There will also
+        be a raffle NFT version. Stay tuned!</div>
       <div class="homepage-lead-column-btns">
-        <a href="/docs/sc-introduction.html" class="homepage-lead-column-btn"
+        <a href="/docs/jump-start.html" class="homepage-lead-column-btn"
           title="Elven Tools Smart Contract - custom Smart Contract for minting and selling MultiversX NFTs">More</a>
-        <a href="https://github.com/ElvenTools/elven-nft-minter-sc" class="homepage-lead-column-btn">GitHub</a>
+        <a href="https://github.com/ElvenTools/" class="homepage-lead-column-btn">GitHub</a>
       </div>
     </div>
     <div class="homepage-lead-column">
@@ -70,14 +70,14 @@ twitterUrl="https://www.elven.tools"
       <div class="homepage-lead-column-icon-wrap"><img height="117px" width="117px" class="homepage-lead-column-icon"
           src="{{relativePath 'assets/images/www.svg'}}" alt="Elven Tools Minter Dapp" /></div>
       <div class="homepage-lead-column-title">
-        <h2><a href="/docs/minter-dapp-introduction.html">Minter Dapp</a></h2>
+        <h2><a href="/docs/minter-dapp-introduction.html">NFT Minter Dapp</a></h2>
       </div>
       <div class="homepage-lead-column-desc">The minter dapp serves as a default <span
           class="homepage-lead-column-bold">
           launch website</span>. It is based on the
         Next framework, and it is equipped with valuable widgets and guides on how to safely and with performance in
         mind run the launch website. With some modifications, it is excellent as a <span
-          class="homepage-lead-column-bold">base for any MultiversX dapp</span>.</div>
+          class="homepage-lead-column-bold">base for any MultiversX project</span>.</div>
       <div class="homepage-lead-column-btns">
         <a href="/docs/minter-dapp-introduction.html" title="MultiversX blockchain Dapp template"
           class="homepage-lead-column-btn">More</a>
@@ -87,22 +87,38 @@ twitterUrl="https://www.elven.tools"
   </div>
   <div class="homepage-code-try">
     <h3 class="homepage-code-try-header">Try it now!</h3>
-    <p class="homepage-code-try-desc">By default, it will deploy the Smart Contract from its repository, and all will
+    <p class="homepage-code-try-desc">By default, it will deploy the Smart Contracts from their repositories, and all
+      will
       happen on the
       devnet! So you can try it out safely.<br>
-      What you need to start is a devnet account with some funds on it.<br>
-      Then enter the terminal commands in order displayed below:</p>
+      What you need to start is a devnet account (wallet address) with some funds on it.<br>
+      Install <a href="https://nodejs.org/en" class="common-link" target="_blank" rel="noopener noreferrer">Node.js</a>
+      and enter the terminal commands in order displayed below:</p>
 
-    <div class="homepage-code-example">
-      1. npm install elven-tools -g<br>
-      2. elven-tools derive-pem<br>
-      3. elven-tools deploy nft-minter<br>
-      4. elven-tools nft-minter issue-collection-token<br>
-      5. elven-tools nft-minter set-roles<br>
-      7. elven-tools nft-minter start-minting<br>
-      8. elven-tools nft-minter mint<br>
-      --- then additionally:<br>
-      9. elven-tools init-dapp
+    <div class="homepage-code-example-wrap">
+      <div class="homepage-code-example">
+        <strong>NFT Minter:</strong><br>
+        1. npm install elven-tools -g<br>
+        2. elven-tools derive-pem<br>
+        3. elven-tools deploy nft-minter<br>
+        4. elven-tools nft-minter issue-collection-token<br>
+        5. elven-tools nft-minter set-roles<br>
+        7. elven-tools nft-minter start-minting<br>
+        8. elven-tools nft-minter mint<br>
+        --- then additionally:<br>
+        9. elven-tools init-dapp
+      </div>
+
+      <div class="homepage-code-example">
+        <strong>SFT Minter:</strong><br>
+        1. npm install elven-tools -g<br>
+        2. elven-tools derive-pem<br>
+        3. elven-tools deploy sft-minter<br>
+        4. elven-tools sft-minter issue-collection-token<br>
+        5. elven-tools sft-minter set-roles<br>
+        7. elven-tools sft-minter create-token<br>
+        8. elven-tools sft-minter buy<br>
+      </div>
     </div>
 
     <div class="homepage-docs-button-section">
@@ -110,8 +126,6 @@ twitterUrl="https://www.elven.tools"
       <a href="/docs/recipes.html" title="Elven Tools Recipes!">Recipes</a>
     </div>
   </div>
-
-
 
   <div class="homepage-slogan secondary">Other tools<span class="homepage-lead-accent">:</span></div>
   <div class="demo-tiles last-tiles-wrapper">
@@ -127,11 +141,11 @@ twitterUrl="https://www.elven.tools"
         <span class="text">CLI for MultiversX blockchain interactions</span>
       </span>
     </a>
-    <a class="demo-tile" href="https://www.elvenjs.com" target="blank"
-      rel="noopener noreferrer">
+    <a class="demo-tile" href="https://www.elvenjs.com" target="blank" rel="noopener noreferrer">
       <span class="link-wrapper">
         <span class="text bigger">Elven.js</span>
-        <span class="text">Compact browser library for interacting with the MultiversX blockchain and smart contracts.</span>
+        <span class="text">Compact browser library for interacting with the MultiversX blockchain and smart
+          contracts.</span>
       </span>
     </a>
   </div>

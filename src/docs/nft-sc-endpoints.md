@@ -1,17 +1,17 @@
 ---
 layout: 'docs'
-title: 'SC Endpoints'
+title: 'NFT SC Endpoints'
 publicationDate: '2022-01-24'
 tags:
-  - smart contract
+  - nft smart contract
 excerpt: "Below you'll find all endpoints with a short description. You can always see the complete code."
-ogTitle: "Smart Contract version 1 - endpoints review"
+ogTitle: "NFT Smart Contract - endpoints review"
 ogDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
-ogUrl: "https://www.elven.tools/docs/sc-endpoints.html"
-twitterTitle: "Smart Contract version 1 - endpoints review"
+ogUrl: "https://www.elven.tools/docs/nft-sc-endpoints.html"
+twitterTitle: "NFT Smart Contract - endpoints review"
 twitterDescription: "Below you'll find all endpoints with a short description. You can always see the complete code."
-twitterUrl: "https://www.elven.tools/docs/sc-endpoints.html"
-githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/sc-endpoints.md"
+twitterUrl: "https://www.elven.tools/docs/nft-sc-endpoints.html"
+githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/nft-sc-endpoints.md"
 ---
 
 Below you'll find all endpoints with a short description. You can always see the complete code [here](https://github.com/ElvenTools/elven-nft-minter-sc).

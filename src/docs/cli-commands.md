@@ -14,6 +14,11 @@ twitterUrl: "https://www.elven.tools/docs/cli-commands.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/cli-commands.md"
 ---
 
+Here you will find all the CLI commands, whether general, NFT-related, or SFT-related commands. You can also display the commands using the CLI and `help` option:
+- `elven-tools --help`
+- `elven-tools nft-minter --help`
+- `elven-tools sft-minter --help`
+
 ### General commands
 
 - `elven-tools derive-pem` - derives the PEM file from seed phrase (keywords)
@@ -61,3 +66,17 @@ githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs
 - `elven-tools nft-minter is-minting-paused` - checks if the minting is paused,
 - `elven-tools nft-minter get-total-supply` - returns the total supply for the collection,
 - `elven-tools nft-minter get-total-supply-of-current-drop` - returns the supply of current drop
+
+### sft-minter commands
+
+- `elven-tools sft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the MultiversX chain. All SFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for SFTs.
+- `elven-tools sft-minter set-roles` [only owner] - for now, the command sets three critical roles for the collection handle. They are: create, mint and burn roles. 
+- `elven-tools sft-minter create-token` [only owner] - You can create SFT tokens with the defined amount, assets, and attributes. You will be asked for all the data with prompts
+- `elven-tools sft-minter buy` - You can also use the CLI as a buyer and buy SFT tokens using this command. Of course, you can also buy as an owner.
+- `elven-tools sft-minter claim-sc-funds` [only owner] - this is treated as a fallback for royalties. The Smart Contract will receive the royalties as the creator, so there has to be a way to get them back. In the future the Smart Contract will probably also have dedicated claim functionality to be able to call the marketplace and get the royalties because some of the marketplaces don't send them automatically. ([see more](/docs/recipes.html#how-to-claim-royalties-and-other-funds))
+- `elven-tools sft-minter claim-dev-rewards` [only owner] - as an owner of the Smart Contract, you can always claim the developer rewards. Read more about them in the MultiversX docs. ([see more](/docs/recipes.html#how-to-claim-dev-rewards))
+- `elven-tools sft-minter get-collection-token-name` - returns collection token name
+- `elven-tools sft-minter get-collection-token-id` - returns collection token id
+- `elven-tools sft-minter get-token-display-name` - returns the SFT token display name. Here you need to provide the nonce of the SFT token because there can be more than one. Each can have different supply and attributes
+- `elven-tools sft-minter get-price` - returns current price per one token, you also need to provide the nonce of the SFT token
+- `elven-tools sft-minter get-max-amount-per-address` - returns the max amount of tokens to buy by one address. You also need to provide the nonce of the SFT token

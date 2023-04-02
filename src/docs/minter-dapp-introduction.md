@@ -4,24 +4,24 @@ title: 'Minter Dapp introduction'
 publicationDate: '2022-04-25'
 tags:
   - minter dapp
-excerpt: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
+excerpt: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools smart contracts."
 ogTitle: "Minter Dapp template - introduction"
-ogDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
+ogDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools smart contracts."
 ogUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
 twitterTitle: "Minter Dapp template - introduction"
-twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools Smart Contract."
+twitterDescription: "Fully functional and optimized minter dapp based on the Next framework, integrated with Elven Tools smart contracts."
 twitterUrl: "https://www.elven.tools/docs/minter-dapp-introduction.html"
 githubUrl: "https://github.com/ElvenTools/elven-tools-website/edit/main/src/docs/minter-dapp-introduction.md"
 ---
 
-Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with the Elven Tools Smart Contract. 
+Elven Tools Dapp is a template (landing page) with preconfigured logic to be used with Elven Tools Smart Contracts. For now it supports NFT minter smart contract. But it will also support SFT minter.
 
 It is a minter dapp based on the [NextJS](https://nextjs.org/) framework and [useElven](https://www.useelven.com), which gives many possibilities for modifications and extending.
 
 - [Elven Tools Dapp repository](https://github.com/ElvenTools/elven-tools-dapp)
 - [Elven Tools Dapp live demo](https://dapp-demo.elven.tools/) (you can mint some NFTs on the devnet here!)
 
-You can use it primarily for this particular case, so for minting NFTs based on Elven Tools Smart Contract, you could also use it as a boilerplate for your other projects. You would only need to do some modifications.
+You can use it primarily for this particular case, so for minting NFTs/SFTs based on Elven Tools smart contracts, you could also use it as a boilerplate for your other projects. You would only need to do some modifications.
 
 Because it is built using the NextJS framework, deployment and hosting with [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/) is as simple as pushing the code to the repository. Also, private repository and not only on GitHub. I will be covering both of these later.
 
