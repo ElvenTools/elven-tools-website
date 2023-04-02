@@ -160,7 +160,7 @@ Not all the commands trigger a Smart Contract transaction. There are also public
 - getCollectionTokenId
 - getTokenDisplayName
 - getPrice
-- getMaxTokensPerAddress
+- getMaxAmountPerAddress
 ```
 ...and more, check `elven-tools sft-minter --help` for the whole list.
 

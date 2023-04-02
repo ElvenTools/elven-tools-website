@@ -43,7 +43,7 @@ These are the required operations you would need to perform once always when con
 - `getCollectionTokenId` - returns collection token id
 - `getTokenDisplayName` - returns the SFT token display name. Here you need to provide the nonce of the SFT token because there can be more than one. Each can have different supply and attributes
 - `getPrice` - returns current price per one token, you also need to provide the nonce of the SFT token
-- `getMaxTokensPerAddress` - returns the max amount of tokens to buy by one address. You also need to provide the nonce of the SFT token
+- `getMaxAmountPerAddress` - returns the max amount of tokens to buy by one address. You also need to provide the nonce of the SFT token
 
 ### How to interact with endpoints
 

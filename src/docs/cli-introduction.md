@@ -37,7 +37,7 @@ For now it is designed to deploy contracts:
 - `npm install elven-tools -g`
 - `elven-tools --version` or `elvent-tools -v`
 - `elven-tools --help` or `elven-tools -h` - for getting the commands on the root level
-- `elven-tools nft-minter --help` or `elven-tools nft-minter -h` - for getting all the commands for the subcommand
+- `elven-tools nft-minter --help` or `elven-tools sft-minter -h` - for getting all the commands for the subcommand
 
 **Steps for deploying and interacting with the Smart Contract:**
 
@@ -133,6 +133,11 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "buyGasLimit": 20000000,
     "buyTokenAmountFnName": "buy",
     "tokenSellingPrice": "<price_of_the_amount_of_1_for_sft_here> when you want to switch between chains or you want to use the cli as buyer",
+    "getTokenDisplayFnName": "getTokenDisplayName",
+    "getPriceFnName": "getPrice",
+    "getMaxAmountPerAddressFnName": "getMaxAmountPerAddress",
+    "getCollectionTokenNameFnName": "getCollectionTokenName",
+    "getCollectionTokenIdFnName": "getCollectionTokenId"
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

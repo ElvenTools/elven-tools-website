@@ -43,7 +43,7 @@ Check how to start with it here: [How to start with the Dapp](/docs/how-to-start
 2. `elven-tools derive-pem` -> provide the seed phrase, the walletKey.pem file will be generated
 3. `elven-tools deploy sft-minter` -> deploy the SFT minter smart contract from GitHub directly or from local file system
 4. `elven-tools sft-minter issue-collection-token` -> provide collection token name and ticker
-5. `elven-tools nft-minter set-roles` -> required roles for the issued token
+5. `elven-tools sft-minter set-roles` -> required roles for the issued token
 6. `elven-tools sft-minter create-token` -> create SFT token and provide all required data using prompts
 7. `elven-tools sft-minter buy` -> buy an amount of SFT tokens, it will respect max tokens per address limit
 
