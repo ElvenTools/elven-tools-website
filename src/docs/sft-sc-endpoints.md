@@ -29,6 +29,10 @@ These are the required operations you would need to perform once always when con
 - `setLocalRoles` - Set three roles for now, create, mint and burn. Required for management of SFTs.
 - `createToken` - create SFT tokens with the defined amount, assets, and attributes.
 
+### Other endpoints (only owner)
+
+- `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from selling are directly sent to the contract owner after each sell.
+
 ### Endpoints for all
 
 - `buy` - buy SFT tokens

@@ -127,11 +127,25 @@ Transaction status: success
 Transaction link: https://devnet-explorer.multiversx.com/transactions/8fc21a08d62d2d1312add3a89d758b8e4610bf9ec1ac799def52c75ef80e4e7f
 ```
 
+After that, you can also use the CLI to buy specific SFT tokens (an amount of them). For simplicity, you must provide its nonce in hex format because, for example, for the TTSFT-d1d695-01 SFT token, the nonce is 01 already in hex format. So you need to find the token ticker and pass the third segment of its name here.
 
+Under the TTSFT-d1d695 collection token, you can have different SFTs with different initial supplies, attributes, and assets. What differentiates them and identifies them is the nonce number.
 
+```bash
+elven-tools sft-minter buy 
 
-TODO: buy
+✔ Provide token nonce (for example in TTSFT-d1d695-01 the 01 has to be provided):
+ … 02
+✔ Provide the amount of SFT to buy:
+ … 12
+✔ Are you sure that you want to proceed?
+ › Yes
 
+Transaction status: success
+Transaction link: https://devnet-explorer.multiversx.com/transactions/848bcbf8254f2197cf32027e99c40e244e2a0c8abdf98990fa477a0bf35b85b2
+```
+
+These are crucial commands. There is more. All of them are in the [CLI commands](/docs/cli-commands.html) section.
 
 ### Good to know
 

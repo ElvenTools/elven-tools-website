@@ -122,14 +122,17 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
   "sftMinterSc": {
     "version": "{tag version here or branch name, for example: v0.1.0}",
     "deployNftMinterSC": "<nft_minter_smart_contract_address_here> when you want to switch between chains or you want to use the cli as buyer",
-    "deployGasLimit": 30000000,
+    "deployGasLimit": 40000000,
     "issueTokenFnName": "issueToken",
     "issueCollectionTokenGasLimit": 60000000,
     "issueValue": "0.05",
     "setLocalRolesFnName": "setLocalRoles",
     "assignRolesGasLimit": 60000000,
     "createGasLimit": 20000000,
-    "createTokenFnName": "createToken"
+    "createTokenFnName": "createToken",
+    "buyGasLimit": 20000000,
+    "buyTokenAmountFnName": "buy",
+    "tokenSellingPrice": "<price_of_the_amount_of_1_for_sft_here> when you want to switch between chains or you want to use the cli as buyer",
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"
