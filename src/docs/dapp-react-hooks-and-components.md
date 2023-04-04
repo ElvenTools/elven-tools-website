@@ -20,11 +20,11 @@ There are much more hooks and tools, but most of them are already used in the on
 
 The code samples are not ready to copy and paste. Please search them in the code.
 
-### @useelven/hooks
+### @useElven/core
 
 The template is based on `@useelven/core` npm library.
 
-- [@useelven/hooks docs](https://www.useElven.com) - React hooks for MultiversX blockchain
+- [@useelven/core docs](https://www.useElven.com) - React hooks for MultiversX blockchain
 
 `useNetworkSync` hook from `useElven` takse whole custom configuration. Elven Tools Dapp is based pn .env variables that are passed to `useNetworkSync`. These are for now `chainType` and optionally API endpoint.
 
