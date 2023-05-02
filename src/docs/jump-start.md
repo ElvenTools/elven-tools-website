@@ -44,7 +44,7 @@ Check how to start with it here: [How to start with the Dapp](/docs/how-to-start
 3. `elven-tools deploy sft-minter` -> deploy the SFT minter smart contract from GitHub directly or from local file system
 4. `elven-tools sft-minter issue-collection-token` -> provide collection token name and ticker
 5. `elven-tools sft-minter set-roles` -> required roles for the issued token
-6. `elven-tools sft-minter create-token` -> create SFT token and provide all required data using prompts
+6. `elven-tools sft-minter create` -> create SFT token and provide all required data using prompts
 7. `elven-tools sft-minter buy` -> buy an amount of SFT tokens, it will respect max tokens per address limit
 
 There is also a video which shows it. So I recommend you to check it out:
