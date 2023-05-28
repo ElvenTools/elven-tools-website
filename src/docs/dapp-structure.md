@@ -41,7 +41,7 @@ useElven_dapp__account: {"address":"","nonce":0,"balance":"", "addressIndex": 0}
 ```
 
 ```
-useElven_dapp__loginInfo: {"loginMethod":"","expires":0,"loginToken":"","signature":""}
+useElven_dapp__loginInfo: {"loginMethod":"","expires":0,"loginToken":"","signature":"", "accessToken": ""}
 ```
 
 The state is reused in many places in the app. There are custom Ract hooks for this purpose. We will check them later in the article.
