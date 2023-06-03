@@ -45,3 +45,9 @@ Here you will find common problems when using the Elven Tools. In the future, th
 **Problem**: The public API which is in use by default isn't responding on time  \
 **Cause**: The problem occurs when the network isn't responding fast. There is a limit of 10 seconds. Then the connection is closed.  \
 **Solution**: You could try again, and if a couple of tries don't help, you would need to change the API provider. Check how [here](https://www.elven.tools/docs/recipes.html#custom-api-endpoints). Or you can wait some time for the public API to be in better shape.
+
+### Problems with the CLI and system permissions
+
+**Problem**: The `npm install elven-tools -g` throws an error related to permissions on the system.  \
+**Cause**: Global instalation uses global system directories. Sometimes system users don't have access to them. It depends on the system's setup.  \
+**Solution**: You can try to use tools like [nvm](https://github.com/nvm-sh/nvm) for better management of the npm versions and permissions. Or you can also try to fix the problem, the solutions are described here: [Resolving EACCES permissions errors when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally). You can also try to run elven-tools using `npx`. For example: `npx elven-tools deploy nft-minter`.
