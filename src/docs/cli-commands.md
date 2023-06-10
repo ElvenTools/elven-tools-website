@@ -73,6 +73,7 @@ Here you will find all the CLI commands, whether general, NFT-related, or SFT-re
 - `elven-tools sft-minter set-roles` [only owner] - for now, the command sets three critical roles for the collection handle. They are: create, mint and burn roles. 
 - `elven-tools sft-minter create` [only owner] - You can create SFT tokens with the defined amount, assets, and attributes. You will be asked for all the data with prompts
 - `elven-tools sft-minter buy` - You can also use the CLI as a buyer and buy SFT tokens using this command. Of course, you can also buy as an owner.
+- `elven-tools sft-minter set-new-price` - You can change the previously set price.
 - `elven-tools sft-minter claim-sc-funds` [only owner] - this is treated as a fallback for royalties. The Smart Contract will receive the royalties as the creator, so there has to be a way to get them back. In the future the Smart Contract will probably also have dedicated claim functionality to be able to call the marketplace and get the royalties because some of the marketplaces don't send them automatically. ([see more](/docs/recipes.html#how-to-claim-royalties-and-other-funds))
 - `elven-tools sft-minter claim-dev-rewards` [only owner] - as an owner of the Smart Contract, you can always claim the developer rewards. Read more about them in the MultiversX docs. ([see more](/docs/recipes.html#how-to-claim-dev-rewards))
 - `elven-tools sft-minter get-collection-token-name` - returns collection token name

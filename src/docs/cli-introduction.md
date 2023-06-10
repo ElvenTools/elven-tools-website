@@ -132,6 +132,8 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "createTokenFnName": "createToken",
     "buyGasLimit": 20000000,
     "buyTokenAmountFnName": "buy",
+    "setNewPriceFnName": "setNewPrice",
+    "setNewPriceGasLimit": 4500000,
     "tokenSellingPrice": "<price_of_the_amount_of_1_for_sft_here> when you want to switch between chains or you want to use the cli as buyer",
     "getTokenDisplayFnName": "getTokenDisplayName",
     "getPriceFnName": "getPrice",

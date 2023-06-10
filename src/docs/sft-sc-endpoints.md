@@ -32,6 +32,7 @@ These are the required operations you would need to perform once always when con
 ### Other endpoints (only owner)
 
 - `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from selling are directly sent to the contract owner after each sell.
+- `setNewPrice` - You can change the previously set price.
 
 ### Endpoints for all
 
