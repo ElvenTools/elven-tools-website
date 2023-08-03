@@ -127,6 +127,19 @@ Transaction status: success
 Transaction link: https://devnet-explorer.multiversx.com/transactions/8fc21a08d62d2d1312add3a89d758b8e4610bf9ec1ac799def52c75ef80e4e7f
 ```
 
+After creating a token, you can only buy it once you enable selling. You can do this by `start-selling` (you can also pause it back with `pause-selling`)
+
+```bash
+elven-tools sft-minter start-selling
+✔ Provide the nonce (for example in TTSFT-d1d695-01 the 01 has to be provided):
+ … 02
+✔ Are you sure that you want to proceed?
+ › Yes
+
+Transaction status: success
+Transaction link: https://devnet-explorer.multiversx.com/transactions/278df3e40ded58f0a52318171a16bcf5136b78cd0cc4f44220b7e8b9ce3b007e
+```
+
 After that, you can also use the CLI to buy specific SFT tokens (an amount of them). For simplicity, you must provide its nonce in hex format because, for example, for the TTSFT-d1d695-01 SFT token, the nonce is 01 already in hex format. So you need to find the token ticker and pass the third segment of its name here.
 
 Under the TTSFT-d1d695 collection token, you can have different SFTs with different initial supplies, attributes, and assets. What differentiates them and identifies them is the nonce number.
@@ -162,11 +175,9 @@ Not all the commands trigger a Smart Contract transaction. There are also public
 - getPrice
 - getMaxAmountPerAddress
 ```
-...and more, check `elven-tools sft-minter --help` for the whole list.
+...and more, check `elven-tools sft-minter --help` for the whole list. Also check the [Smart Contract endpoints](/docs/sft-sc-endpoints.html).
 
 With them, you can get simple information written in the Smart Contract. You can also access them through API. Read more about it [here](https://docs.multiversx.com/sdk-and-tools/rest-api/virtual-machine).
-
-Elven Tools also provides the Minter Dapp for the SFT launch, which strictly integrates with the Smart Contract. It have a lot of useful widgets.
 
 ### Where to go from here
 

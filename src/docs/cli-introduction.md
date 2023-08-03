@@ -1,7 +1,7 @@
 ---
-layout: 'docs'
-title: 'CLI Introduction'
-publicationDate: '2022-01-26'
+layout: "docs"
+title: "CLI Introduction"
+publicationDate: "2022-01-26"
 tags:
   - cli tool
 excerpt: "The CLI tools is a standard Node CLI program which you can install using the npm package manager."
@@ -26,11 +26,12 @@ npm install elven-tools -g
   - deploy the NFT or SFT minter Smart Contract on the MultiversX blockchain
   - interact with the NFT or SFT minter Smart Contract on the MultiversX blockchain
 
-For now it is designed to deploy contracts: 
+For now it is designed to deploy contracts:
+
 - [elven-tools-nft-minter-sc](https://github.com/ElvenTools/elven-nft-minter-sc).
 - [elven-tools-sft-minter-sc](https://github.com/ElvenTools/elven-tools-sft-minter-sc).
 
-### How does it work? 
+### How does it work?
 
 **General how to:**
 
@@ -139,7 +140,15 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "getPriceFnName": "getPrice",
     "getMaxAmountPerAddressFnName": "getMaxAmountPerAddress",
     "getCollectionTokenNameFnName": "getCollectionTokenName",
-    "getCollectionTokenIdFnName": "getCollectionTokenId"
+    "getCollectionTokenIdFnName": "getCollectionTokenId",
+    "startSellingFnName": "startSelling",
+    "startSellingGasLimit": 3000000,
+    "pauseSellingFnName": "pauseSelling",
+    "pauseSellingGasLimit": 3000000,
+    "setNewAmountLimitPerAddressFnName": "setNewAmountLimitPerAddress",
+    "setNewAmountLimitPerAddressGasLimit": 3000000,
+    "getIsPausedFnName": "isPaused",
+    "getAmountPerAddressTotalFnName": "getAmountPerAddressTotal"
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

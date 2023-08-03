@@ -33,6 +33,9 @@ These are the required operations you would need to perform once always when con
 
 - `claimScFunds` - You can claim the funds which are there on the payable Smart Contract. For example, royalties paid by marketplaces. These are only funds that come from outside. The funds from selling are directly sent to the contract owner after each sell.
 - `setNewPrice` - You can change the previously set price.
+- `setNewAmountLimitPerAddress` - You can change the previously set max token amount with a particular nonce per address
+- `pauseSelling` - You can stop selling a token with a particular nonce.
+- `startSelling` - You can start selling a token with a particular nonce.
 
 ### Endpoints for all
 
@@ -45,6 +48,8 @@ These are the required operations you would need to perform once always when con
 - `getTokenDisplayName` - returns the SFT token display name. Here you need to provide the nonce of the SFT token because there can be more than one. Each can have different supply and attributes
 - `getPrice` - returns current price per one token, you also need to provide the nonce of the SFT token
 - `getMaxAmountPerAddress` - returns the max amount of tokens to buy by one address. You also need to provide the nonce of the SFT token
+- `isPaused` - returns the information about whether the token with a particular nonce can be bought or the selling is paused
+- `getAmountPerAddressTotal` - returns the amount of already bought tokens with a particular nonce by a specific address
 
 ### How to interact with endpoints
 
