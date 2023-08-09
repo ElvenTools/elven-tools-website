@@ -244,4 +244,4 @@ Here are a couple of ideas on preparing the Smart Contract to sell the NFT colle
 
 Hopefully, it will be helpful, and the examples will help better understand the idea behind all the existing endpoints on the Smart Contract.
 
-There will probably be more improvements. Please let me know if you will find a bug or have some ideas to improve the toolset. You can write to me directly: [Twitter](https://twitter.com/JulianCwirko). Or you can report an issue on GitHub for the Smart Contract [here](https://github.com/ElvenTools/elven-nft-minter-sc/issues) and the CLI [here](https://github.com/ElvenTools/elven-tools-cli/issues).
+There will probably be more improvements. Please let me know if you will find a bug or have some ideas to improve the toolset. You can write to me directly: [Twitter](https://twitter.com/theJulianIo). Or you can report an issue on GitHub for the Smart Contract [here](https://github.com/ElvenTools/elven-nft-minter-sc/issues) and the CLI [here](https://github.com/ElvenTools/elven-tools-cli/issues).
