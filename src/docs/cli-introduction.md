@@ -148,7 +148,11 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "setNewAmountLimitPerAddressFnName": "setNewAmountLimitPerAddress",
     "setNewAmountLimitPerAddressGasLimit": 3000000,
     "getIsPausedFnName": "isPaused",
-    "getAmountPerAddressTotalFnName": "getAmountPerAddressTotal"
+    "getAmountPerAddressTotalFnName": "getAmountPerAddressTotal",
+    "getSftMintFnName": "mint",
+    "mintGasLimit": 3000000,
+    "getSftBurnFnName": "burn",
+    "burnGasLimit": 3000000,
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

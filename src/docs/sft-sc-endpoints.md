@@ -28,6 +28,8 @@ These are the required operations you would need to perform once always when con
 - `issueToken` - required endpoint for creating a new collection, this is done once. It is a handler for the whole single collection.
 - `setLocalRoles` - Set three roles for now, create, mint and burn. Required for management of SFTs.
 - `createToken` - create SFT tokens with the defined amount, assets, and attributes.
+- `mint` - increase the initial supply
+- `burn` - decrease the initial supply
 
 ### Other endpoints (only owner)
 
