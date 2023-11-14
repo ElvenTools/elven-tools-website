@@ -101,6 +101,11 @@
     min-width: 200px;
     margin: auto 5px;
 
+    &.secondary {
+      background-color: $color-main-contrast2;
+      color: $color-main-contrast;
+    }
+
     &:hover {
       color: $color-main-contrast;
       background-color: $color-main-light;
