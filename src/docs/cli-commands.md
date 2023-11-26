@@ -69,7 +69,7 @@ Here you will find all the CLI commands, whether general, NFT-related, or SFT-re
 
 ### sft-minter commands
 
-- `elven-tools sft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the MultiversX chain. All SFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also provide a separate name for SFTs.
+- `elven-tools sft-minter issue-collection-token` [only owner] - issue main collection handle, it costs 0.05 EGLD, and it is a must in the MultiversX chain. All SFTs will be under this collection. The cost here is a one-time payment for the whole collection. Provide the name and ticker. You can also set/change the collection token properties.
 - `elven-tools sft-minter set-roles` [only owner] - for now, the command sets three critical roles for the collection handle. They are: create, mint and burn roles. 
 - `elven-tools sft-minter create` [only owner] - You can create SFT tokens with the defined amount, assets, and attributes. You will be asked for all the data with prompts
 - `elven-tools sft-minter start-selling` [only owner] - You can pause and start selling the tokens with a particular nonce

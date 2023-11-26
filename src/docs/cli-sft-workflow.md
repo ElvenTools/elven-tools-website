@@ -74,6 +74,18 @@ elven-tools sft-minter issue-collection-token
 ✔ Enter the ticker for the collection token (ex. MYNAME). 
 (3-10 characters, alphanumeric and uppercase only)
  … MST
+ Instructions:
+    ↑/↓: Highlight option
+    ←/→/[space]: Toggle selection
+    a: Toggle all
+    enter/return: Complete answer
+◉   CanAddSpecialRoles - It is mandatory to proceed
+◯   CanFreeze
+◯   CanWipe
+◯   CanPause
+◯   CanTransferCreateRole
+◯   CanChangeOwner
+◯   CanUpgrade
 
 ✔ Are you sure that you want to proceed?
  › Yes
