@@ -112,10 +112,28 @@ elven-tools nft-minter issue-collection-token
  … TSTONL
 ✔ Do you want to remove the edition number from the name? (example: 'name #1' when there is 1.json and 1.png) › No
 ✔ Enter the name for NFTs. If not provided, the name of the collection will be used. (Optional)
- … Separate NFT name
+ … 
+✔ Please choose token properties.
+ ›  
+Instructions:
+    ↑/↓: Highlight option
+    ←/→/[space]: Toggle selection
+    a: Toggle all
+    enter/return: Complete answer
+◉   CanAddSpecialRoles - It is mandatory to proceed
+◯   CanFreeze
+◯   CanWipe
+◯   CanPause
+◯   CanTransferCreateRole
+◯   CanChangeOwner
+◯   CanUpgrade
+✔ Are you sure that you want to proceed?
+ › Yes
 
 Transaction status: success
-Transaction link: https://devnet-explorer.multiversx.com/transactions/a06da61a1d138a73c569ed0e13ecbda4176768aa19cb37254cce1aab318c229f
+Transaction link: https://devnet-explorer.multiversx.com/transactions/cdef352e6d8cb5772b8e461b8255344479c7cf49aca02a3a1e57fd6495306c03
+
+Issued collection token id: TSTONL-f40a25
 ```
 
 The last mandatory command is `elven-tools nft-minter set-roles`. It will assign the obligatory role, which allows for new NFT tokens creation. Here there won't be any prompts, at least for now. Only a transaction will take the token data from the output.json file and assign the roles.
