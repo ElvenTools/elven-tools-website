@@ -100,6 +100,17 @@ Here there won't be any prompts, at least for now. Only a transaction will take 
 
 ```bash
 elven-tools sft-minter set-roles
+? Please choose special roles.
+ ›  
+Instructions:
+    ↑/↓: Highlight option
+    ←/→/[space]: Toggle selection
+    a: Toggle all
+    enter/return: Complete answer
+◉   ESDTRoleNFTCreate - It is mandatory to proceed
+◉   ESDTRoleNFTAddQuantity
+◯   ESDTRoleNFTBurn
+◯   ESDTTransferRole
 
 ✔ Are you sure that you want to proceed?
  › Yes
