@@ -26,7 +26,7 @@ These are the required operations you would need to perform once always when con
 
 - `init` - standard init endpoint, it will be triggered on deployment and upgrade
 - `issueToken` - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection.
-- `setLocalRoles` - Set roles set only one role for now. The required one for creating the NFTs.
+- `setLocalRoles` - Set roles. You can choose from five of them. Create role is required to proceed.
 - `startMinting` - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
 
 ### Only owner endpoints
@@ -35,7 +35,7 @@ Only the owner of the Smart Contract can call them. In such a Smart Contract, th
 
  - `init` - standard init endpoint, it will be triggered on deployment and upgrade
 - `issueToken` - required endpoint for creating a new collection, this is done once, and the token is one for one smart contract instance. It is a handler for the whole collection.
-- `setLocalRoles` - Set roles set only one role for now. The required one for creating the NFTs. 
+- `setLocalRoles` - Set roles. You can choose from five of them. Create role is required to proceed. 
 - `pauseMinting` - You can pause the minting process in any moment you need. 
 - `startMinting` - You will need to start the minting process after deploying the contract and each time you use the pauseMinting function
 - `setDrop` - You can set the 'drop' by defining how many tokens per drop will be minted 

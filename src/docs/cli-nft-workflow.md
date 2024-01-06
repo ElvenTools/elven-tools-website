@@ -140,6 +140,19 @@ The last mandatory command is `elven-tools nft-minter set-roles`. It will assign
 
 ```bash
 elven-tools nft-minter set-roles
+? Please choose special roles.
+ ›  
+Instructions:
+    ↑/↓: Highlight option
+    ←/→/[space]: Toggle selection
+    a: Toggle all
+    enter/return: Complete answer
+◉   ESDTRoleNFTCreate - It is mandatory to proceed
+◯   ESDTRoleNFTBurn
+◯   ESDTRoleNFTUpdateAttributes
+◯   ESDTRoleNFTAddURI
+◯   ESDTTransferRole
+
 Transaction: https://devnet-explorer.multiversx.com/transactions/b156ebc9f91a75c56ee5e1ae034c2e4ce09a9de16cde79f297221b457902e326
 ```
 
