@@ -153,6 +153,8 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
     "mintGasLimit": 3000000,
     "getSftBurnFnName": "burn",
     "burnGasLimit": 3000000,
+    "giveawayBaseGasLimit": 3500000,
+    "giveawayFnName": "giveaway",
   },
   "minterDapp": {
     "version": "{tag version here, for example: v1.0.3}"

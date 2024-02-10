@@ -81,6 +81,7 @@ Here you will find all the CLI commands, whether general, NFT-related, or SFT-re
 - `elven-tools sft-minter claim-dev-rewards` [only owner] - as an owner of the Smart Contract, you can always claim the developer rewards. Read more about them in the MultiversX docs. ([see more](/docs/recipes.html#how-to-claim-dev-rewards))
 - `elven-tools sft-minter mint` [only owner] - increase the initial supply
 - `elven-tools sft-minter burn` [only owner] - decrease the initial supply
+- `elven-tools sft-minter giveaway` [only owner] - give some ampunt of particular SFTs to some addresses. No limits applied.
 - `elven-tools sft-minter get-collection-token-name` - returns collection token name
 - `elven-tools sft-minter get-collection-token-id` - returns collection token id
 - `elven-tools sft-minter get-token-display-name` - returns the SFT token display name. Here you need to provide the nonce of the SFT token because there can be more than one. Each can have different supply and attributes

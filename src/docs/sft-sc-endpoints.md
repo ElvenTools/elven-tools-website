@@ -38,6 +38,7 @@ These are the required operations you would need to perform once always when con
 - `setNewAmountLimitPerAddress` - You can change the previously set max token amount with a particular nonce per address
 - `pauseSelling` - You can stop selling a token with a particular nonce.
 - `startSelling` - You can start selling a token with a particular nonce.
+- `giveaway` - You can send some amount of particular SFTs to some addresses. No limits applied here.
 
 ### Endpoints for all
 

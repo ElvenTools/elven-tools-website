@@ -234,13 +234,17 @@ Remember that you can always use the functionality without using the CLI tool, t
 
 ### How to use the giveaway
 
-**(NFT only for now)**
+<div class="docs-info-box">The JSON file with giveaway receivers is the same for NFTs and SFTs. But it has a different structure. The best is to manage NFT/SFT SC in separate workspaces. See more about it below.</div>
 
-The `giveaway` functionality is helpful when you want to give some tokens to a particular address. It can be because they are the team members or someone you want to thank. Remember that with Elven Tools, you can't choose the specific token. It will still be randomly selected and minted. When using this functionality, there is no payment—only transaction fees.
+The `giveaway` functionality is helpful when you want to give some tokens to a particular address. It can be because they are the team members or someone you want to thank. 
+
+**For NFTs:**
+
+Remember that with Elven Tools, you can't choose the specific token. It will still be randomly selected and minted. When using this functionality, there is no payment—only transaction fees.
 
 You can give some tokens using the CLI's command `elven-tools nft-minter giveaway`. You would need to provide the address to which you would like to send the NFTs and the amount of the tokens to give.
 
-You can provide addresses by hand in the CLI prompt, separating them from the coma. But you can also provide the file: `giveaway.json`. The structure looks like this:
+You can provide addresses by hand in the CLI prompt, separating them with a coma. But you can also provide the file: `giveaway.json`. The structure looks like this:
 
 ```json
 [
@@ -250,13 +254,40 @@ You can provide addresses by hand in the CLI prompt, separating them from the co
 ]
 ```
 
+<div class="embeded-media-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/lQUVEd-9ZhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+**For SFTs:**
+
+You can give some amount of the particular SFT tokens using the CLI's command `elven-tools sft-minter giveaway`. You would need to provide the address to which you would like to send the NFTs and the amount of the tokens to give.
+
+You can provide addresses by hand in the CLI prompt, separating them with a coma. It should be a string similar to: `erd1...|01|100,erd1...|02|200`.
+
+But you can also provide the file: `giveaway.json`. The structure looks like this:
+
+```json
+[
+  {
+    "address": "erd1...",
+    "nonce": "01",
+    "amount": "100"
+  },
+  {
+    "address": "erd1...",
+    "nonce": "02",
+    "amount": "200"
+  }
+]
+```
+
+
+
 You can use this even when the minting process is paused, which is usable for the giveaway before the official minting is started.
 
 As always, you can call the giveaway endpoint without the CLI. Check them in the SC endpoints section.
 
-<div class="embeded-media-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/lQUVEd-9ZhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+
 
 ### How to claim dev rewards
 
