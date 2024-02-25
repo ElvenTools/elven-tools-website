@@ -53,14 +53,21 @@ The first command will be `elven-tools deploy sft-minter`. It takes the Smart Co
 
 ```bash
 elven-tools deploy sft-minter
-
+✔ Decide if the contract can be upgraded in the future.
+ › Yes
+✔ Decide if the contract's storage can be read by other contracts. Not recommended in this case.
+ › No
+✔ Decide if the contract can receive funds.
+ › No
+✔ Decide if the contract can receive funds from other smart contract. Recommended because of the royalties.
+ › Yes
 ✔ Are you sure that you want to proceed?
  › Yes
 
 Deployment transaction executed: success
-Deployment tx: https://devnet-explorer.multiversx.com/transactions/3ed03f012b5bafbd1e3634ec37eab201d8fac087010b29ec9596fa4272ad47c9
+Deployment tx: https://devnet-explorer.multiversx.com/transactions/5d2e937c043ba457bbd8fe707f649670e9b1396744ce63d936b5a97c0c285e1b
 
-Smart Contract address: erd1qqqqqqqqqqqqqpgq4vvwttr9flqpn8j83kz4y7cx7lnwvuys67es47jdmp
+Smart Contract address: erd1qqqqqqqqqqqqqpgqham90h5k6ukerscmke88wzfhlj0f4hwg67eswkkxnr
 ```
 
 The following mandatory command which you would use is issuing the collection token. You can do this by running `elven-tools sft-minter issue-collection-token`. The token will be issued, and all will be saved in the `output.json` file in the same directory. Here you will be asked about the name of the collection and the ticker. It looks like that:

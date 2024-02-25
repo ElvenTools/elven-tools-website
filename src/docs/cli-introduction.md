@@ -59,6 +59,8 @@ Below is an example of a `.elventoolsrc` config file with default values. You do
   "chain": "devnet",
   "apiProviderEndpoint": "https://devnet-api.multiversx.com",
   "gatewayProviderEndpoint": "https://devnet-gateway.multiversx.com",
+  "txWatcherTimeout": 90000,
+  "txWatcherPatience": 0,
   "nftMinterSc": {
     "version": "{tag version here or branch name, for example: v1.2.0}",
     "deployNftMinterSC": "<nft_minter_smart_contract_address_here> when you want to switch between chains or you want to use the cli as buyer",
