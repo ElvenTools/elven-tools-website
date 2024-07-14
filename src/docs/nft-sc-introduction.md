@@ -62,7 +62,7 @@ Please post issues and ideas [here](https://github.com/ElvenTools/elven-nft-mint
 
 ### Contact
 
-- [Twitter](https://twitter.com/theJulianIo)
+- [x.com/theJulianIo](https://x.com/theJulianIo)
 - julian.cwirko@gmail.com
 
 <div class="next-page-link">

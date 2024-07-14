@@ -185,5 +185,5 @@ Please post issues and ideas [here](https://github.com/ElvenTools/elven-tools-cl
 
 ### Contact
 
-- [Twitter](https://twitter.com/theJulianIo)
+- [x.com/theJulianIo](https://x.com/theJulianIo)
 - julian.cwirko@gmail.com
